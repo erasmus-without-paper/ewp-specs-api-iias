@@ -4,8 +4,8 @@
     xmlns:xml="http://www.w3.org/XML/1998/namespace"
     elementFormDefault="qualified"
 
-    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-imas/tree/master"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imas/tree/master"
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-iias/tree/master"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/tree/master"
 >
     <!-- WRTODO: Replace all occurrences of 'master' (in all projects) with 'stable-v1' upon release. -->
 
@@ -22,7 +22,7 @@
         <xs:annotation>
             <xs:documentation>
                 This describes the format of the response returned by the EWP Interinstitutional
-                Mobility Agreements API.
+                Agreements API.
             </xs:documentation>
         </xs:annotation>
         <xs:complexType>

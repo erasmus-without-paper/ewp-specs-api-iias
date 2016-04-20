@@ -1,5 +1,5 @@
-Interinstitutional Mobility Agreements API
-==========================================
+Interinstitutional Agreements API
+=================================
 
 * [What is the status of this document?][statuses]
 * [See the index of all other EWP Specifications][develhub]
@@ -8,10 +8,10 @@ Interinstitutional Mobility Agreements API
 Summary
 -------
 
-This document describes the **Interinstitutional Mobility Agreements API**.
-This API is implemented by the **EWP IMA Repository** only. All other EWP
+This document describes the **Interinstitutional Agreements API**.
+This API is implemented by the **EWP IIA Repository** only. All other EWP
 partners will only be *using* it (not *serving* it). This API allows EWP
-partners to access the contents of agreements (IMAs), by given IDs.
+partners to access the contents of agreements (IIAs), by given IDs.
 
 
 Request method
@@ -31,9 +31,9 @@ Parameters MUST be provided either in a query string (for GET requests), or in
 the `application/x-www-form-urlencoded` format (for POST requests).
 
 
-### `ima_id` (repeatable, required)
+### `iia_id` (repeatable, required)
 
-A list of IMA identifiers (max 500 items) - IDs of agreements the client wants
+A list of IIA identifiers (max 500 items) - IDs of agreements the client wants
 to retrieve information on.
 
 This parameter is *repeatable*, so the request MAY contain multiple occurrences
@@ -52,12 +52,12 @@ Handling of invalid parameters
 
  * General [error handling rules][error-handling] apply.
 
- * Invalid (unknown) `ima_id` values MUST be ignored. Servers MUST return
+ * Invalid (unknown) `iia_id` values MUST be ignored. Servers MUST return
    a valid (HTTP 200) XML response in such cases, but the response will simply
-   not contain the information on the unknown `ima_id` values. (If all values
+   not contain the information on the unknown `iia_id` values. (If all values
    are unknown, servers MUST respond with an empty envelope.)
 
- * If the length of `ima_id` list is greater than 500, servers MAY respond
+ * If the length of `iia_id` list is greater than 500, servers MAY respond
    with HTTP 400. Clients SHOULD split such large requests into a couple of
    smaller ones.
 
