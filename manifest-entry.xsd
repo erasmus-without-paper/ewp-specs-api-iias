@@ -44,6 +44,16 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
+                        <xs:element name="sends-notifications" type="ewp:Empty" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    If this element is present, then the EWP Host states, that it has implemented
+                                    a Notification Sender for IIAs - it will *try* to deliver notifications to all
+                                    Interinstitutional Agreement CNR APIs implemented throughout the EWP Network
+                                    whenever related IIAs are changed.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
