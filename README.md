@@ -8,71 +8,76 @@ Interinstitutional Agreements API
 Summary
 -------
 
-This document describes the **Interinstitutional Agreements API**.
-This API is implemented by the **EWP IIA Repository** only. All other EWP
-partners will only be *using* it (not *serving* it). This API allows EWP
-partners to access the contents of agreements (IIAs), by given IDs.
+This document describes the **Interinstitutional Agreements API**. This API
+allows partners to compare their copies of interinstitutional agreements with
+each other, which makes it easier to spot errors.
 
 
-Request method
---------------
+Introduction
+------------
 
- * Requests MUST be made with either HTTP GET or HTTP POST method. Servers MUST
-   support both these methods. Servers SHOULD reject all other request methods.
+As part of the EWP project, we have [thoroughly discussed]
+(https://github.com/erasmus-without-paper/general-issues/issues/12)
+[many options]
+(https://github.com/erasmus-without-paper/general-issues/issues/12#issuecomment-229931282)
+of how to design the functionality of synchronizing IIAs between different
+HEIs. We have proposed multiple solutions, and then rejected them, either
+because of their limited functionality, or their complexity.
 
- * Clients are advised to use POST when passing large number of parameters
-   (servers MAY set a limit on their GET query string length).
+The `1.x.x` branch of this document describes the solution we ended up agreeing
+to:
+
+ * **It is distributed**. Agreements (IIAs) are stored and hosted **only** by
+   the institutions involved in these agreements. No agreements are stored on
+   central servers at any time.
+
+ * **All partners are equal**. There is no "master" of the agreement. Since all
+   partners of a single IIA are allowed to serve their copies of this IIA,
+   therefore *multiple conflicting copies of a single IIA may exist in the
+   network*. These conflicts are not resolved by the system itself, but our
+   APIs allow partners to discover such conflicts early (so that they may then
+   fix them by themselves).
+
+ * **No history of changes.** This API will serve only a single copy of the
+   agreement (with no history of previous versions). This copy should be the
+   copy which is **currently used** by the HEI which is serving the API.
+
+Also, implementing this API is *not strictly required* in order to take part in
+the EWP mobility process, but it is still RECOMMENDED:
+
+ * **Why not required?** IIA is an official document. Therefore, it seems
+   reasonable to assume that each of the partners possesses a *printed copy*
+   this document, and their computer systems are somewhat aware of the data
+   contained within, and this data is **usually** correct (in sync with the
+   partner's copy). **Other EWP APIs will refer to IIA IDs**, so all partners
+   will need to possess each-other's IIAs, but every partner MAY assume that
+   their local copy of this IIA is correct (and it **usually** is).
+
+ * **Why recommended?** Because we can do better than "usually" (see the
+   sentences above). If we expose our agreements to the other partner via an
+   API, then the partner will be able to compare the contents more easily, and
+   possibly **find conflicts** in an automated way. In the future, when new
+   agreements are forged, it might also enable the partner to copy the
+   agreement's data directly from computer system to computer system, without
+   the need of typing it by hand.
 
 
-Request parameters
-------------------
+Endpoints to be implemented
+---------------------------
 
-Parameters MUST be provided either in a query string (for GET requests), or in
-the `application/x-www-form-urlencoded` format (for POST requests).
+Server implementers MUST:
 
+ * Implement the [`get` endpoint](endpoints/get.md).
+ * Implement the [`index` endpoint](endpoints/index.md).
+ * Put the URLs of these endpoints in their [manifest file][discovery-api], as
+   described in [manifest-entry.xsd](manifest-entry.xsd).
 
-### `iia_id` (repeatable, required)
-
-A list of IIA identifiers (max 500 items) - IDs of agreements the client wants
-to retrieve information on.
-
-This parameter is *repeatable*, so the request MAY contain multiple occurrences
-of it. The server is REQUIRED to process all of them.
-
-
-Permissions
------------
-
-All requests from the EWP Network MUST be allowed access to this API. Consult
-the [Echo API][echo] specs for details on handling unprivileged requests.
-
-
-Handling of invalid parameters
-------------------------------
-
- * General [error handling rules][error-handling] apply.
-
- * Invalid (unknown) `iia_id` values MUST be ignored. Servers MUST return
-   a valid (HTTP 200) XML response in such cases, but the response will simply
-   not contain the information on the unknown `iia_id` values. (If all values
-   are unknown, servers MUST respond with an empty envelope.)
-
- * If the length of `iia_id` list is greater than 500, servers MAY respond
-   with HTTP 400. Clients SHOULD split such large requests into a couple of
-   smaller ones.
-
-
-Response
---------
-
-Servers MUST respond with a valid XML document described by the [response.xsd]
-(response.xsd) schema. See the schema annotations for further information.
+The details on each of these endpoints are described on separate pages of this
+API specification.
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
-[registry-spec]: https://github.com/erasmus-without-paper/ewp-specs-api-registry
 [discovery-api]: https://github.com/erasmus-without-paper/ewp-specs-api-discovery
 [echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
-[institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
