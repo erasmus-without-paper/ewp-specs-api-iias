@@ -51,7 +51,7 @@
 		</partner>
 		<partner>
 			<id type="uri">
-				<institution-id>??????.pl</institution-id>
+				<institution-id>uw.edu.pl</institution-id>
 			</id>
 			<cooperation-condition>
 				<academic-term>
@@ -67,7 +67,7 @@
 				</mobility-type>
 				<mobility-number>10</mobility-number>
 				<req-lang-comp>
-					<lang>en</lang>
+					<lang>EN</lang>
 					<level>5</level>
 				</req-lang-comp>
 				<eqf-level>4</eqf-level>
@@ -86,7 +86,7 @@
 				</mobility-type>
 				<mobility-number>7</mobility-number>
 				<req-lang-comp>
-					<lang>en</lang>
+					<lang>EN</lang>
 					<level>8</level>
 				</req-lang-comp>
 			</cooperation-condition>
