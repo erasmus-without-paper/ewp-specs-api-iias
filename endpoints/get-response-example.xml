@@ -5,9 +5,10 @@
         <start-date>2017-01-01T00:00:00Z</start-date>
         <end-date>2020-12-31T23:59:59Z</end-date>
         <partner>
-            <id type="uri">
+            <id>
                 <institution-id>uio.no</institution-id>
                 <!-- Wojtek's comment: Is organization-unit-id optional? -->
+                <!-- Kais comment: Yes. -->
                 <organization-unit-id>fsat.no</organization-unit-id>
             </id>
             <cooperation-condition>
@@ -16,17 +17,34 @@
                     Wojtek's comment: Is this an academic year? If so, shouldn't it
                     be 2016?
                     -->
+                    <!--
+                    Kais comment: An Academic Term is a general concept (usually a
+                    semester, trimester or such) identified by start year + term.
+                    (In this case, 2017/Spring)
+                    The academic year starting Fall 2016 would consist of 2 Academic
+                    Terms: 2016/Fall and 2017/Spring. (Non-key elements are removed,
+                    as these are references)
+                    -->
                     <year>2017</year>
                     <term xml:lang="en-us">Spring</term>
-                    <term xml:lang="no">Vår</term>
-                    <start-date>2017-01-01</start-date>
-                    <end-date>2017-06-30</end-date>
                 </academic-term>
                 <subject-area-code>03.3</subject-area-code>
                 <mobility-type>
                     <!--
                     Wojtek's comment: Are these enumerations? What are the possible
                     values?
+                    -->
+                    <!--
+                    Kais comment: I thought I had described this in an issue, but I can't find it.
+                    Mobility Type has the two components below, with the suggested values:
+                    - mobility-group = Student or Staff
+                    - mobility-category = Studies or Training
+                    Where the combinations are:
+                    - Student/Studies (self-explanatory)
+                    - Student/Training (traineeships)
+                    - Staff/Studies (teaching)
+                    - Staff/Training (training)
+                    I don't have strong opinions about the coding of these values.
                     -->
                     <mobility-group>Student</mobility-group>
                     <mobility-category>Studies</mobility-category>
@@ -42,9 +60,6 @@
                 <academic-term>
                     <year>2017</year>
                     <term xml:lang="en-us">Fall</term>
-                    <term xml:lang="no">Høst</term>
-                    <start-date>2017-07-01</start-date>
-                    <end-date>2017-12-31</end-date>
                 </academic-term>
                 <subject-area-code>12.2</subject-area-code>
                 <mobility-type>
@@ -59,15 +74,13 @@
             </cooperation-condition>
         </partner>
         <partner>
-            <id type="uri">
+            <id>
                 <institution-id>uw.edu.pl</institution-id>
             </id>
             <cooperation-condition>
                 <academic-term>
                     <year>2017</year>
                     <term xml:lang="en-us">Spring</term>
-                    <start-date>2017-01-01</start-date>
-                    <end-date>2017-06-30</end-date>
                 </academic-term>
                 <subject-area-code>07.3</subject-area-code>
                 <mobility-type>
@@ -76,7 +89,7 @@
                 </mobility-type>
                 <mobility-number>10</mobility-number>
                 <req-lang-comp>
-                    <lang>EN</lang>
+                    <lang>en</lang>
                     <level>5</level>
                 </req-lang-comp>
                 <eqf-level>4</eqf-level>
@@ -85,8 +98,6 @@
                 <academic-term>
                     <year>2017</year>
                     <term xml:lang="en-us">Fall</term>
-                    <start-date>2017-07-01</start-date>
-                    <end-date>2017-12-31</end-date>
                 </academic-term>
                 <subject-area-code>09.4</subject-area-code>
                 <mobility-type>
@@ -95,7 +106,7 @@
                 </mobility-type>
                 <mobility-number>7</mobility-number>
                 <req-lang-comp>
-                    <lang>EN</lang>
+                    <lang>en</lang>
                     <level>8</level>
                 </req-lang-comp>
             </cooperation-condition>
