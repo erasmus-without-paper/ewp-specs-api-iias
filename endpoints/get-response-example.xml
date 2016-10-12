@@ -30,8 +30,18 @@
                     2017? Also, I believe we have a bit different conventions in
                     Poland. We'd call such semester "Spring 2016/2017" since it is part
                     of the academic year which started in 2016.
-
+                    
                     I would suggest <start-date>, <end-date>, <name> (all required).
+                    -->
+                    <!--
+                    Kais comment: Ah, we have a difference in terminology:
+                    https://en.wikipedia.org/wiki/Academic_term defines an academic
+                    term to be *part of a year* (semester => semi => half year etc).
+                    The common academic year lasts for 2 terms (N Fall..N+1 Spring).
+                    
+                    As for including Start/End Date and Name: Since Academic Terms
+                    used at a HEI are defined in the Institutions/Departments APIs, I
+                    would think it was enough with a reference here (Year + Term Code)?
                     -->
                     <year>2017</year>
                     <term xml:lang="en-us">Spring</term>
@@ -59,6 +69,9 @@
                     Found it here: https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/1
                     My primary concern is wether we should allow for other (unknown) combinations for
                     future-compatibility.
+                    -->
+                    <!--
+                    Kais comment: Would there be a problem to introduce new combinations later?
                     -->
                     <mobility-group>Student</mobility-group>
                     <mobility-category>Studies</mobility-category>
