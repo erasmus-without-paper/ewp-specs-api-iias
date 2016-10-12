@@ -25,6 +25,14 @@
                     Terms: 2016/Fall and 2017/Spring. (Non-key elements are removed,
                     as these are references)
                     -->
+                    <!--
+                    Wojtek's comment: What about terms which start in 2016 and end in
+                    2017? Also, I believe we have a bit different conventions in
+                    Poland. We'd call such semester "Spring 2016/2017" since it is part
+                    of the academic year which started in 2016.
+
+                    I would suggest <start-date>, <end-date>, <name> (all required).
+                    -->
                     <year>2017</year>
                     <term xml:lang="en-us">Spring</term>
                 </academic-term>
@@ -45,6 +53,12 @@
                     - Staff/Studies (teaching)
                     - Staff/Training (training)
                     I don't have strong opinions about the coding of these values.
+                    -->
+                    <!--
+                    Wojtek's comment:
+                    Found it here: https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/1
+                    My primary concern is wether we should allow for other (unknown) combinations for
+                    future-compatibility.
                     -->
                     <mobility-group>Student</mobility-group>
                     <mobility-category>Studies</mobility-category>
