@@ -23,7 +23,7 @@
         </xs:documentation>
     </xs:annotation>
 
-    <xs:element name="response">
+    <xs:element name="iias-get-response">
         <xs:annotation>
             <xs:documentation>
                 This describes the format of the response returned by the `get` endpoint of
