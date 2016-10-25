@@ -76,6 +76,16 @@ The details on each of these endpoints are described on separate pages of this
 API specification.
 
 
+Data model entities involved in the response
+--------------------------------------------
+
+ * IIA
+ * IIA Partner
+ * Coordinator
+ * Person
+ * Cooperation Condition
+
+
 [develhub]: http://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [discovery-api]: https://github.com/erasmus-without-paper/ewp-specs-api-discovery
