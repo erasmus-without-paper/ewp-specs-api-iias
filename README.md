@@ -24,8 +24,39 @@ of how to design the functionality of synchronizing IIAs between different
 HEIs. We have proposed multiple solutions, and then rejected them, either
 because of their limited functionality, or their complexity.
 
-The `1.x.x` branch of this document describes the solution we ended up agreeing
-to:
+This document describes the solution we ended up agreeing to.
+
+
+### It is not (!) required in EWP mobility flow
+
+The most important feature to understand about this solution, is that HEIs are
+not required to neither *serve* nor *use* this API.
+
+This API is *not* part of the primary
+mobility flow modeled in EWP. You can still exchange information on
+Nominations and Learning Agreements **without** implementing this API. It
+serves *only* as a helper API to spot differences between IIAs. If you
+choose to implement it, then **you should probably implement it after all
+other APIs**.
+
+ * **Why not required?** IIA is an official document. Therefore, it seems
+   reasonable to assume that each of the partners possesses a *printed copy*
+   this document, and their computer systems are somewhat aware of the data
+   contained within, and this data is **usually** correct (in sync with the
+   partner's copy). **Other EWP APIs will refer to IIA IDs**, so all partners
+   will need to possess each-other's IIAs, but every partner MAY assume that
+   their local copy of this IIA is correct (and it **usually** is).
+
+ * **Why would I want to implement it then?** Because we can do better than
+   "usually" (see the sentences above). If we expose our agreements to the
+   other partner via an API, then the partner will be able to compare the
+   contents more easily, and possibly **find conflicts** in an automated way.
+   In the future, when new agreements are forged, it might also enable the
+   partner to copy the agreement's data directly from computer system to
+   computer system, without the need of typing it by hand.
+
+
+### Other features
 
  * **It is distributed**. Agreements (IIAs) are stored and hosted **only** by
    the institutions involved in these agreements. No agreements are stored on
@@ -41,25 +72,6 @@ to:
  * **No history of changes.** This API will serve only a single copy of the
    agreement (with no history of previous versions). This copy should be the
    copy which is **currently used** by the HEI which is serving the API.
-
-Also, implementing this API is *not strictly required* in order to take part in
-the EWP mobility process, but it is still RECOMMENDED:
-
- * **Why not required?** IIA is an official document. Therefore, it seems
-   reasonable to assume that each of the partners possesses a *printed copy*
-   this document, and their computer systems are somewhat aware of the data
-   contained within, and this data is **usually** correct (in sync with the
-   partner's copy). **Other EWP APIs will refer to IIA IDs**, so all partners
-   will need to possess each-other's IIAs, but every partner MAY assume that
-   their local copy of this IIA is correct (and it **usually** is).
-
- * **Why recommended?** Because we can do better than "usually" (see the
-   sentences above). If we expose our agreements to the other partner via an
-   API, then the partner will be able to compare the contents more easily, and
-   possibly **find conflicts** in an automated way. In the future, when new
-   agreements are forged, it might also enable the partner to copy the
-   agreement's data directly from computer system to computer system, without
-   the need of typing it by hand.
 
 
 Endpoints to be implemented
