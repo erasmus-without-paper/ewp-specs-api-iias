@@ -93,9 +93,10 @@ Data model entities involved in the response
 
  * IIA
  * IIA Partner
+ * Cooperation Condition
  * Coordinator
  * Person
- * Cooperation Condition
+ * Person Contact Info
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
