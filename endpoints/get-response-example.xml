@@ -12,15 +12,25 @@
         <partner>
             <institution-id>uio.no</institution-id>
             <!-- Optional -->
-            <organization-unit-id>fsat.no</organization-unit-id>
+            <unit-id>fsat.no</unit-id>
             <!-- Optional -->
             <local-iia-id>some_id</local-iia-id>
             <!-- Optional set of coordinators with different roles -->
-            <coordinator role="insurance">
-                <family-name>Person</family-name>
-                <given-names>Contact</given-names>
-                <email>contact.person@uio.no</email>
-                <phone>99999999</phone>
+            <coordinator>
+                <!-- Kai's comment: From Person in the model. -->
+                <first-names>John</first-names>
+                <last-name>Doe</last-name>
+                <email>john@uio.no</email>
+                <p:phone-number>
+                    <p:e164>+4723456789</p:e164>
+                </p:phone-number>
+                <role>
+                    <header>Insurance</header>
+                    <description xml:lang="en">Advising incoming students in regard to insurance.</description>
+                    <other-info>
+                        Other information, which is not present in the model itself, e.g. calling hours.
+                    </other-info>
+                </role>
             </coordinator>
             <!--
             Kai's comment:
@@ -115,12 +125,6 @@
         <partner>
             <institution-id>uw.edu.pl</institution-id>
             <!-- Optional set of coordinators with different roles -->
-            <coordinator role="visa">
-                <family-name>Person</family-name>
-                <given-names>Contact</given-names>
-                <email>contact.person@uio.no</email>
-                <phone>99999999</phone>
-            </coordinator>
             <!--
             Kai's comment: Alternative 1 - Asymmetrical Cooperation Conditions
             entails that the client/requesting Partner section doesn't have CCs.
@@ -139,7 +143,7 @@
             <partner instance="from">
                 <institution-id>uio.no</institution-id>
                 <!-- Optional -->
-                <organization-unit-id>fsat.no</organization-unit-id>
+                <unit-id>fsat.no</unit-id>
             </partner>
             <partner instance="to">
                 <institution-id>uw.edu.pl</institution-id>
@@ -168,7 +172,7 @@
             <partner instance="to">
                 <institution-id>uio.no</institution-id>
                 <!-- Optional -->
-                <organization-unit-id>fsat.no</organization-unit-id>
+                <unit-id>fsat.no</unit-id>
             </partner>
             <mobility-number variant="average">5</mobility-number>
             <duration unit="week">10</duration>
@@ -185,7 +189,7 @@
             <partner instance="from">
                 <institution-id>uio.no</institution-id>
                 <!-- Optional -->
-                <organization-unit-id>fsat.no</organization-unit-id>
+                <unit-id>fsat.no</unit-id>
             </partner>
             <partner instance="to">
                 <institution-id>uw.edu.pl</institution-id>
@@ -223,7 +227,7 @@
             <partner instance="A">
                 <institution-id>uio.no</institution-id>
                 <!-- Optional -->
-                <organization-unit-id>fsat.no</organization-unit-id>
+                <unit-id>fsat.no</unit-id>
             </partner>
             <partner instance="B">
                 <institution-id>uw.edu.pl</institution-id>
@@ -263,7 +267,7 @@
             <partner instance="A">
                 <institution-id>uio.no</institution-id>
                 <!-- Optional -->
-                <organization-unit-id>fsat.no</organization-unit-id>
+                <unit-id>fsat.no</unit-id>
             </partner>
             <partner instance="B">
                 <institution-id>uw.edu.pl</institution-id>
