@@ -96,7 +96,6 @@ Data model entities involved in the response
  * Cooperation Condition
  * Coordinator
  * Person
- * Person Contact Info
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
