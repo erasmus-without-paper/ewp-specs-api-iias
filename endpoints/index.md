@@ -9,7 +9,7 @@ Summary
 -------
 
 This endpoint allows clients to see the list of all agreements (IIAs) known to
-this EWP Host.
+a particular HEI.
 
 
 Request method

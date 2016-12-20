@@ -8,8 +8,9 @@ IIA Get endpoint
 Summary
 -------
 
-This endpoint allows the client to get the content of a single IIA. If you
-haven't read it yet, then read [the IIAs API introduction][iias-api] first.
+This endpoint allows the client to get the content of a specific IIAs (by their
+IDs). If you haven't read it yet, then read [the IIAs API introduction]
+[iias-api] first.
 
 
 Request method
@@ -31,16 +32,22 @@ the `application/x-www-form-urlencoded` format (for POST requests).
 
 ### `hei_id` (required)
 
-Identifier of the HEI which we want to fetch the IIA from.
+Identifier of the HEI to fetch the IIA from. (This HEI also needs to be one of
+the IIA's partners.)
 
 This parameter is required, because one EWP Host may cover multiple HEIs, and
-IIA IDs are *not* universally unique by themselves.
+IIA IDs are *not* universally unique by themselves. Also note, that it is
+theoretically possible for one EWP Host (covering multiple HEIs) to serve two
+conflicting copies of a single IIA (as, per spec, each HEI can have a copy of
+its own).
 
 
 ### `iia_id` (repeatable, required)
 
-A list of IIA identifiers (no more than `<max-iia-ids>` items) - IDs of
-agreements the client wants to retrieve information on.
+A list of local IIA identifiers (no more than `<max-iia-ids>` items) - IDs of
+agreements the client wants to retrieve information on. HEI identified by the
+`hei_id` parameter needs to be one of the partners of all the referenced IIAs
+(otherwise, IIA won't be found).
 
 This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.

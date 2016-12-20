@@ -1,0 +1,15 @@
+<iias-index-response
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/endpoints/index-response.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/endpoints/index-response.xsd
+        index-response.xsd
+    "
+>
+    <!-- WRTODO: Make schemaLocation absolute -->
+
+    <iia-id>983/E+/III14&amp;15</iia-id>
+    <iia-id>2015/NO/147</iia-id>
+    <iia-id>58998123</iia-id>
+    <iia-id>36bb0e3f-39ad-4f26-b2cb-41f707e7e297</iia-id>
+</iias-index-response>

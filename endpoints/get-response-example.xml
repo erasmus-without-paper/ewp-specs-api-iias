@@ -1,293 +1,160 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<iias-get-response xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/endpoints/get-response.xsd get-response.xsd" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/endpoints/get-response.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<iias-get-response
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/endpoints/get-response.xsd"
+    xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/master"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/endpoints/get-response.xsd
+        get-response.xsd
+    "
+>
+    <!-- WRTODO: Make schemaLocation absolute -->
+
+    <!--
+    IMPORTANT: Please see the response.xsd file for detailed requirements and
+    descriptions of all the elements. You MUST NOT base your implementation
+    solely on the example file.
+    -->
     <iia>
-        <iia-id>some_id</iia-id>
-        <start-date>2016-01-01</start-date>
-        <end-date>2018-12-31</end-date>
-        <last-modified-date>2016-07-01</last-modified-date>
         <!--
-        Kai's comment:
-        See https://github.com/erasmus-without-paper/ewp-wp3-data-model/issues/6
+        General reminder: All EWP IDs MAY contain characters which require proper
+        encoding based on context. E.g. the "&" character needs to be encoded as %26 in
+        the request URL ("/" and "+" characters would be encoded too), but in XML "&"
+        will be encoded as "&amp;". (This is part of the URI and XML specifications,
+        which every EWP developer should be familiar with.)
         -->
-        <partner>
-            <institution-id>uio.no</institution-id>
-            <!-- Optional -->
-            <unit-id>fsat.no</unit-id>
-            <!-- Optional -->
-            <local-iia-id>some_id</local-iia-id>
-            <!-- Optional set of coordinators with different roles -->
-            <coordinator>
-                <!-- Kai's comment: From Person in the model. -->
-                <first-names>John</first-names>
-                <last-name>Doe</last-name>
-                <email>john@uio.no</email>
-                <p:phone-number>
-                    <p:e164>+4723456789</p:e164>
-                </p:phone-number>
-                <role>
-                    <header>Insurance</header>
-                    <description xml:lang="en">Advising incoming students in regard to insurance.</description>
-                    <other-info>
-                        Other information, which is not present in the model itself, e.g. calling hours.
-                    </other-info>
-                </role>
-            </coordinator>
-            <!--
-            Kai's comment:
-            Alternative 1 - Asymmetrical Cooperation Conditions.
-            This entails the structural problem that only the server/responding Partner
-            section will contain CC in a given response (in this case, UiO).
-            -->
-            <cooperation-condition>
-                <!--
-                Kai's comment: Mandatory for agreements with > 2 partners.
-                -->
-                <other-partner>
-                    <institution-id>uw.edu.pl</institution-id>
-                </other-partner>
-                <mobility-type>
-                    <!--
-                    Kai's comment:
-                    Mobility Type has the two components below, with the suggested values:
-                    - mobility-group = Student or Staff
-                    - mobility-category = Studies or Training
-                    Where the combinations are:
-                    - Student/Studies (self-explanatory)
-                    - Student/Training (traineeships)
-                    - Staff/Studies (teaching)
-                    - Staff/Training (training)
-                    I don't have strong opinions about the coding of these values.
-                    -->
-                    <!--
-                    Wojtek's comment:
-                    Found it here: https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/1
-                    My primary concern is wether we should allow for other (unknown) combinations for
-                    future-compatibility.
-                    -->
-                    <!--
-                    Kai's comment: Would there be a problem to introduce new combinations later?
-                    -->
-                    <mobility-group>Student</mobility-group>
-                    <mobility-category>Studies</mobility-category>
-                </mobility-type>
-                <start-date>2016-01-01</start-date>
-                <end-date>2017-12-31</end-date>
-                <outgoing>
-                    <mobility-number variant="average">3</mobility-number>
-                    <duration unit="week">8</duration>
-                    <eqf-level>5</eqf-level>
-                    <!-- Optional -->
-                    <isced-code>0411</isced-code>
-                    <!-- Optional -->
-                    <req-lang-comp>
-                        <lang>en</lang>
-                        <level>4</level>
-                    </req-lang-comp>
-                </outgoing>
-                <incoming>
-                    <mobility-number variant="average">5</mobility-number>
-                    <duration unit="week">10</duration>
-                    <eqf-level>5</eqf-level>
-                    <!-- Optional -->
-                    <isced-code>0215</isced-code>
-                    <!-- Optional -->
-                    <req-lang-comp>
-                        <lang>en</lang>
-                        <level>3</level>
-                    </req-lang-comp>
-                </incoming>
-            </cooperation-condition>
-            <cooperation-condition>
-                <!--
-                Kai's comment: Mandatory for agreements with > 2 partners.
-                -->
-                <other-partner>
-                    <institution-id>uw.edu.pl</institution-id>
-                </other-partner>
-                <mobility-type>
-                    <mobility-group>Staff</mobility-group>
-                    <mobility-category>Training</mobility-category>
-                </mobility-type>
-                <start-date>2016-01-01</start-date>
-                <end-date>2017-12-31</end-date>
-                <outgoing>
-                    <mobility-number variant="total">3</mobility-number>
-                    <duration unit="hours">40</duration>
-                    <eqf-level>5</eqf-level>
-                </outgoing>
-                <incoming>
-                    <mobility-number variant="total">2</mobility-number>
-                    <duration unit="hours">50</duration>
-                    <eqf-level>5</eqf-level>
-                </incoming>
-            </cooperation-condition>
-        </partner>
-        <partner>
-            <institution-id>uw.edu.pl</institution-id>
-            <!-- Optional set of coordinators with different roles -->
-            <!--
-            Kai's comment: Alternative 1 - Asymmetrical Cooperation Conditions
-            entails that the client/requesting Partner section doesn't have CCs.
-            -->
-        </partner>
-        <!--
-        Kai's comment: Alternative 2 - Symmetrical Cooperation Conditions.
-        This is a better structure, in my opinion.
-        -->
-        <!--
-        Kai's comment: Alternative 2a - Normalized.
-        Pros:
-        - It conforms most closely to the conceptual model
-        -->
-        <cooperation-condition>
-            <partner instance="from">
-                <institution-id>uio.no</institution-id>
-                <!-- Optional -->
-                <unit-id>fsat.no</unit-id>
-            </partner>
-            <partner instance="to">
-                <institution-id>uw.edu.pl</institution-id>
-            </partner>
-            <mobility-type>
-                <mobility-group>Student</mobility-group>
-                <mobility-category>Studies</mobility-category>
-            </mobility-type>
-            <start-date>2016-01-01</start-date>
-            <end-date>2017-12-31</end-date>
-            <mobility-number variant="average">3</mobility-number>
-            <duration unit="week">8</duration>
-            <eqf-level>5</eqf-level>
-            <!-- Optional -->
-            <isced-code>0411</isced-code>
-            <!-- Optional -->
-            <req-lang-comp>
-                <lang>en</lang>
-                <level>4</level>
-            </req-lang-comp>
-        </cooperation-condition>
-        <cooperation-condition>
-            <partner instance="from">
-                <institution-id>uw.edu.pl</institution-id>
-            </partner>
-            <partner instance="to">
-                <institution-id>uio.no</institution-id>
-                <!-- Optional -->
-                <unit-id>fsat.no</unit-id>
-            </partner>
-            <mobility-number variant="average">5</mobility-number>
-            <duration unit="week">10</duration>
-            <eqf-level>5</eqf-level>
-            <!-- Optional -->
-            <isced-code>0215</isced-code>
-            <!-- Optional -->
-            <req-lang-comp>
-                <lang>en</lang>
-                <level>3</level>
-            </req-lang-comp>
-        </cooperation-condition>
-        <cooperation-condition>
-            <partner instance="from">
-                <institution-id>uio.no</institution-id>
-                <!-- Optional -->
-                <unit-id>fsat.no</unit-id>
-            </partner>
-            <partner instance="to">
-                <institution-id>uw.edu.pl</institution-id>
-            </partner>
-            <mobility-type>
-                <mobility-group>Staff</mobility-group>
-                <mobility-category>Training</mobility-category>
-            </mobility-type>
-            <start-date>2016-01-01</start-date>
-            <end-date>2017-12-31</end-date>
-            <mobility-number variant="total">3</mobility-number>
-            <duration unit="hours">40</duration>
-            <eqf-level>5</eqf-level>
-        </cooperation-condition>
-        <cooperation-condition>
-            <mobility-type>
-                <mobility-group>Staff</mobility-group>
-                <mobility-category>Training</mobility-category>
-            </mobility-type>
-            <start-date>2016-01-01</start-date>
-            <end-date>2017-12-31</end-date>
-            <mobility-number variant="total">2</mobility-number>
-            <duration unit="hours">50</duration>
-            <eqf-level>5</eqf-level>
-        </cooperation-condition>
-        <!--
-        Kai's comment: Alternative 2b - Denormalized.
-        Pros:
-        - It minimizes duplication
-        - It highlights the fact that "direction" is special:
-          There should exist "mirror" conditions for the same values in the rest of the key attributes
-          (Mobility Type, Start/End Date)
-        -->
-        <cooperation-condition>
-            <partner instance="A">
-                <institution-id>uio.no</institution-id>
-                <!-- Optional -->
-                <unit-id>fsat.no</unit-id>
-            </partner>
-            <partner instance="B">
-                <institution-id>uw.edu.pl</institution-id>
-            </partner>
-            <mobility-type>
-                <mobility-group>Student</mobility-group>
-                <mobility-category>Studies</mobility-category>
-            </mobility-type>
-            <start-date>2016-01-01</start-date>
-            <end-date>2017-12-31</end-date>
-            <direction from="A" to="B">
-                <mobility-number variant="average">3</mobility-number>
-                <duration unit="week">8</duration>
-                <eqf-level>5</eqf-level>
-                <!-- Optional -->
-                <isced-code>0411</isced-code>
-                <!-- Optional -->
-                <req-lang-comp>
-                    <lang>en</lang>
-                    <level>4</level>
-                </req-lang-comp>
-            </direction>
-            <direction from="B" to="A">
-                <mobility-number variant="average">5</mobility-number>
-                <duration unit="week">10</duration>
-                <eqf-level>5</eqf-level>
-                <!-- Optional -->
-                <isced-code>0215</isced-code>
-                <!-- Optional -->
-                <req-lang-comp>
-                    <lang>en</lang>
-                    <level>3</level>
-                </req-lang-comp>
-            </direction>
-        </cooperation-condition>
-        <cooperation-condition>
-            <partner instance="A">
-                <institution-id>uio.no</institution-id>
-                <!-- Optional -->
-                <unit-id>fsat.no</unit-id>
-            </partner>
-            <partner instance="B">
-                <institution-id>uw.edu.pl</institution-id>
-            </partner>
-            <mobility-type>
-                <mobility-group>Staff</mobility-group>
-                <mobility-category>Training</mobility-category>
-            </mobility-type>
-            <start-date>2016-01-01</start-date>
-            <end-date>2017-12-31</end-date>
-            <direction from="A" to="B">
-                <mobility-number variant="total">3</mobility-number>
-                <duration unit="hours">40</duration>
-                <eqf-level>5</eqf-level>
-            </direction>
-            <direction from="B" to="A">
-                <mobility-number variant="total">2</mobility-number>
-                <duration unit="hours">50</duration>
-                <eqf-level>5</eqf-level>
-            </direction>
-        </cooperation-condition>
+        <iia-id>983/E+/III14&amp;15</iia-id>
+        <signing-contact>
+            <c:contact-name>Sylwia Salomon</c:contact-name>
+            <c:email>email@example.com</c:email>
+            <!-- All other Abstract Contact fields are allowed too (including the role
+            description). -->
+        </signing-contact>
+        <c:contact>
+            <c:contact-name>Jadwiga Królikowska</c:contact-name>
+            <c:email>email@example.com</c:email>
+        </c:contact>
+        <partner-hei>
+            <hei-id>hibo.no</hei-id>
+            <!-- Optional remote iia-id goes here, if known. -->
+            <signing-contact>
+                <c:contact-name>Monica Brobakk</c:contact-name>
+                <c:email>email@example.com</c:email>
+            </signing-contact>
+            <!-- Optional other remote contacts go here, if known. -->
+        </partner-hei>
+        <in-effect>true</in-effect>
+        <start-date>2014-06-01</start-date>
+        <end-date>2021-09-30</end-date>
+        <cooperation-conditions>
+
+            <!-- Student mobility for studies. -->
+            <student-studies-mobility-spec>
+                <sending-hei-id>uw.edu.pl</sending-hei-id>
+                <sending-ounit-id>34010000</sending-ounit-id>
+                <!-- Optional sending-contact elements go here (if supported by the
+                server at this level). -->
+                <receiving-hei-id>hibo.no</receiving-hei-id>
+                <!-- Optional receiving-contact elements go here (if supported by the
+                server at this level). -->
+                <receiving-academic-year-id>2014/2015</receiving-academic-year-id>
+                <receiving-academic-year-id>2015/2016</receiving-academic-year-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <receiving-academic-year-id>2018/2019</receiving-academic-year-id>
+                <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
+                <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>en</language>
+                    <cefr-level>B1</cefr-level>
+                </recommended-language-skill>
+                <recommended-language-skill>
+                    <language>no</language>
+                    <cefr-level>B1</cefr-level>
+                </recommended-language-skill>
+                <isced-code>0314</isced-code>
+                <avg-months>5</avg-months>
+                <!-- At least one eqf-level is required for "mobility for studies". -->
+                <eqf-level>7</eqf-level>
+                <eqf-level>8</eqf-level>
+            </student-studies-mobility-spec>
+
+            <!-- Student mobility for traineeships. -->
+            <student-traineeship-mobility-spec>
+                <sending-hei-id>uw.edu.pl</sending-hei-id>
+                <sending-ounit-id>34010000</sending-ounit-id>
+                <receiving-hei-id>hibo.no</receiving-hei-id>
+                <receiving-academic-year-id>2014/2015</receiving-academic-year-id>
+                <receiving-academic-year-id>2015/2016</receiving-academic-year-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <receiving-academic-year-id>2018/2019</receiving-academic-year-id>
+                <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
+                <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
+                <mobilities-per-year>10</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>no</language>
+                    <cefr-level>B1</cefr-level>
+                </recommended-language-skill>
+                <isced-code>0314</isced-code>
+                <avg-months>10</avg-months>
+                <!-- No eqf-level for traineeships. -->
+            </student-traineeship-mobility-spec>
+
+            <!-- Staff mobility for teaching. -->
+            <staff-teacher-mobility-spec>
+                <sending-hei-id>uw.edu.pl</sending-hei-id>
+                <sending-ounit-id>34010000</sending-ounit-id>
+                <receiving-hei-id>hibo.no</receiving-hei-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>en</language>
+                    <cefr-level>C1</cefr-level>
+                </recommended-language-skill>
+                <isced-code>0314</isced-code>
+                <!-- Staff mobilities have days instead of months. -->
+                <avg-days>14</avg-days>
+            </staff-teacher-mobility-spec>
+            <staff-teacher-mobility-spec>
+                <!-- Every specification describes a unidirectional mobility. If students or
+                staff members are exchanged in both directions, two specifications are provided.
+                (The same is true for every other *-mobility-spec element.) -->
+                <sending-hei-id>hibo.no</sending-hei-id>
+                <receiving-hei-id>uw.edu.pl</receiving-hei-id>
+                <receiving-ounit-id>34010000</receiving-ounit-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>en</language>
+                    <cefr-level>C1</cefr-level>
+                </recommended-language-skill>
+                <isced-code>0314</isced-code>
+                <avg-days>14</avg-days>
+            </staff-teacher-mobility-spec>
+
+            <!-- Staff mobility for training. -->
+            <staff-training-mobility-spec>
+                <sending-hei-id>hibo.no</sending-hei-id>
+                <receiving-hei-id>uw.edu.pl</receiving-hei-id>
+                <receiving-ounit-id>34010000</receiving-ounit-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>en</language>
+                    <cefr-level>B2</cefr-level>
+                </recommended-language-skill>
+                <isced-code>0314</isced-code>
+                <avg-days>14</avg-days>
+            </staff-training-mobility-spec>
+        </cooperation-conditions>
     </iia>
+
+    <!-- More than one IIA can be returned in one response. We have only one here,
+    to keep it simple. -->
+
 </iias-get-response>

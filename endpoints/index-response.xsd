@@ -25,38 +25,17 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="iia-ref" minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="iia-id" type="xs:string" minOccurs="0" maxOccurs="unbounded">
                     <xs:annotation>
                         <xs:documentation>
-                            In order for the response to stay small, this API responds with a very limited
-                            set of data.
+                            The list of local IIA IDs (results for the client's query). Each of those
+                            identifiers can be used to access a single IIA via the `get` endpoint of
+                            the IIAs API.
 
-                            If more data on matched agreements is required by the clients, then an
-                            additional request to the Interinstitutional Agreements API will be
-                            required.
+                            "Local ID" means the IIA ID used by the HEI referred to in the `hei_id` request
+                            parameter.
                         </xs:documentation>
                     </xs:annotation>
-                    <xs:complexType>
-                        <xs:attribute name="id" type="xs:string" use="required">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    ID of the matched IIA.
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:attribute>
-                        <xs:attribute name="last-modified" type="xs:dateTime" use="required">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    Indicates when this agreement has been last modified.
-
-                                    This attribute allows this endpoint to be used for synchronization (as an
-                                    alternative to CNR APIs). Clients MUST be aware that server's clock might be a
-                                    bit off. Server implementers MUST make sure that their clock if off by no more
-                                    than a value of 5 minutes.
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:attribute>
-                    </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
