@@ -368,7 +368,7 @@
                 </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="language" type="xs:language">
+                        <xs:element name="language" type="xs:language" minOccurs="1" maxOccurs="1">
                             <xs:annotation>
                                 <xs:documentation>
                                     The code of the language which the student (or staff member) is recommended to be
@@ -478,12 +478,10 @@
             <xs:complexContent>
                 <xs:extension base="StudentMobilitySpecification">
                     <xs:sequence>
-                        <xs:element name="eqf-level" type="xs:positiveInteger" minOccurs="1" maxOccurs="unbounded">
+                        <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="1" maxOccurs="unbounded">
                             <xs:annotation>
                                 <xs:documentation>
-                                    A list of allowed study levels of the students being sent (e.g. Bachelor is
-                                    6, Master is 7, and Doctorate is 8).
-                                    https://en.wikipedia.org/wiki/European_Qualifications_Framework
+                                    A list of allowed study levels of the students being sent.
 
                                     (If a particular student's level is not listed here, then this student should
                                     not be able to apply for this mobility.)
