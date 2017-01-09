@@ -66,7 +66,7 @@
                     <language>no</language>
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
-                <isced-code>0314</isced-code>
+                <isced-f-code>0314</isced-f-code>
                 <avg-months>5</avg-months>
                 <!-- At least one eqf-level is required for "mobility for studies". -->
                 <eqf-level>7</eqf-level>
@@ -90,7 +90,7 @@
                     <language>no</language>
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
-                <isced-code>0314</isced-code>
+                <isced-f-code>0314</isced-f-code>
                 <avg-months>10</avg-months>
                 <!-- No eqf-level for traineeships. -->
             </student-traineeship-mobility-spec>
@@ -107,7 +107,7 @@
                     <language>en</language>
                     <cefr-level>C1</cefr-level>
                 </recommended-language-skill>
-                <isced-code>0314</isced-code>
+                <isced-f-code>0314</isced-f-code>
                 <!-- Staff mobilities have days instead of months. -->
                 <avg-days>14</avg-days>
             </staff-teacher-mobility-spec>
@@ -125,7 +125,7 @@
                     <language>en</language>
                     <cefr-level>C1</cefr-level>
                 </recommended-language-skill>
-                <isced-code>0314</isced-code>
+                <isced-f-code>0314</isced-f-code>
                 <avg-days>14</avg-days>
             </staff-teacher-mobility-spec>
 
@@ -141,7 +141,7 @@
                     <language>en</language>
                     <cefr-level>B2</cefr-level>
                 </recommended-language-skill>
-                <isced-code>0314</isced-code>
+                <isced-f-code>0314</isced-f-code>
                 <avg-days>14</avg-days>
             </staff-training-mobility-spec>
         </cooperation-conditions>
