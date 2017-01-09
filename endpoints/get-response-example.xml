@@ -16,14 +16,7 @@
     solely on the example file.
     -->
     <iia>
-        <!--
-        General reminder: All EWP IDs MAY contain characters which require proper
-        encoding based on context. E.g. the "&" character needs to be encoded as %26 in
-        the request URL ("/" and "+" characters would be encoded too), but in XML "&"
-        will be encoded as "&amp;". (This is part of the URI and XML specifications,
-        which every EWP developer should be familiar with.)
-        -->
-        <iia-id>983/E+/III14&amp;15</iia-id>
+        <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
         <signing-contact>
             <c:contact-name>Sylwia Salomon</c:contact-name>
             <c:email>email@example.com</c:email>
@@ -51,7 +44,7 @@
             <!-- Student mobility for studies. -->
             <student-studies-mobility-spec>
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
-                <sending-ounit-id>34010000</sending-ounit-id>
+                <sending-ounit-id>140</sending-ounit-id>
                 <!-- Optional sending-contact elements go here (if supported by the
                 server at this level). -->
                 <receiving-hei-id>hibo.no</receiving-hei-id>
@@ -83,7 +76,7 @@
             <!-- Student mobility for traineeships. -->
             <student-traineeship-mobility-spec>
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
-                <sending-ounit-id>34010000</sending-ounit-id>
+                <sending-ounit-id>140</sending-ounit-id>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
                 <receiving-academic-year-id>2014/2015</receiving-academic-year-id>
                 <receiving-academic-year-id>2015/2016</receiving-academic-year-id>
@@ -105,7 +98,7 @@
             <!-- Staff mobility for teaching. -->
             <staff-teacher-mobility-spec>
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
-                <sending-ounit-id>34010000</sending-ounit-id>
+                <sending-ounit-id>140</sending-ounit-id>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
                 <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
                 <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
@@ -124,7 +117,7 @@
                 (The same is true for every other *-mobility-spec element.) -->
                 <sending-hei-id>hibo.no</sending-hei-id>
                 <receiving-hei-id>uw.edu.pl</receiving-hei-id>
-                <receiving-ounit-id>34010000</receiving-ounit-id>
+                <receiving-ounit-id>140</receiving-ounit-id>
                 <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
                 <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
                 <mobilities-per-year>2</mobilities-per-year>
@@ -140,7 +133,7 @@
             <staff-training-mobility-spec>
                 <sending-hei-id>hibo.no</sending-hei-id>
                 <receiving-hei-id>uw.edu.pl</receiving-hei-id>
-                <receiving-ounit-id>34010000</receiving-ounit-id>
+                <receiving-ounit-id>140</receiving-ounit-id>
                 <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
                 <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
                 <mobilities-per-year>2</mobilities-per-year>
