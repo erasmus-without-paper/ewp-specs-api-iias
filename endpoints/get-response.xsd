@@ -56,11 +56,33 @@
                             <xs:element name="iia-id" type="xs:string" minOccurs="1" maxOccurs="1">
                                 <xs:annotation>
                                     <xs:documentation>
-                                        This is the *local* ID of this IIA. It is always equal to one of the values
-                                        passed in the `iia_id` request parameter.
+                                        This is the *local* unique identifier of this IIA. It is always equal to one of
+                                        the values passed in the `iia_id` request parameter. It SHOULD NOT be displayed
+                                        to the user (use `iia-code` for that).
 
-                                        "Local ID" means the IIA ID used by the HEI referred to in the `hei_id` request
-                                        parameter.
+                                        Server implementers SHOULD use immutable surrogate keys for their work with EWP
+                                        (we recommend choosing UUID surrogate keys). Avoid using natural/business keys!
+
+                                        Related links:
+                                        https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
+                                        https://en.wikipedia.org/wiki/Surrogate_key
+                                        https://en.wikipedia.org/wiki/Natural_key
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="iia-code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Since `iia-id` values should contain surrogate identifiers (and, as such,
+                                        should not be displayed to the user), we require additional "human readable"
+                                        agreement codes/numbers to be provided here. These codes SHOULD be displayed to
+                                        the user, and they MAY be used for searching, but they are *not used* to
+                                        directly identify entities in EWP network.
+
+                                        Related links:
+                                        https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
+                                        https://en.wikipedia.org/wiki/Surrogate_key
+                                        https://en.wikipedia.org/wiki/Natural_key
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
@@ -108,11 +130,20 @@
                                         <xs:element name="iia-id" type="xs:string" minOccurs="0" maxOccurs="1">
                                             <xs:annotation>
                                                 <xs:documentation>
-                                                    The partner's ID of this IIA.
+                                                    The partner's surrogate ID of this IIA. SHOULD NOT be displayed to the user.
 
                                                     Since IIA IDs are local (unique within a single HEI, but not within the world),
                                                     each partner is allowed to have his own ID for the same IIA. If this server is
                                                     aware of the IDs used by the other partners, then it outputs it here.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="iia-code" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    The partner's "human readable" ID of this IIA (aka an agreement number). If
+                                                    this server is aware of the agreement numbers used by the other partners, then
+                                                    it outputs it here. These numbers MAY be displayed to the users.
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
