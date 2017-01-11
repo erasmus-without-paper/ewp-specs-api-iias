@@ -173,9 +173,12 @@
                             <xs:element name="in-effect" minOccurs="1" maxOccurs="1" type="xs:boolean">
                                 <xs:annotation>
                                     <xs:documentation>
-                                        Boolean. True, if this IIA is in effect - that is, it has been signed, and the
-                                        partners are currently following its rules. False, if this IIA is a draft or
-                                        proposal only.
+                                        Boolean. True, if this IIA *is* or *once was* in effect - that is, it has been
+                                        signed, and the partners are (or were) following its rules. False, if this IIA
+                                        is a draft or proposal only (and it hasn't been agreed on).
+
+                                        This flag allows to differentiate between actual agreements, and the *proposed*
+                                        agreements. (IIAs API allows to peek on both.)
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
