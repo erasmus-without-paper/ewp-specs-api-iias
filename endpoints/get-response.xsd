@@ -94,6 +94,18 @@
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
+                            <xs:element name="signing-date" type="xs:date" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The date when the agreement has been first signed, by the *local* institutional
+                                        coordinator. Given only if the server stores this information.
+
+                                        Note, that agreements are often modified *after* they were signed. These
+                                        modifications don't usually require official signatures, though. This date
+                                        refers to the "first signing" only.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                             <xs:element ref="c:contact" minOccurs="0" maxOccurs="unbounded">
                                 <xs:annotation>
                                     <xs:documentation>
@@ -154,6 +166,16 @@
                                                     for this IIA. If this server keeps data related to remote coordinators, then it
                                                     outputs it here. (This is the remote equivalent of the local signing-contact
                                                     introduced above.)
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="signing-date" type="xs:date" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    The date when the agreement has been first signed by the *partner's*
+                                                    institutional coordinator. If this server keeps data related to remote
+                                                    coordinators, then it outputs it here. (This is the remote equivalent of the
+                                                    local signing-date introduced above.)
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
