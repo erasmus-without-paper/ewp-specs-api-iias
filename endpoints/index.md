@@ -31,10 +31,23 @@ the `application/x-www-form-urlencoded` format (for POST requests).
 
 ### `hei_id` (required)
 
-Identifier of the HEI which we want to fetch the IIA from.
+Identifier of the HEI which we want to fetch the list of IIAs from.
 
-This parameter is required, because one EWP Host may cover multiple HEIs, and
-IIA IDs are *not* universally unique by themselves.
+
+### `receiving_academic_year_id` (optional, repeatable)
+
+If given, then the server SHOULD limit the list of returned IIA IDs to only
+such, which are valid in at least one of the given academic years.
+
+In other words, if we are called with the following parameters:
+
+```
+hei_id=any&receiving_academic_year_id=2005/2006&receiving_academic_year_id=2006/2007
+```
+
+Then, if an agreement `A` doesn't contain at least one of these academic years
+in the `<receiving-academic-year-id>` lists in any of its cooperation
+conditions, then `A` SHOULD NOT be included in the response.
 
 
 Permissions
