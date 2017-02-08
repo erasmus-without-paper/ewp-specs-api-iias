@@ -53,100 +53,23 @@
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="hei-id" type="xs:string" minOccurs="1" maxOccurs="1">
+                            <xs:element name="partner" minOccurs="2" maxOccurs="unbounded">
                                 <xs:annotation>
                                     <xs:documentation>
-                                        The ID of the serving HEI. This is always equal to the value passed in the
-                                        `hei_id` request parameter, so it's a bit redundant, but we are including it
-                                        here for consistency.
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element name="ounit-id" type="xs:string" minOccurs="0" maxOccurs="1">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        Optional organizational unit ID. If given, then it refers to the unit within
-                                        the *local* HEI's organizational structure, which is the actual partner of this
-                                        agreement. Agreements can be signed between units, not only between HEIs:
-                                        https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/11
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element name="iia-id" type="xs:string" minOccurs="1" maxOccurs="1">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        This is the *local* unique identifier of this IIA. It is always equal to one of
-                                        the values passed in the `iia_id` request parameter. It SHOULD NOT be displayed
-                                        to the user (use `iia-code` for that).
+                                        A list of HEIs participating in this IIA.
 
-                                        Server implementers SHOULD use immutable surrogate keys for their work with EWP
-                                        (we recommend choosing UUID surrogate keys). Avoid using natural/business keys!
+                                        This list includes the local HEI which MUST be the first element on this list.
+                                        In other words:
 
-                                        Related links:
-                                        https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
-                                        https://en.wikipedia.org/wiki/Surrogate_key
-                                        https://en.wikipedia.org/wiki/Natural_key
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element name="iia-code" type="xs:string" minOccurs="1" maxOccurs="1">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        Since `iia-id` values should contain surrogate identifiers (and, as such,
-                                        should not be displayed to the user), we require additional "human readable"
-                                        agreement codes/numbers to be provided here. These codes SHOULD be displayed to
-                                        the user, and they MAY be used for searching, but they are *not used* to
-                                        directly identify entities in EWP network.
+                                        * The value of `hei-id` of the first `partner` MUST match the value passed in
+                                          the `hei_id` request parameter,
 
-                                        Related links:
-                                        https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
-                                        https://en.wikipedia.org/wiki/Surrogate_key
-                                        https://en.wikipedia.org/wiki/Natural_key
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element name="signing-contact" type="c:Contact" minOccurs="0" maxOccurs="1">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        This describes that person who acts as the *local* institutional coordinator for
-                                        this IIA. This is the person who signs the agreement.
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element name="signing-date" type="xs:date" minOccurs="0" maxOccurs="1">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        The date when the agreement has been first signed, by the *local* institutional
-                                        coordinator. Given only if the server stores this information.
+                                        * Both `iia-id` and `iia-code` elements MUST be present in the first `partner`
+                                          element (even though it's not required by the schema itself), and `iia-id`
+                                          MUST match one of the values passed in the `iia_id` request parameter.
 
-                                        Note, that agreements are often modified *after* they were signed. These
-                                        modifications don't usually require official signatures, though. This date
-                                        refers to the "first signing" only.
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element ref="c:contact" minOccurs="0" maxOccurs="unbounded">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        A list of other *local* contacts related to this IIA (or to mobilities related
-                                        to this IIA).
-
-                                        Not all servers provide these! Many HEIs (especially the smaller ones) don't
-                                        granulate their contacts in such a detailed way. Instead, they have a fixed set
-                                        of contacts described in their Institutions API.
-
-                                        These contacts take precedence over contacts defined in the Institutions API.
-                                        Clients are advised to display these contacts in a separate section above other
-                                        contacts - so that the users will notice them first (before scrolling down to
-                                        other, more generic contacts).
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element name="partner" minOccurs="1" maxOccurs="unbounded">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        A list of *other* HEIs participating in this IIA. This list does not include the
-                                        local HEI.
+                                        * The server will usually fill much more data for the first `partner`, and the
+                                          data on all other partners will be often much more limited.
                                     </xs:documentation>
                                 </xs:annotation>
                                 <xs:complexType>
@@ -172,25 +95,36 @@
                                         <xs:element name="ounit-id" type="xs:string" minOccurs="0" maxOccurs="1">
                                             <xs:annotation>
                                                 <xs:documentation>
-                                                    Optional organizational unit ID. If given, then it refers to the unit within
-                                                    the partner HEI's organizational structure, which is the actual partner of this
-                                                    agreement. Agreements can be signed between units, not only between HEIs:
-                                                    https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/11
+                                                    Optional organizational unit surrogate ID. If given, then it refers to the unit
+                                                    within the partner HEI's organizational structure, which is the actual partner
+                                                    of this agreement. Agreements can be signed between units, not only between
+                                                    HEIs: https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/11
 
-                                                    If provided, then it MUST have the value of the "external" ounit-id, exactly as
+                                                    If provided, then it MUST have the value of the "official" ounit-id, exactly as
                                                     it has been assigned by the *partner HEI* in its Organizational Units API. If
-                                                    this external ID is not known by the server, then this element MUST be skipped.
+                                                    this official ID is not known by the server (and it often isn't), then this
+                                                    element MUST be skipped. This is a surrogate ID, so it SHOULD NOT be displayed
+                                                    to the user (use `ounit-code` for that).
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
                                         <xs:element name="iia-id" type="xs:string" minOccurs="0" maxOccurs="1">
                                             <xs:annotation>
                                                 <xs:documentation>
-                                                    The partner's surrogate ID of this IIA. SHOULD NOT be displayed to the user.
+                                                    The partner's unique surrogate ID of this IIA. This is a surrogate ID, so it
+                                                    SHOULD NOT be displayed to the user (use `iia-code` for that).
 
                                                     Since IIA IDs are local (unique within a single HEI, but not within the world),
                                                     each partner is allowed to have his own ID for the same IIA. If this server is
                                                     aware of the IDs used by the other partners, then it outputs it here.
+
+                                                    Server implementers SHOULD use immutable surrogate keys for their work with EWP
+                                                    (we recommend choosing UUID surrogate keys). Avoid using natural/business keys!
+
+                                                    Related links:
+                                                    https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
+                                                    https://en.wikipedia.org/wiki/Surrogate_key
+                                                    https://en.wikipedia.org/wiki/Natural_key
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
@@ -199,7 +133,18 @@
                                                 <xs:documentation>
                                                     The partner's "human readable" ID of this IIA (aka an agreement number). If
                                                     this server is aware of the agreement numbers used by the other partners, then
-                                                    it outputs it here. These numbers MAY be displayed to the users.
+                                                    it outputs it here.
+
+                                                    Since `iia-id` values should contain surrogate identifiers (and, as such,
+                                                    should not be displayed to the user), we require additional "human readable"
+                                                    agreement codes/numbers to be provided here. These codes SHOULD be displayed to
+                                                    the user, and they MAY be used for searching, but they are *not used* to
+                                                    directly identify entities in EWP network.
+
+                                                    Related links:
+                                                    https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
+                                                    https://en.wikipedia.org/wiki/Surrogate_key
+                                                    https://en.wikipedia.org/wiki/Natural_key
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
@@ -207,9 +152,7 @@
                                             <xs:annotation>
                                                 <xs:documentation>
                                                     This describes that person who acts as the partner's institutional coordinator
-                                                    for this IIA. If this server keeps data related to remote coordinators, then it
-                                                    outputs it here. (This is the remote equivalent of the local signing-contact
-                                                    introduced above.)
+                                                    for this IIA (if known).
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
@@ -217,9 +160,11 @@
                                             <xs:annotation>
                                                 <xs:documentation>
                                                     The date when the agreement has been first signed by the *partner's*
-                                                    institutional coordinator. If this server keeps data related to remote
-                                                    coordinators, then it outputs it here. (This is the remote equivalent of the
-                                                    local signing-date introduced above.)
+                                                    institutional coordinator (if known).
+
+                                                    Note, that agreements are often modified *after* they were signed. These
+                                                    modifications don't usually require official signatures, though. This date
+                                                    refers to the "first signing" only.
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
@@ -227,9 +172,18 @@
                                             <xs:annotation>
                                                 <xs:documentation>
                                                     A list of other partner contacts related to this IIA (or to mobilities related
-                                                    to this IIA). If this server keeps data related to remote contacts, then it
-                                                    outputs it here. (This is the remote equivalent of the local c:contact
-                                                    introduced above.)
+                                                    to this IIA).
+
+                                                    Only some servers provide these, even for the *local* partner. Many HEIs
+                                                    (especially the smaller ones) don't granulate their contacts in such a detailed
+                                                    way. Instead, they have a fixed set of contacts described in their Institutions
+                                                    API.
+
+                                                    These contacts take precedence over contacts defined in the Institutions API
+                                                    and Organization Units API for the partner HEI/unit. Clients are advised to
+                                                    display these contacts in a separate section above other contacts - so that the
+                                                    users will notice them first (before scrolling down to other, more generic
+                                                    contacts).
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>

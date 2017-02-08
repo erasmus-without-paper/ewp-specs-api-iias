@@ -16,19 +16,21 @@
     solely on the example file.
     -->
     <iia>
-        <hei-id>uw.edu.pl</hei-id>
-        <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
-        <iia-code>983/E+/III14&amp;15</iia-code>
-        <signing-contact>
-            <c:contact-name>Sylwia Salomon</c:contact-name>
-            <c:email>email@example.com</c:email>
-            <!-- All other Abstract Contact fields are allowed too (including the role
-            description). -->
-        </signing-contact>
-        <c:contact>
-            <c:contact-name>Jadwiga Królikowska</c:contact-name>
-            <c:email>email@example.com</c:email>
-        </c:contact>
+        <partner>
+            <hei-id>uw.edu.pl</hei-id>
+            <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
+            <iia-code>983/E+/III14&amp;15</iia-code>
+            <signing-contact>
+                <c:contact-name>Sylwia Salomon</c:contact-name>
+                <c:email>email@example.com</c:email>
+                <!-- All other Abstract Contact fields are allowed too (including the role
+                description). -->
+            </signing-contact>
+            <c:contact>
+                <c:contact-name>Jadwiga Królikowska</c:contact-name>
+                <c:email>email@example.com</c:email>
+            </c:contact>
+        </partner>
         <partner>
             <hei-id>hibo.no</hei-id>
             <iia-id>1954991</iia-id>
