@@ -422,6 +422,11 @@
                         academic years.) It MUST be a unique set of IDs (years are not allowed to be
                         repeated).
 
+                        Data models of some servers allow for a mobility specification to be in effect
+                        for an infinite number of years - this happens if the agreement doesn't have an
+                        end date yet. In such cases, it is RECOMMENDED for server implementers to
+                        include all academic years from now to 5 years into the future.
+
                         If some of the partners are from the southern hemisphere (so that they use
                         academic years in a form of "2010/2010" instead of "2010/2011"), then IDs
                         provided here should refer to the scheme used by the receiving partner (not the
