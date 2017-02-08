@@ -53,6 +53,25 @@
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
+                            <xs:element name="hei-id" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The ID of the serving HEI. This is always equal to the value passed in the
+                                        `hei_id` request parameter, so it's a bit redundant, but we are including it
+                                        here for consistency.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ounit-id" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Optional organizational unit ID. If given, then it refers to the unit within
+                                        the *local* HEI's organizational structure, which is the actual partner of this
+                                        agreement. Agreements can be signed between units, not only between HEIs:
+                                        https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/11
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                             <xs:element name="iia-id" type="xs:string" minOccurs="1" maxOccurs="1">
                                 <xs:annotation>
                                     <xs:documentation>
@@ -123,7 +142,7 @@
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
-                            <xs:element name="partner-hei" minOccurs="1" maxOccurs="unbounded">
+                            <xs:element name="partner" minOccurs="1" maxOccurs="unbounded">
                                 <xs:annotation>
                                     <xs:documentation>
                                         A list of *other* HEIs participating in this IIA. This list does not include the
@@ -147,6 +166,20 @@
 
                                                     Discuss here:
                                                     https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/6
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="ounit-id" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    Optional organizational unit ID. If given, then it refers to the unit within
+                                                    the partner HEI's organizational structure, which is the actual partner of this
+                                                    agreement. Agreements can be signed between units, not only between HEIs:
+                                                    https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/11
+
+                                                    If provided, then it MUST have the value of the "external" ounit-id, exactly as
+                                                    it has been assigned by the *partner HEI* in its Organizational Units API. If
+                                                    this external ID is not known by the server, then this element MUST be skipped.
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
