@@ -63,6 +63,19 @@ Permissions
 All requests from the EWP Network MUST be allowed access to this API. Consult
 the [Echo API][echo] specs for details on handling unprivileged requests.
 
+Note, that this does not imply that you must allow access to all IIAs to the
+requester. The server is allowed to choose its own policy, as long as the
+following requirements are satisfied:
+
+* You MUST be consistent. If you allow a specific requester to see a specific
+  IIA, then this IIA MUST also be listed (to this requester) via the `index`
+  endpoint. Similarly, if you leave a reference to an IIA when the requester is
+  using any of the other APIs, then this requester MUST also be allowed to read
+  this IIA.
+
+* You SHOULD allow an IIA to be read at least by all its partners. This is,
+  after all, what this API is for.
+
 
 Handling of invalid parameters
 ------------------------------

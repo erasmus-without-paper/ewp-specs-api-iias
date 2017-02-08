@@ -43,8 +43,9 @@ Permissions
 All requests from the EWP Network MUST be allowed access to this API. Consult
 the [Echo API][echo] specs for details on handling unprivileged requests.
 
-Note, that this does not imply that you should return all IIA IDs. On the
-contrary, you should return only such IDs which the requester has access to.
+Note, that this does not imply that you must return all your IIA IDs. You
+SHOULD return only such IDs which the requester has access to. See the `get`
+endpoint for details on which IIAs should be accessible by which requester.
 
 
 Handling of invalid parameters
