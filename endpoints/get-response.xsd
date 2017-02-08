@@ -248,21 +248,6 @@
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
-                            <xs:element name="start-date" minOccurs="1" maxOccurs="1" type="xs:date">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        Indicates the official beginning of the period of this agreement (if known).
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
-                            <xs:element name="end-date" minOccurs="0" maxOccurs="1" type="xs:date">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        Indicates the official end of the period of this agreement. Some agreements
-                                        don't have any official end date (indefinite agreements).
-                                    </xs:documentation>
-                                </xs:annotation>
-                            </xs:element>
                             <xs:element name="cooperation-conditions">
                                 <xs:annotation>
                                     <xs:documentation>
