@@ -22,12 +22,16 @@
             <iia-code>983/E+/III14&amp;15</iia-code>
             <signing-contact>
                 <c:contact-name>Sylwia Salomon</c:contact-name>
+                <c:person-given-names>Sylwia</c:person-given-names>
+                <c:person-family-name>Salomon</c:person-family-name>
                 <c:email>email@example.com</c:email>
                 <!-- All other Abstract Contact fields are allowed too (including the role
                 description). -->
             </signing-contact>
             <c:contact>
                 <c:contact-name>Jadwiga Królikowska</c:contact-name>
+                <c:person-given-names>Jadwiga</c:person-given-names>
+                <c:person-family-name>Królikowska</c:person-family-name>
                 <c:email>email@example.com</c:email>
             </c:contact>
         </partner>
