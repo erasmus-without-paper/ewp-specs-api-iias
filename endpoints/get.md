@@ -42,19 +42,23 @@ conflicting copies of a single IIA (as, per spec, each HEI can have a copy of
 its own).
 
 
-### `iia_id` (repeatable, required)
+### `iia_id` or `iia_code` (repeatable, required)
 
-A list of local IIA identifiers (no more than `<max-iia-ids>` items) - IDs of
-agreements the client wants to retrieve information on. HEI identified by the
-`hei_id` parameter needs to be one of the partners of all the referenced IIAs
-(otherwise, IIA won't be found).
+A list of local IIA identifiers OR local IIA codes to be returned (no more than
+`<max-iia-ids>` or `<max-iia-codes>` items, respectively). The requester MUST
+provide either a list of `iia_id` values, or a list of `iia_code` values, **but
+not both**.
+
+HEI identified by the `hei_id` parameter MUST be one of the partners of all the
+referenced IIAs (otherwise, IIA won't be found).
 
 This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.
 
-Server implementers provide their own chosen value of `<max-iia-ids>` via
-their manifest entry (see [manifest-entry.xsd](manifest-entry.xsd)). Clients
-SHOULD parse this value (or assume it's equal to `1`).
+Server implementers provide their own chosen values of `<max-iia-ids>` and
+`<max-iia-codes>` via their manifest entry (see [manifest-entry.xsd]
+(manifest-entry.xsd)). Clients SHOULD parse these values (or assume they're
+equal to `1`).
 
 
 Permissions
@@ -85,14 +89,17 @@ Handling of invalid parameters
  * Invalid `hei_id` values (i.e. references to HEIs which are not covered by
    this host) MUST result in a HTTP 400 error.
 
- * Invalid (unknown) `iia_id` values MUST be ignored. Servers MUST return
-   a valid (HTTP 200) XML response in such cases, but the response will simply
-   not contain the information on the unknown `iia_id` values. (If all values
-   are unknown, servers MUST respond with an empty envelope.)
+ * Invalid (or unknown) `iia_id` and `iia_code` values MUST be **ignored**.
+   Servers MUST return a valid (HTTP 200) XML response in such cases, but the
+   response will simply not contain any information on these missing entities.
+   If all values are unknown, servers MUST respond with an empty `<response>`
+   element. This requirement is true even when both `<max-iia-ids>` and
+   `<max-iia-codes>` are set to `1`.
 
- * If the length of `iia_id` list is greater than `<max-iia-ids>`, servers
-   SHOULD respond with HTTP 400 error. Clients SHOULD split such large requests
-   into a couple of smaller ones.
+ * If the length of `iia_id` list is greater than `<max-iia-ids>` (or the
+   length of `iia_code` list is greater than `<max-iia-codes>`), then the
+   server SHOULD respond with HTTP 400 error. Clients SHOULD split such large
+   requests into a couple of smaller ones.
 
 
 Response
