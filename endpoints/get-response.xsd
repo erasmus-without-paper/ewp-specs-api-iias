@@ -204,7 +204,7 @@
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
-                            <xs:element name="cooperation-conditions">
+                            <xs:element name="cooperation-conditions" minOccurs="1" maxOccurs="1">
                                 <xs:annotation>
                                     <xs:documentation>
                                         List of all cooperation conditions defined in this agreement.
