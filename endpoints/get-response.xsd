@@ -94,7 +94,7 @@
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
-                                        <xs:element name="ounit-id" type="xs:string" minOccurs="0" maxOccurs="1">
+                                        <xs:element name="ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="1">
                                             <xs:annotation>
                                                 <xs:documentation>
                                                     Optional organizational unit surrogate ID. If given, then it refers to the unit
@@ -110,7 +110,7 @@
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
-                                        <xs:element name="iia-id" type="xs:string" minOccurs="0" maxOccurs="1">
+                                        <xs:element name="iia-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="1">
                                             <xs:annotation>
                                                 <xs:documentation>
                                                     The partner's unique surrogate ID of this IIA. This is a surrogate ID, so it
@@ -120,13 +120,8 @@
                                                     each partner is allowed to have his own ID for the same IIA. If this server is
                                                     aware of the IDs used by the other partners, then it outputs it here.
 
-                                                    Server implementers SHOULD use immutable surrogate keys for their work with EWP
-                                                    (we recommend choosing UUID surrogate keys). Avoid using natural/business keys!
-
-                                                    Related links:
-                                                    https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
-                                                    https://en.wikipedia.org/wiki/Surrogate_key
-                                                    https://en.wikipedia.org/wiki/Natural_key
+                                                    Server implementers MUST use immutable surrogate keys for their work with EWP.
+                                                    https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
@@ -144,9 +139,7 @@
                                                     directly identify entities in EWP network.
 
                                                     Related links:
-                                                    https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
-                                                    https://en.wikipedia.org/wiki/Surrogate_key
-                                                    https://en.wikipedia.org/wiki/Natural_key
+                                                    https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
@@ -295,7 +288,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="sending-ounit-id" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="sending-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         Optional list of IDs of sending organizational units.
@@ -340,7 +333,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="receiving-ounit-id" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="receiving-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         Optional list of receiving organizational units.
