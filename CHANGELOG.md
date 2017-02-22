@@ -5,6 +5,20 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+0.5.0
+-----
+
+* Academic Term and Abstract Contact data types are now in `stable-v1`
+  namespace ([more information]
+  (https://github.com/erasmus-without-paper/general-issues/issues/24)).
+
+* Introduced limits on IIA ID values ([more information]
+  (https://github.com/erasmus-without-paper/general-issues/issues/23)).
+
+* `minOccurs` and `maxOccurs` are now provided explicitly ([why?]
+  (https://github.com/erasmus-without-paper/general-issues/issues/22)).
+
+
 0.4.0
 -----
 
