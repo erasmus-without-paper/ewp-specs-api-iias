@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/master"
+    xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:trm="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1"
     elementFormDefault="qualified"
@@ -18,7 +18,7 @@
 
     <xs:import
         schemaLocation="../../ewp-specs-types-contact/schema.xsd"
-        namespace="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/master"
+        namespace="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
     /> <!-- WRTODO: absolute paths! -->
 
     <xs:import
