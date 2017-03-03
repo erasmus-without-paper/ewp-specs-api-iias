@@ -373,8 +373,10 @@
 
                         Data models of some servers allow for a mobility specification to be in effect
                         for an infinite number of years - this happens if the agreement doesn't have an
-                        end date yet. In such cases, it is RECOMMENDED for server implementers to
-                        include all academic years from now to 5 years into the future.
+                        end date yet. In such cases, it is RECOMMENDED for server implementers to use a
+                        "best guess" strategy to determine the end date. If you cannot guess reliably,
+                        then it is RECOMMENDED to include *at least* all academic years from *now* to 5
+                        years into the future.
 
                         If some of the partners are from the southern hemisphere (so that they use
                         academic years in a form of "2010/2010" instead of "2010/2011"), then IDs
