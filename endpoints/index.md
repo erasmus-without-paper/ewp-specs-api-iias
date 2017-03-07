@@ -31,7 +31,21 @@ the `application/x-www-form-urlencoded` format (for POST requests).
 
 ### `hei_id` (required)
 
-Identifier of the HEI which we want to fetch the list of IIAs from.
+Identifier of the HEI which we want to fetch the list of IIAs from. This MUST
+be the HEI covered by the server. It MUST be required, even if the server
+covers only a single HEI.
+
+
+### `partner_hei_id` (optional)
+
+If given, then the server MUST limit the list of returned IIA IDs to only those
+in which `partner_hei_id` is one of the partners. This value of this parameter
+MUST NOT equal the value passed in `hei_id`.
+
+Note, that if both `hei_id` and `partner_hei_id` are given, then the client is
+specifying two partners of the IIA, but IIAs MAY have more than two partners.
+It's currently not allowed for the client to filter IIAs by more than two
+partners.
 
 
 ### `receiving_academic_year_id` (optional, repeatable)
