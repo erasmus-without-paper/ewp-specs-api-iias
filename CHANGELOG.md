@@ -5,6 +5,13 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+0.6.0
+-----
+
+* New request parameter: `partner_hei_id`. (Servers are required to support
+  it.)
+
+
 0.5.0
 -----
 
