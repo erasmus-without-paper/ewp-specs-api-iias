@@ -21,17 +21,17 @@
             <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
             <iia-code>983/E+/III14&amp;15</iia-code>
             <signing-contact>
-                <c:contact-name>Sylwia Salomon</c:contact-name>
+                <c:contact-name>Sylwia Nowak</c:contact-name>
                 <c:person-given-names>Sylwia</c:person-given-names>
-                <c:person-family-name>Salomon</c:person-family-name>
+                <c:person-family-name>Nowak</c:person-family-name>
                 <c:email>email@example.com</c:email>
                 <!-- All other Abstract Contact fields are allowed too (including the role
                 description). -->
             </signing-contact>
             <c:contact>
-                <c:contact-name>Jadwiga Królikowska</c:contact-name>
+                <c:contact-name>Jadwiga Kowalska</c:contact-name>
                 <c:person-given-names>Jadwiga</c:person-given-names>
-                <c:person-family-name>Królikowska</c:person-family-name>
+                <c:person-family-name>Kowalska</c:person-family-name>
                 <c:email>email@example.com</c:email>
             </c:contact>
         </partner>
@@ -40,7 +40,7 @@
             <iia-id>1954991</iia-id>
             <iia-code>2014/E+/PL/4104B</iia-code>
             <signing-contact>
-                <c:contact-name>Monica Brobakk</c:contact-name>
+                <c:contact-name>Monica Turner</c:contact-name>
                 <c:email>email@example.com</c:email>
             </signing-contact>
             <!-- Optional other remote contacts go here, if known. -->
