@@ -9,8 +9,8 @@ Summary
 -------
 
 This endpoint allows the client to get the content of a specific IIAs (by their
-IDs). If you haven't read it yet, then read [the IIAs API introduction]
-[iias-api] first.
+IDs). If you haven't read it yet, then read
+[the IIAs API introduction][iias-api] first.
 
 
 Request method
@@ -56,9 +56,9 @@ This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.
 
 Server implementers provide their own chosen values of `<max-iia-ids>` and
-`<max-iia-codes>` via their manifest entry (see [manifest-entry.xsd]
-(manifest-entry.xsd)). Clients SHOULD parse these values (or assume they're
-equal to `1`).
+`<max-iia-codes>` via their manifest entry (see
+[manifest-entry.xsd](manifest-entry.xsd)). Clients SHOULD parse these values
+(or assume they're equal to `1`).
 
 
 Permissions

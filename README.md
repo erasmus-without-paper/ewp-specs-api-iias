@@ -16,10 +16,9 @@ agreements with each other, which makes it easier to spot errors.
 Introduction
 ------------
 
-As part of the EWP project, we have [thoroughly discussed]
-(https://github.com/erasmus-without-paper/general-issues/issues/12)
-[many options]
-(https://github.com/erasmus-without-paper/general-issues/issues/12#issuecomment-229931282)
+As part of the EWP project, we have
+[thoroughly discussed](https://github.com/erasmus-without-paper/general-issues/issues/12)
+[many options](https://github.com/erasmus-without-paper/general-issues/issues/12#issuecomment-229931282)
 of how to design the functionality of synchronizing IIAs between different
 HEIs. We have proposed multiple solutions, and then rejected them, either
 because of their limited functionality, or their complexity.
