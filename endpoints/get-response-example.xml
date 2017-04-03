@@ -98,7 +98,7 @@
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <avg-months>10</avg-months>
+                <total-months>70</total-months>
                 <!-- No eqf-level for traineeships. -->
             </student-traineeship-mobility-spec>
 
@@ -149,7 +149,7 @@
                     <cefr-level>B2</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <avg-days>14</avg-days>
+                <total-days>28</total-days>
             </staff-training-mobility-spec>
         </cooperation-conditions>
     </iia>

@@ -466,22 +466,36 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="avg-months" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
+                    <xs:choice minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation>
-                                Average duration of the student mobility, in months.
-
-                                Note, that Erasmus+ IIA template allows to give this value in two formats:
+                                Erasmus+ IIA template allows to provide this value in two formats:
 
                                 A. a total number of months of the study periods, or
                                 B. an average duration.
 
-                                Since A can be easily calculated from B (A=B*N, where N is the
-                                `mobilities-per-year`), we do not need to support both formats here. We
-                                chose to support B only.
+                                The server MAY use any of these formats. The client MUST support both. It's
+                                worth noting, that storing the "A" value seems to be a bit safer than storing "B":
+                                https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/17
                             </xs:documentation>
                         </xs:annotation>
-                    </xs:element>
+                        <xs:element name="avg-months" type="xs:positiveInteger">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Average number of mobility months, per each academic year bound to the mobility
+                                    specification. (WRTODO: Can we make it sound better? Don't know how.)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="total-months" type="xs:positiveInteger">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Total number of mobility months, for all academic years bound to the mobility
+                                    specification. (WRTODO: Can we make it sound better? Don't know how.)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -496,18 +510,30 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="avg-days" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
+                    <xs:choice minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation>
-                                Average duration of the staff mobility, in days.
-
-                                This is very similar to `avg-months` element (please read the notes there too).
-                                Note, that Erasmus+ IIA template defines student mobility periods in months, but
-                                staff mobility periods are always defined in days (that's why neither
-                                `avg-months` nor `avg-days` can be present on the MobilitySpecification level).
+                                This choice is very similar to the one described for `avg-months` and
+                                `total-months` elements - please read the notes there too.
                             </xs:documentation>
                         </xs:annotation>
-                    </xs:element>
+                        <xs:element name="avg-days" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Average number of mobility days, per each academic year bound to the mobility
+                                    specification. (WRTODO: Can we make it sound better? Don't know how.)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="total-days" type="xs:positiveInteger">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Total number of mobility days, for all academic years bound to the mobility
+                                    specification. (WRTODO: Can we make it sound better? Don't know how.)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
