@@ -5,6 +5,14 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+0.7.0
+-----
+
+* `total-days` and `total-months` were introduced as a valid alternative to
+  `avg-days` and `avg-months`
+  ([why?](https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/17)).
+
+
 0.6.0
 -----
 
