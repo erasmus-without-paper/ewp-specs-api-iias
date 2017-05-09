@@ -64,6 +64,28 @@ in the `<receiving-academic-year-id>` lists in any of its cooperation
 conditions, then `A` SHOULD NOT be included in the response.
 
 
+### `modified_since` (optional)
+
+A datetime string in the ISO 8601 format, e.g. `2004-02-12T15:19:21+01:00`.
+
+If given, then the server SHOULD filter the returned IIA IDs to the ones
+which have been either created or modified after the given point in time.
+
+ * Servers MAY include IIAs which were *not* modified. For example, if the
+   server only *suspects* that the IIA has been modified, then it is okay to
+   include such mobility's ID in the response.
+
+ * Servers MAY ignore the `modified_since` parameter completely, and *always*
+   respond with the full list of IIA IDs. (If, for some reason, the server
+   cannot reliably identify when IIAs are updated, then it's even *better* to
+   do so.)
+
+ * As we previously explained [here][index-pulling], clients MAY use the
+   `index` and `get` endpoints as a pull-based method of synchronization,
+   alternative (or rather complementary) to CNRs. It is RECOMMENDED for the
+   servers to support this parameter, to avoid unnecessary network traffic.
+
+
 Permissions
 -----------
 
@@ -99,3 +121,4 @@ for further information.
 [echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
+[index-pulling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#index-pulling
