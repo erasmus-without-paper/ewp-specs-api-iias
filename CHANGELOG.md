@@ -5,6 +5,14 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+0.8.0
+-----
+
+* New parameter in the `index` endpoint: `modified_since`. It is RECOMMENDED
+  for the servers to support this parameter, to avoid unnecessary network
+  traffic.
+
+
 0.7.0
 -----
 
