@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+0.8.1
+-----
+
+* Minor fixes in XSD's "style".
+
+
 0.8.0
 -----
 
