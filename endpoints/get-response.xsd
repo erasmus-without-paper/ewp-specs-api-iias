@@ -517,7 +517,7 @@
                                 `total-months` elements - please read the notes there too.
                             </xs:documentation>
                         </xs:annotation>
-                        <xs:element name="avg-days" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
+                        <xs:element name="avg-days" type="xs:positiveInteger">
                             <xs:annotation>
                                 <xs:documentation>
                                     Average number of mobility days, per each academic year bound to the mobility
