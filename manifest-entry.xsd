@@ -5,11 +5,9 @@
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     elementFormDefault="qualified"
 
-    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/manifest-entry.xsd"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/manifest-entry.xsd"
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
 >
-    <!-- WRTODO: Replace all occurrences of 'master' (in all projects) with 'stable-v1' upon release. -->
-
     <xs:import
         schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd"
         namespace="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
