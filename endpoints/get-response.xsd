@@ -15,14 +15,14 @@
     />
 
     <xs:import
-        schemaLocation="../../ewp-specs-types-contact/schema.xsd"
+        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-types-contact/stable-v1/schema.xsd"
         namespace="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
-    /> <!-- WRTODO: absolute paths! -->
+    />
 
     <xs:import
-        schemaLocation="../../ewp-specs-types-academic-term/schema.xsd"
+        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-types-academic-term/stable-v1/schema.xsd"
         namespace="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1"
-    /> <!-- WRTODO: absolute paths! -->
+    />
 
     <xs:annotation>
         <xs:documentation>

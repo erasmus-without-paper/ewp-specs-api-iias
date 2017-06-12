@@ -5,11 +5,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/endpoints/get-response.xsd
-        get-response.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v1/endpoints/get-response.xsd
     "
 >
-    <!-- WRTODO: Make schemaLocation absolute -->
-
     <!--
     IMPORTANT: Please see the response.xsd file for detailed requirements and
     descriptions of all the elements. You MUST NOT base your implementation
