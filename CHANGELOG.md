@@ -5,6 +5,13 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+1.0.0
+-----
+
+* First stable release!
+* Clean up: Replaced all relative schemaLocations with absolute ones.
+
+
 0.9.0
 -----
 
