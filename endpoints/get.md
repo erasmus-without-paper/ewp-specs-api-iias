@@ -64,12 +64,9 @@ Server implementers provide their own chosen values of `<max-iia-ids>` and
 Permissions
 -----------
 
-All requests from the EWP Network MUST be allowed access to this API. Consult
-the [Echo API][echo] specs for details on handling unprivileged requests.
-
-Note, that this does not imply that you must allow access to all IIAs to the
-requester. The server is allowed to choose its own policy, as long as the
-following requirements are satisfied:
+Server implementers may choose their own policy in regard to the visibility of
+their IIAs for certain requesters. The following requirements MUST be
+satisfied:
 
 * You MUST be consistent. If you allow a specific requester to see a specific
   IIA, then this IIA MUST also be listed (to this requester) via the `index`
@@ -79,6 +76,10 @@ following requirements are satisfied:
 
 * You SHOULD allow an IIA to be read at least by all its partners. This is,
   after all, what this API is for.
+
+* If you decide to *change* the visibility of an already existing IIA, and you
+  implement the IIA CNR API, then you SHOULD inform all affected parties about
+  such change.
 
 
 Handling of invalid parameters

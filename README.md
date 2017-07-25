@@ -100,6 +100,13 @@ be obvious where a particular piece of data can be found, but - once you get
 to know the model - all should gradually become clear.
 
 
+Security
+--------
+
+For all endpoints of this API, implementers MUST follow the rules described in
+[EWP Authentication and Security, Version 1][sec-v1] document.
+
+
 Endpoints to be implemented
 ---------------------------
 
@@ -130,3 +137,4 @@ Data model entities involved in the response
 [echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
+[sec-v1]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v1

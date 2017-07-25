@@ -89,12 +89,9 @@ which have been either created or modified after the given point in time.
 Permissions
 -----------
 
-All requests from the EWP Network MUST be allowed access to this API. Consult
-the [Echo API][echo] specs for details on handling unprivileged requests.
-
-Note, that this does not imply that you must return all your IIA IDs. You
-SHOULD return only such IDs which the requester has access to. See the `get`
-endpoint for details on which IIAs should be accessible by which requester.
+You MUST return the set of all IDs which the requester has access to (via the
+`get` endpoint). See the `get` endpoint for details on which IIAs should be
+accessible by which requester.
 
 
 Handling of invalid parameters
