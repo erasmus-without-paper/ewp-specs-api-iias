@@ -5,6 +5,60 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+2.0.0
+-----
+
+ * This API now requires implementers to upgrade their implementations to
+   [Version 2](https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2)
+   of the *Authentication and Security* document.
+
+   In particular, this means that the clients MUST be aware of the fact, that
+   the server is no longer required to support methods of authentication and
+   encryption which it *was* required to support in the previous versions of
+   this API. Clients SHOULD consult the newly introduced `<http-security>`
+   element in the server's manifest entry before making their requests.
+
+ * Because we are releasing a new major release (which is no longer
+   backward-compatible with the previously released stable `1.x.x` releases),
+   XML namespaces were changed to reflect that.
+
+   In particular, API-entry namespace was changed from:
+
+   ```
+   https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd
+   ```
+
+   to:
+
+   ```
+   https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd
+   ```
+
+   Get-endpoint response namespace was changed from:
+
+   ```
+   https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/endpoints/get-response.xsd
+   ```
+
+   to:
+
+   ```
+   https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/get-response.xsd
+   ```
+
+   And Index-endpoint namespace was changed from:
+
+   ```
+   https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/endpoints/index-response.xsd
+   ```
+
+   to:
+
+   ```
+   https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/index-response.xsd
+   ```
+
+
 1.0.1
 -----
 
