@@ -8,6 +8,9 @@ Interinstitutional Agreements API
 Summary
 -------
 
+**This version (v1.x.x) of Interinstitutional Agreements API is now DEPRECATED.
+Please upgrade to version 2.x.x.**
+
 This document describes the **Interinstitutional Agreements API**. This API
 allows partners to compare their copies of interinstitutional Erasmus+ mobility
 agreements with each other, which makes it easier to spot errors.
