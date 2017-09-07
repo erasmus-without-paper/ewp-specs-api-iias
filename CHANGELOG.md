@@ -169,11 +169,11 @@ Other changes:
 * New required `<iia-code>` element. Together with `<iia-id>` it allows server
   implementers to provide both surrogate and natural/business keys for all
   IIAs. Examples were updated appropriately to visualize the difference between
-  them. See [this thread](https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9#issuecomment-271272493)
+  them. See [this thread](https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/issues/9#issuecomment-271272493)
   for more reasoning.
 
 * The `<isced-code>` element was renamed to `<isced-f-code>`
-  ([why?](https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/8#issuecomment-270402114)).
+  ([why?](https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/issues/8#issuecomment-270402114)).
 
 * New `<signing-date>` elements (one per each partner, as requested
   [here](https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/7)).
