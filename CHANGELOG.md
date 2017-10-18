@@ -5,6 +5,19 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+2.0.1
+-----
+
+* The `modified_since` parameter of the `index` endpoint is now in the
+  `xs:dateTime` format (not ISO 8601 format). See
+  [this thread](https://github.com/erasmus-without-paper/general-issues/issues/27).
+
+  Note, that this change is not 100% backward-compatible, so - in theory -
+  we should release version `3.0.0` at this point. Instead, we judged it would
+  be better to treat this change as a bugfix (because it's *almost* compatible
+  as it is, and releasing a new major version would complicate things).
+
+
 2.0.0
 -----
 
