@@ -72,7 +72,7 @@
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <avg-months>5</avg-months>
+                <avg-months exact-value="5.25">5</avg-months>
                 <!-- At least one eqf-level is required for "mobility for studies". -->
                 <eqf-level>7</eqf-level>
                 <eqf-level>8</eqf-level>
@@ -96,7 +96,7 @@
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <total-months>70</total-months>
+                <total-months exact-value="70.00">70</total-months>
                 <!-- No eqf-level for traineeships. -->
             </student-traineeship-mobility-spec>
 
@@ -114,7 +114,7 @@
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
                 <!-- Staff mobilities have days instead of months. -->
-                <avg-days>14</avg-days>
+                <avg-days exact-value="13.5">14</avg-days>
             </staff-teacher-mobility-spec>
             <staff-teacher-mobility-spec>
                 <!-- Every specification describes a unidirectional mobility. If students or
@@ -131,7 +131,7 @@
                     <cefr-level>C1</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <avg-days>14</avg-days>
+                <avg-days>14</avg-days> <!-- exact-value is optional -->
             </staff-teacher-mobility-spec>
 
             <!-- Staff mobility for training. -->
@@ -147,7 +147,7 @@
                     <cefr-level>B2</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <total-days>28</total-days>
+                <total-days exact-value="28">28</total-days>
             </staff-training-mobility-spec>
         </cooperation-conditions>
     </iia>
