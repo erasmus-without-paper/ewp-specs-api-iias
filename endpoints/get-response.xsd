@@ -455,6 +455,53 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="BackwardCompatibleDecimal">
+        <xs:annotation>
+            <xs:documentation>
+                This type was introduced as a backward-compatible replacement for the
+                xs:positiveInteger type. We wanted to upgrade this type to a decimal with two
+                fractional digits, but we couldn't simply change this existing type without
+                breaking the older clients. Hence, we added an optional attribute with the
+                "upgraded" value. See this thread:
+
+                https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/23
+
+                * Servers which keep the value in integer fields, SHOULD NOT provide the
+                  `exact-value` attribute.
+
+                * Servers which keep the value in decimal fields:
+
+                  - SHOULD provide the `exact-value` attribute in cases when the fractional
+                    part is non-zero.
+                  - MAY provide the `exact-value` attribute even when the fractional part is
+                    zero.
+                  - MUST provide the "legacy" rounded integer value in the element's content
+                    (for older clients which do not recognize the `exact-value` attribute yet).
+
+                * Clients SHOULD check if `exact-value` attribute is set. If it is, then take
+                  the value from there. If it isn't, then use the integer value from inside
+                  the element.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+                <xs:attribute use="optional" name="exact-value">
+                    <xs:annotation>
+                        <xs:documentation>
+                            If given, then it overrides the integer value provided in the element's
+                            content. Please read the specs for the BackwardCompatibleDecimal type.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:fractionDigits value="2"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
     <xs:complexType name="StudentMobilitySpecification" abstract="true">
         <xs:annotation>
             <xs:documentation>
@@ -477,7 +524,7 @@
                                 https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/17
                             </xs:documentation>
                         </xs:annotation>
-                        <xs:element name="avg-months" type="xs:positiveInteger">
+                        <xs:element name="avg-months" type="BackwardCompatibleDecimal">
                             <xs:annotation>
                                 <xs:documentation>
                                     Average number of mobility months, per each academic year bound to the mobility
@@ -485,7 +532,7 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="total-months" type="xs:positiveInteger">
+                        <xs:element name="total-months" type="BackwardCompatibleDecimal">
                             <xs:annotation>
                                 <xs:documentation>
                                     Total number of mobility months, for all academic years bound to the mobility
@@ -515,7 +562,7 @@
                                 `total-months` elements - please read the notes there too.
                             </xs:documentation>
                         </xs:annotation>
-                        <xs:element name="avg-days" type="xs:positiveInteger">
+                        <xs:element name="avg-days" type="BackwardCompatibleDecimal">
                             <xs:annotation>
                                 <xs:documentation>
                                     Average number of mobility days, per each academic year bound to the mobility
@@ -523,7 +570,7 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="total-days" type="xs:positiveInteger">
+                        <xs:element name="total-days" type="BackwardCompatibleDecimal">
                             <xs:annotation>
                                 <xs:documentation>
                                     Total number of mobility days, for all academic years bound to the mobility
