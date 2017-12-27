@@ -466,15 +466,21 @@
 
                 https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/23
 
-                Servers which keep the value in integer fields, are not required to use the
-                `exact-value` attribute. Servers which keep the value in decimal fields,
-                SHOULD use the `exact-value` attribute, and MUST provide a rounded integer
-                value in the element's content (for older clients which do not recognize the
-                `exact-value` attribute yet).
+                * Servers which keep the value in integer fields, SHOULD NOT provide the
+                  `exact-value` attribute.
 
-                Clients should check if `exact-value` attribute is set. If it is, then take the
-                value from there. If it doesn't, then use the integer value from inside the
-                element.
+                * Servers which keep the value in decimal fields:
+
+                  - SHOULD provide the `exact-value` attribute in cases when the fractional
+                    part is non-zero.
+                  - MAY provide the `exact-value` attribute even when the fractional part is
+                    zero.
+                  - MUST provide the "legacy" rounded integer value in the element's content
+                    (for older clients which do not recognize the `exact-value` attribute yet).
+
+                * Clients SHOULD check if `exact-value` attribute is set. If it is, then take
+                  the value from there. If it isn't, then use the integer value from inside
+                  the element.
             </xs:documentation>
         </xs:annotation>
         <xs:simpleContent>
