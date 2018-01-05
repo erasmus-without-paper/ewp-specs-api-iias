@@ -5,6 +5,27 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+2.1.0
+-----
+
+* **Changed data type** of the following elements:
+
+  - `<avg-months>` (in `StudentMobilitySpecification`),
+  - `<total-months>` (in `StudentMobilitySpecification`),
+  - `<avg-days>` in (in `StaffMobilitySpecification`),
+  - `<total-days>` in (in `StaffMobilitySpecification`).
+
+  Previously, these elements contained `xs:positiveInteger`. Now, they contain
+  a positive decimal with the maximum of 2 fraction digits.
+
+  This changed is **not backward compatible** with respect the API clients
+  (clients might have already assumed that they will get an integer in these
+  elements, but this is no longer guaranteed). Despite that fact, partners have
+  agreed to NOT increase the major version of the API (because of the very
+  limited number of implemented API clients). See
+  [this thread](https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/23).
+
+
 2.0.1
 -----
 
