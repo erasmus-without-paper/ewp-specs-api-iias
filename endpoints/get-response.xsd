@@ -477,21 +477,33 @@
                                 https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/17
                             </xs:documentation>
                         </xs:annotation>
-                        <xs:element name="avg-months" type="xs:positiveInteger">
+                        <xs:element name="avg-months">
                             <xs:annotation>
                                 <xs:documentation>
                                     Average number of mobility months, per each academic year bound to the mobility
                                     specification.
                                 </xs:documentation>
                             </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:element>
-                        <xs:element name="total-months" type="xs:positiveInteger">
+                        <xs:element name="total-months">
                             <xs:annotation>
                                 <xs:documentation>
                                     Total number of mobility months, for all academic years bound to the mobility
                                     specification.
                                 </xs:documentation>
                             </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:element>
                     </xs:choice>
                 </xs:sequence>
@@ -515,21 +527,33 @@
                                 `total-months` elements - please read the notes there too.
                             </xs:documentation>
                         </xs:annotation>
-                        <xs:element name="avg-days" type="xs:positiveInteger">
+                        <xs:element name="avg-days">
                             <xs:annotation>
                                 <xs:documentation>
                                     Average number of mobility days, per each academic year bound to the mobility
                                     specification.
                                 </xs:documentation>
                             </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:element>
-                        <xs:element name="total-days" type="xs:positiveInteger">
+                        <xs:element name="total-days">
                             <xs:annotation>
                                 <xs:documentation>
                                     Total number of mobility days, for all academic years bound to the mobility
                                     specification.
                                 </xs:documentation>
                             </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:element>
                     </xs:choice>
                 </xs:sequence>
