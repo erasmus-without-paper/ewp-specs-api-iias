@@ -452,6 +452,16 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            <xs:element name="subject-area-name" type="xs:string" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject area name associated with this mobility.
+
+                        It can be a name of the ISCED-F code sent in the `isced-f-code` element,
+                        but does not have to. In some cases it is useful to have more detailed information here.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
