@@ -10,6 +10,7 @@ Agreements API* document, starting from its first beta draft version.
 
 * Add optional `<conditions-hash>` element to the get response.
   It is necessary to be able to get approval of the IIA via `IIAs Approval API`.
+* Add example scenario of sending and approving agreement.
 
 
 2.1.0
