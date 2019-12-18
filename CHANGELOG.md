@@ -11,6 +11,8 @@ Agreements API* document, starting from its first beta draft version.
 * Add optional `<conditions-hash>` element to the get response.
   It is necessary to be able to get approval of the IIA via `IIAs Approval API`.
 * Add example scenario of sending and approving agreement.
+* Add PDF to the get response.
+* Add optional `send_pdf` request parameter.
 
 
 2.1.0

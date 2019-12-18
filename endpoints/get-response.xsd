@@ -257,6 +257,22 @@
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
+                            <xs:element name="pdf" type="xs:base64Binary" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        PDF version of the agreement. SHOULD be skipped if the `send_pdf` request parameter
+                                        value is `false`.
+
+                                        Notes for client implementers:
+                                        
+                                        The pdf element can be missing even if the `send_pdf` parameter was set to true.
+                                        Some servers MAY not support PDFs at all or the PDF version can be not ready yet.
+
+                                        For security reasons, you may consider checking the content type of the file
+                                        before displaying it in the browser.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
