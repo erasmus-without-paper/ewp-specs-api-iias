@@ -9,26 +9,26 @@
             <hei-id>A</hei-id>
             <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
         </partner>
-<cooperation-conditions>
-    <student-studies-mobility-spec>
-        <sending-hei-id>B</sending-hei-id>
-        <receiving-hei-id>A</receiving-hei-id>
-        <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
-        <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
-        <mobilities-per-year>2</mobilities-per-year>
-        <eqf-level>7</eqf-level>
-        <eqf-level>8</eqf-level>
-    </student-studies-mobility-spec>
-    <student-studies-mobility-spec>
-        <sending-hei-id>A</sending-hei-id>
-        <receiving-hei-id>B</receiving-hei-id>
-        <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
-        <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
-        <mobilities-per-year>2</mobilities-per-year>
-        <eqf-level>7</eqf-level>
-        <eqf-level>8</eqf-level>
-    </student-studies-mobility-spec>
-</cooperation-conditions>
+        <cooperation-conditions>
+            <student-studies-mobility-spec>
+                <sending-hei-id>B</sending-hei-id>
+                <receiving-hei-id>A</receiving-hei-id>
+                <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
+                <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <eqf-level>7</eqf-level>
+                <eqf-level>8</eqf-level>
+            </student-studies-mobility-spec>
+            <student-studies-mobility-spec>
+                <sending-hei-id>A</sending-hei-id>
+                <receiving-hei-id>B</receiving-hei-id>
+                <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
+                <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <eqf-level>7</eqf-level>
+                <eqf-level>8</eqf-level>
+            </student-studies-mobility-spec>
+        </cooperation-conditions>
         <conditions-hash>cdcdf8bb7ce3f028a0cc6f7e848199a592a74b5014107ed4f4f6d4103421fa0a</conditions-hash>
     </iia>
 </iias-get-response>
