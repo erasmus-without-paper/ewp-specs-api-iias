@@ -204,6 +204,9 @@
                                         unrelated to themselves. This can happen if IIA has more than 2 partners. The
                                         following list of conditions MAY be limited to only those conditions which are
                                         related to the HEI the client is requesting the IIA from.
+
+                                        If you are sending conditions-hash, be consistent in ordering cooperation conditions.
+                                        The hash SHOULD NOT change if the cooperation conditions are not really changing.
                                     </xs:documentation>
                                 </xs:annotation>
                                 <xs:complexType>
@@ -239,6 +242,20 @@
                                         </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
+                            </xs:element>
+                            <xs:element name="conditions-hash" type="ewp:Sha256Hex" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The SHA-256 digest of the cooperation-conditions element. Before
+                                        calculating the hash, the cooperation-conditions element should be normalized
+                                        using Exclusive XML Canonicalization.
+
+                                        This element is not required. However, if it is not present, your partner
+                                        will not be able to approve your version of the agreement using EWP IIAs Approval API.
+                                        If you want to get approval of your agreements, then you should always send
+                                        the conditions hash.
+                                    </xs:documentation>
+                                </xs:annotation>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>

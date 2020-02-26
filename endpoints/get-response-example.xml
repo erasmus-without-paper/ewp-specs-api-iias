@@ -150,6 +150,7 @@
                 <total-days>28</total-days>
             </staff-training-mobility-spec>
         </cooperation-conditions>
+        <conditions-hash>57ef636fcdcdfa54066ab13a21f630e41f1078ee8fa9877282a426afdcebd4c9</conditions-hash>
     </iia>
 
     <!-- More than one IIA can be returned in one response. We have only one here,

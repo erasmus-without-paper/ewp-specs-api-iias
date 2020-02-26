@@ -5,6 +5,13 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+2.2.0
+-----
+
+* Add optional `<conditions-hash>` element to the get response.
+  It is necessary to be able to get approval of the IIA via `IIAs Approval API`.
+
+
 2.1.0
 -----
 
