@@ -151,6 +151,10 @@
             </staff-training-mobility-spec>
         </cooperation-conditions>
         <conditions-hash>57ef636fcdcdfa54066ab13a21f630e41f1078ee8fa9877282a426afdcebd4c9</conditions-hash>
+        <!-- For clarity, we do not paste a real PDF binary here. This should be a signed PDF. The hei can choose to generate -->
+        <!-- and sign its own PDF or use (sign and serve here) a document served by the partner. -->
+        <pdf>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmxt1dWM7wF18z9ZKd9IdolvVXPKYWsQo
+            BE2fJXIXnwT2f39kKzCrNwRgia3XMdiS2jYHG0GAfqQfYNCafjIwhqI4d2pgjNNt11IUxViG</pdf>
     </iia>
 
     <!-- More than one IIA can be returned in one response. We have only one here,
