@@ -29,5 +29,7 @@
             </student-studies-mobility-spec>
         </cooperation-conditions>
         <conditions-hash>6bab23655105e47adffa15ef5409046bad7d3bc6c9b449f23ee1865bc55ee15e</conditions-hash>
+        <!-- This is a PDF generated and signed by A. -->
+        <pdf>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl...</pdf>
     </iia>
 </iias-get-response>
