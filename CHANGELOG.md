@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+2.2.1
+-----
+
+* Add PDFs to the examples.
+
+
 2.2.0
 -----
 
