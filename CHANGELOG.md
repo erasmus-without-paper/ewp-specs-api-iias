@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+2.2.2
+-----
+
+* Add template for Calls 2021-2027.
+
+
 2.2.1
 -----
 
