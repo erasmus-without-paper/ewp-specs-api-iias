@@ -72,7 +72,7 @@
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <avg-months>5.25</avg-months>
+                <total-months>36.75</total-months>
                 <blended>false</blended>
                 <!-- At least one eqf-level is required for "mobility for studies". -->
                 <eqf-level>7</eqf-level>
@@ -116,7 +116,7 @@
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
                 <!-- Staff mobilities have days instead of months. -->
-                <avg-days>13.5</avg-days>
+                <total-days>27</total-days>
             </staff-teacher-mobility-spec>
             <staff-teacher-mobility-spec>
                 <!-- Every specification describes a unidirectional mobility. If students or
@@ -133,7 +133,7 @@
                     <cefr-level>C1</cefr-level>
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
-                <avg-days>14</avg-days>
+                <total-days>28</total-days>
             </staff-teacher-mobility-spec>
 
             <!-- Staff mobility for training. -->
