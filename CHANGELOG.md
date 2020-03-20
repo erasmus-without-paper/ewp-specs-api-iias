@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+2.3.0
+-----
+
+* Add `blended` flag for student mobilities.
+
+
 2.2.2
 -----
 

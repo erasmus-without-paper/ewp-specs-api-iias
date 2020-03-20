@@ -549,6 +549,20 @@
                             </xs:simpleType>
                         </xs:element>
                     </xs:choice>
+                    <xs:element name="blended" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Blended mobility option for students. By sending 'true', the partners
+                                confirm that they are willing to exchange students who wish to carry out their mobility
+                                in a blended format, a combination of a short-term physical mobility with a virtual
+                                component.
+
+                                This element is REQUIRED since 2021. Partners can exchange older agreements or
+                                send draft versions of new agreements without this element, but since 2021 the
+                                agreements MUST NOT be signed without it.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
