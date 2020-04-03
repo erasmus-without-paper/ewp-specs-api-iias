@@ -73,6 +73,7 @@
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
                 <total-months>36.75</total-months>
+                <blended>false</blended>
                 <!-- At least one eqf-level is required for "mobility for studies". -->
                 <eqf-level>7</eqf-level>
                 <eqf-level>8</eqf-level>
@@ -97,10 +98,9 @@
                 </recommended-language-skill>
                 <isced-f-code>0314</isced-f-code>
                 <total-months>70.00</total-months>
+                <blended>false</blended>
                 <!-- No eqf-level for traineeships. -->
             </student-traineeship-mobility-spec>
-
-            <blended>false</blended>
 
             <!-- Staff mobility for teaching. -->
             <staff-teacher-mobility-spec>
