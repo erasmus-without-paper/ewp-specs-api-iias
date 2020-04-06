@@ -44,15 +44,17 @@ HEIs. The IIAs API is the final result.
 ### Fact sheet information
 
 If you compare our IIA XSDs to  [the official IIA template](resources)
-from the European Commission, you may notice that many fields seem to be missing
-in our XSDs. This is because we have decided to include many fields
-in the [Institutions API][institutions-api] and [Factsheet API][factsheet-api] instead.
+from the European Commission, for years 2021-20[29], you may notice that
+many fields seem to be missing in our XSDs. This is because we have decided
+to include many fields in the [Institutions API][institutions-api]
+and the [Factsheet API][factsheet-api] instead.
 
-Based on the 21-29 template we follow the following rules:
+Based on the official IIA template from the European Commission for years 2021-20[29],
+we follow the following rules:
 
  * General information that is part of Higher Education Institutions’ profile
-   and made publicly available to students is part of the Institutions API
-   (and - in some cases - Organizational Units API) and Factsheet API.
+   and made publicly available to students is part of the [Institutions API][institutions-api]
+   (and - in some cases - [Organizational Units API][ounits-api]) and the [Factsheet API][factsheet-api].
    The general information can be updated without formal approval of the partner.
 
  * Data on the terms of agreement that needs to be approved by both partners
@@ -98,3 +100,4 @@ Data model entities involved in the response
 [sec-v2]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
 [factsheet-api]: https://github.com/erasmus-without-paper/ewp-specs-api-factsheet
 [iias-approval-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval
+[ounits-api]: https://github.com/erasmus-without-paper/ewp-specs-api-ounits
