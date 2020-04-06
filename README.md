@@ -49,7 +49,7 @@ many fields seem to be missing in our XSDs. This is because we have decided
 to include many fields in the [Institutions API][institutions-api]
 and the [Factsheet API][factsheet-api] instead.
 
-Based on the official IIA template from the European Commission for years 2021-20[29],
+Based on [the official IIA template](resources) from the European Commission for years 2021-20[29],
 we follow the following rules:
 
  * General information that is part of Higher Education Institutions’ profile
