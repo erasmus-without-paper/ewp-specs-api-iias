@@ -20,49 +20,14 @@ As part of the EWP project, we have
 [thoroughly discussed](https://github.com/erasmus-without-paper/general-issues/issues/12)
 [many options](https://github.com/erasmus-without-paper/general-issues/issues/12#issuecomment-229931282)
 of how to design the functionality of synchronizing IIAs between different
-HEIs. We have proposed multiple solutions, and then rejected them, either
-because of their limited functionality, or their complexity.
-
-This document describes the solution we ended up agreeing to.
+HEIs. The IIAs API is the final result.
 
 
-### It is not (!) required in EWP mobility flow
-
-The most important feature to understand about this solution, is that HEIs are
-not required to neither *serve* nor *use* this API.
-
-This API is *not* part of the primary mobility flow modeled in EWP. You can
-still exchange information on Nominations and Learning Agreements **without**
-implementing this API. It serves *only* as a helper API to spot differences
-between IIAs. If you choose to implement it, then **you should probably
-implement it after all the other APIs**.
-
- * **Why not required?** IIA is an official document. Therefore, it seems
-   reasonable to assume that:
-
-   - Each of the partners possesses a *printed copy* of this document.
-   - Their computer systems are somewhat aware of the data contained within.
-   - This data is **usually** correct (in sync with the partner's copy).
-
-   Other EWP APIs will refer to IIA **IDs** (and **IDs only**). This means
-   that, although all partners might need to exchange these IDs, they still are
-   allowed to simply assume that their own local copy of this IIA is correct
-   (and it **usually** is).
-
- * **Why would I want to implement it then?** Because we can do better than
-   "usually" (see the sentences above). If we expose our agreements to the
-   other partner via an API, then the partner will be able to compare the
-   contents more easily, and possibly **find differences** in an automated way.
-   In the future, when new agreements are forged, it might also enable the
-   partner to copy the agreement's data directly from one computer system to
-   another, without the need of typing it by hand.
-
-
-### Other features
+### Features
 
  * **It is distributed**. Agreements (IIAs) are stored and hosted **only** by
-   the institutions involved in these agreements. No agreements are stored on
-   central servers at any time.
+   the institutions involved in these agreements. If the institutions use the IIA Manager
+   (part of the Dashboard), their agreements are stored in the Dashboard repository.
 
  * **All partners are equal**. There is no "master" of the agreement. Since all
    partners of a single IIA are allowed to serve their copies of this IIA,
@@ -76,36 +41,30 @@ implement it after all the other APIs**.
    copy which is **currently in use** by the HEI which is serving the API.
 
 
-### Where are the fact sheets?
+### Fact sheet information
 
-If you compare our IIA XSDs to EUC IIA templates, you may notice that many
-fields seem to be missing in our XSDs. This is because we have decided to
-include many fields in the [Institutions API][institutions-api] instead.
+If you compare our IIA XSDs to  [the official IIA template](resources)
+from the European Commission, you may notice that many fields seem to be missing
+in our XSDs. This is because we have decided to include many fields
+in the [Institutions API][institutions-api] and [Factsheet API][factsheet-api] instead.
 
-We *tried* to follow the following rules:
+Based on the 21-29 template we follow the following rules:
 
- * We were aiming for IIAs API to describe only such data, which "belongs to"
-   (and is often stored by) *all* IIA partners, whereas Institutions API and
-   Organizational Units API describe data which "belongs to" a *single* partner
-   only (and other partners often don't really need to store it).
+ * General information that is part of Higher Education Institutions’ profile
+   and made publicly available to students is part of the Institutions API
+   (and - in some cases - Organizational Units API) and Factsheet API.
+   The general information can be updated without formal approval of the partner.
 
- * Data which is public, and can be changed without signing the IIA again, has
-   been made part of the Institutions API (and - in some cases - Organizational
-   Units API). Data which is not necessarily public, and which can be changed
-   only after the IIA is signed again, has been made part of the IIAs API.
-
-As you can see, these are NOT very strict nor explicit rules. And also, we did
-not necessarily follow them to the letter. As a result, sometimes it might not
-be obvious where a particular piece of data can be found, but - once you get
-to know the model - all should gradually become clear.
+ * Data on the terms of agreement that needs to be approved by both partners
+   is part of this API. The approval is done in the [IIAs Approval API][iias-approval-api]. 
 
 
 Security
 --------
 
-This version of this API uses [standard EWP Authentication and Security,
-Version 2][sec-v2]. Server implementers choose which security methods they
-support by declaring them in their Manifest API entry.
+This version of this API uses [standard EWP Authentication and Security, Version 2][sec-v2].
+Server implementers choose which security methods they support by declaring them
+in their Manifest API entry.
 
 
 Endpoints to be implemented
@@ -135,7 +94,7 @@ Data model entities involved in the response
 [develhub]: http://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [discovery-api]: https://github.com/erasmus-without-paper/ewp-specs-api-discovery
-[echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
-[error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
 [sec-v2]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+[factsheet-api]: https://github.com/erasmus-without-paper/ewp-specs-api-factsheet
+[iias-approval-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval
