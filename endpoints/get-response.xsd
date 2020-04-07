@@ -507,34 +507,48 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="total-months" minOccurs="1" maxOccurs="1">
+                    <xs:choice minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation>
-                                Total number of mobility months, for all academic years bound to the mobility
-                                specification.
-                            </xs:documentation>
-                        </xs:annotation>
-                        <xs:simpleType>
-                            <xs:restriction base="xs:decimal">
-                                <xs:minExclusive value="0"/>
-                                <xs:fractionDigits value="2"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element name="blended" type="xs:boolean" minOccurs="0" maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation>
-                                Blended mobility option for students. By sending 'true', the partners
-                                confirm that they are willing to exchange students who wish to carry out their mobility
-                                in a blended format, a combination of a short-term physical mobility with a virtual
-                                component.
+                                Erasmus+ IIA template allows to provide this value in two formats:
 
-                                This element is REQUIRED since 2021. Partners can exchange older agreements or
-                                send draft versions of new agreements without this element, but since 2021 the
-                                agreements MUST NOT be signed without it.
+                                A. a total number of months of the study periods, or
+                                B. an average duration.
+
+                                The server MAY use any of these formats. The client MUST support both. It's
+                                worth noting, that storing the "A" value seems to be a bit safer than storing "B":
+                                https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/17
                             </xs:documentation>
                         </xs:annotation>
-                    </xs:element>
+                        <xs:element name="avg-months">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Average number of mobility months, per each academic year bound to the mobility
+                                    specification.
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="total-months">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Total number of mobility months, for all academic years bound to the mobility
+                                    specification.
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -549,20 +563,42 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="total-days" minOccurs="1" maxOccurs="1">
+                    <xs:choice minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation>
-                                Total number of mobility days, for all academic years bound to the mobility
-                                specification.
+                                This choice is very similar to the one described for `avg-months` and
+                                `total-months` elements - please read the notes there too.
                             </xs:documentation>
                         </xs:annotation>
-                        <xs:simpleType>
-                            <xs:restriction base="xs:decimal">
-                                <xs:minExclusive value="0"/>
-                                <xs:fractionDigits value="2"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
+                        <xs:element name="avg-days">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Average number of mobility days, per each academic year bound to the mobility
+                                    specification.
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="total-days">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Total number of mobility days, for all academic years bound to the mobility
+                                    specification.
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minExclusive value="0"/>
+                                    <xs:fractionDigits value="2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
