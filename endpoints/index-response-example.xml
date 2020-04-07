@@ -1,8 +1,8 @@
 <iias-index-response
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/index-response.xsd"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/endpoints/index-response.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/index-response.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/endpoints/index-response.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v2/endpoints/index-response.xsd
     "
 >

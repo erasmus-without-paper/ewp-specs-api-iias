@@ -10,6 +10,7 @@ Agreements API* document, starting from its first beta draft version.
 
 * Remove average duration and make total required.
 * Add `blended` flag for student mobilities.
+* Change namespaces due to a major release.
 
 
 2.2.2
