@@ -10,7 +10,9 @@ Summary
 
 This document describes the **Interinstitutional Agreements API**. This API
 allows partners to compare their copies of interinstitutional Erasmus+ mobility
-agreements with each other, which makes it easier to spot errors.
+agreements with each other, which makes it easier to spot errors. This API is complementary
+with the [Interinstitutional Agreements Approval API][iias-approval-api]
+where HEIs can approve agreements they exchange via the IIAs API.
 
 
 Introduction
@@ -43,13 +45,13 @@ HEIs. The IIAs API is the final result.
 
 ### Fact sheet information
 
-If you compare our IIA XSDs to  [the official IIA template](resources)
+If you compare our IIA XSDs to the [official IIA template](resources)
 from the European Commission, for years 2021-20[29], you may notice that
 many fields seem to be missing in our XSDs. This is because we have decided
 to include many fields in the [Institutions API][institutions-api]
 and the [Factsheet API][factsheet-api] instead.
 
-Based on [the official IIA template](resources) from the European Commission for years 2021-20[29],
+Based on the [official IIA template](resources) from the European Commission for years 2021-20[29],
 we follow the following rules:
 
  * General information that is part of Higher Education Institutions’ profile
