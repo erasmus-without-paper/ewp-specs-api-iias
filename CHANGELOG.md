@@ -5,13 +5,6 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
-3.0.0
------
-
-* Remove average duration and make total required.
-* Add `blended` flag for student mobilities.
-
-
 2.2.2
 -----
 
