@@ -71,7 +71,9 @@
                     <language>no</language>
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
-                <isced-f-code>0314</isced-f-code>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
                 <total-months>36.75</total-months>
                 <blended>false</blended>
                 <!-- At least one eqf-level is required for "mobility for studies". -->
@@ -96,7 +98,9 @@
                     <language>no</language>
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
-                <isced-f-code>0314</isced-f-code>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
                 <total-months>70.00</total-months>
                 <blended>false</blended>
                 <!-- No eqf-level for traineeships. -->
@@ -114,7 +118,9 @@
                     <language>en</language>
                     <cefr-level>C1</cefr-level>
                 </recommended-language-skill>
-                <isced-f-code>0314</isced-f-code>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
                 <!-- Staff mobilities have days instead of months. -->
                 <total-days>27</total-days>
             </staff-teacher-mobility-spec>
@@ -132,7 +138,9 @@
                     <language>en</language>
                     <cefr-level>C1</cefr-level>
                 </recommended-language-skill>
-                <isced-f-code>0314</isced-f-code>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
                 <total-days>28</total-days>
             </staff-teacher-mobility-spec>
 
@@ -148,7 +156,9 @@
                     <language>en</language>
                     <cefr-level>B2</cefr-level>
                 </recommended-language-skill>
-                <isced-f-code>0314</isced-f-code>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
                 <total-days>28</total-days>
             </staff-training-mobility-spec>
         </cooperation-conditions>
