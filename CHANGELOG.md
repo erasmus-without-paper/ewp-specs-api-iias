@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+4.0.0
+-----
+
+* Allow many ISCED codes in mobility specification.
+
+
 3.0.0
 -----
 
