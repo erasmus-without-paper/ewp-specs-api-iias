@@ -394,15 +394,12 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="mobilities-per-year" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
+            <xs:element name="mobilities-per-year" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
                         Maximum number of people to be sent *for each* academic year. (The total number
                         of people being sent can be calculated by multiplying this number and the
                         length of the `receiving-academic-year-id` list.)
-
-                        (In the Erasmus+ IIA template this was called "mobility number", and it wasn't
-                        necessarilly "per year".)
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
