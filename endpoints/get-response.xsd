@@ -561,7 +561,7 @@
             <xs:complexContent>
                 <xs:extension base="StudentMobilitySpecification">
                     <xs:sequence>
-                        <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="1" maxOccurs="unbounded">
+                        <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="0" maxOccurs="unbounded">
                             <xs:annotation>
                                 <xs:documentation>
                                     A list of allowed study levels of the students being sent.
