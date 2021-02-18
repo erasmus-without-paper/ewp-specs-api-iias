@@ -518,6 +518,16 @@
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>
+                    <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                A list of allowed study levels of the students being sent.
+
+                                (If a particular student's level is not listed here, then this student should
+                                not be able to apply for this mobility.)
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -561,16 +571,7 @@
             <xs:complexContent>
                 <xs:extension base="StudentMobilitySpecification">
                     <xs:sequence>
-                        <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="0" maxOccurs="unbounded">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    A list of allowed study levels of the students being sent.
-
-                                    (If a particular student's level is not listed here, then this student should
-                                    not be able to apply for this mobility.)
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:element>
+                        <!-- Currently, there are no extra fields for this subclass. -->
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
