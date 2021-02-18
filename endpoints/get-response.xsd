@@ -455,6 +455,13 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            <xs:element name="other-info-terms" type="xs:string" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        Optional field for any other information regarding the terms of the agreement.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
