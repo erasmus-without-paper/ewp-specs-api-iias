@@ -478,13 +478,10 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="subject-area-name" type="xs:string" minOccurs="0" maxOccurs="1">
+            <xs:element name="isced-clarification" type="xs:string" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                        Subject area name.
-
-                        It can be a name of the ISCED-F code sent in the `isced-f-code` element,
-                        but does not have to. In some cases it is useful to have more detailed information here.
+                        This field contains additional details regarding `isced-f-code` field.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
