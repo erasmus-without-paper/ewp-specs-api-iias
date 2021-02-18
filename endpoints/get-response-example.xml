@@ -74,7 +74,7 @@
                 <subject-area>
                     <isced-f-code>0314</isced-f-code>
                 </subject-area>
-                <total-months>36.75</total-months>
+                <total-months-per-year>5</total-months-per-year>
                 <blended>false</blended>
                 <!-- At least one eqf-level is required for "mobility for studies". -->
                 <eqf-level>7</eqf-level>
@@ -101,7 +101,7 @@
                 <subject-area>
                     <isced-f-code>0314</isced-f-code>
                 </subject-area>
-                <total-months>70.00</total-months>
+                <total-months-per-year>10</total-months-per-year>
                 <blended>false</blended>
                 <!-- No eqf-level for traineeships. -->
             </student-traineeship-mobility-spec>
@@ -122,7 +122,7 @@
                     <isced-f-code>0314</isced-f-code>
                 </subject-area>
                 <!-- Staff mobilities have days instead of months. -->
-                <total-days>27</total-days>
+                <total-days-per-year>8</total-days-per-year>
             </staff-teacher-mobility-spec>
             <staff-teacher-mobility-spec>
                 <!-- Every specification describes a unidirectional mobility. If students or
@@ -141,7 +141,7 @@
                 <subject-area>
                     <isced-f-code>0314</isced-f-code>
                 </subject-area>
-                <total-days>28</total-days>
+                <total-days-per-year>14</total-days-per-year>
             </staff-teacher-mobility-spec>
 
             <!-- Staff mobility for training. -->
@@ -159,7 +159,7 @@
                 <subject-area>
                     <isced-f-code>0314</isced-f-code>
                 </subject-area>
-                <total-days>28</total-days>
+                <total-days-per-year>14</total-days-per-year>
             </staff-training-mobility-spec>
         </cooperation-conditions>
         <conditions-hash>57ef636fcdcdfa54066ab13a21f630e41f1078ee8fa9877282a426afdcebd4c9</conditions-hash>

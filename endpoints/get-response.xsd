@@ -497,11 +497,10 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="total-months" minOccurs="1" maxOccurs="1">
+                    <xs:element name="total-months-per-year" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation>
-                                Total number of mobility months, for all academic years bound to the mobility
-                                specification.
+                                Total number of mobility months per academic year.
                             </xs:documentation>
                         </xs:annotation>
                         <xs:simpleType>
@@ -545,11 +544,10 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="total-days" minOccurs="1" maxOccurs="1">
+                    <xs:element name="total-days-per-year" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation>
-                                Total number of mobility days, for all academic years bound to the mobility
-                                specification.
+                                Total number of mobility days per academic year.
                             </xs:documentation>
                         </xs:annotation>
                         <xs:simpleType>
