@@ -439,10 +439,11 @@
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
+                        <xs:element name="subject-area" type="SubjectArea" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="subject-area" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="subject-area" type="SubjectArea" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         Optional subject areas associated with this mobility.
@@ -453,31 +454,32 @@
                         in future versions though.
                     </xs:documentation>
                 </xs:annotation>
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="isced-f-code" type="xs:string" minOccurs="1" maxOccurs="1">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    ISCED-F subject area code.
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
 
-                                    ISCED-F codes define fields of education and training at the secondary,
-                                    post-secondary and tertiary levels of education. Details:
-                                    http://www.uis.unesco.org/Education/Documents/isced-fields-of-education-training-2013.pdf
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:element>
-                        <xs:element name="subject-area-name" type="xs:string" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    Subject area name.
+    <xs:complexType name="SubjectArea">
+        <xs:sequence>
+            <xs:element name="isced-f-code" type="xs:string" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        ISCED-F subject area code.
 
-                                    It can be a name of the ISCED-F code sent in the `isced-f-code` element,
-                                    but does not have to. In some cases it is useful to have more detailed information here.
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:element>
-                    </xs:sequence>
-                </xs:complexType>
+                        ISCED-F codes define fields of education and training at the secondary,
+                        post-secondary and tertiary levels of education. Details:
+                        http://www.uis.unesco.org/Education/Documents/isced-fields-of-education-training-2013.pdf
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="subject-area-name" type="xs:string" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject area name.
+
+                        It can be a name of the ISCED-F code sent in the `isced-f-code` element,
+                        but does not have to. In some cases it is useful to have more detailed information here.
+                    </xs:documentation>
+                </xs:annotation>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
