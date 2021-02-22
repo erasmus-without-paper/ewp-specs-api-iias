@@ -517,6 +517,9 @@
                                 confirm that they are willing to exchange students who wish to carry out their mobility
                                 in a blended format, a combination of a short-term physical mobility with a virtual
                                 component.
+
+                                Note: This field should be set to 'false' for all agreements create before the
+                                introduction of blended mobilities.
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>
