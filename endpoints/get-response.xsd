@@ -116,7 +116,8 @@
                                                 <xs:documentation>
                                                     The partner's "human readable" ID of this IIA (aka an agreement number). If
                                                     this server is aware of the agreement numbers used by the other partners, then
-                                                    it outputs it here.
+                                                    it MUST output it here (otherwise, a copy of the agreement in our system could
+                                                    be treated as a separate different agreement in partner's system).
 
                                                     Since `iia-id` values should contain surrogate identifiers (and, as such,
                                                     should not be displayed to the user), we require additional "human readable"
