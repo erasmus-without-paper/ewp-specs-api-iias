@@ -78,7 +78,7 @@ which have been either created or modified after the given point in time.
 
  * As we previously explained [here][index-pulling], clients MAY use the
    `index` and `get` endpoints as a pull-based method of synchronization,
-   alternative (or rather complementary) to CNRs. It is RECOMMENDED for the
+   complementary to CNRs. It is RECOMMENDED for the
    servers to support this parameter, to avoid unnecessary network traffic.
 
 

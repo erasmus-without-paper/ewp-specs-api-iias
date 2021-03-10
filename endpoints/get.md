@@ -87,9 +87,8 @@ satisfied:
 * You SHOULD allow an IIA to be read at least by all its partners. This is,
   after all, what this API is for.
 
-* If you decide to *change* the visibility of an already existing IIA, and you
-  implement the IIA CNR API, then you SHOULD inform all affected parties about
-  such change.
+* If you decide to *change* the visibility of an already existing IIA,
+  then you SHOULD inform all affected parties about such change.
 
 
 Handling of invalid parameters

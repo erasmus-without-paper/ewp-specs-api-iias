@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     elementFormDefault="qualified"
@@ -82,16 +81,6 @@
                             <xs:annotation>
                                 <xs:documentation>
                                     An URL at which the IIA `index` endpoint is being served.
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:element>
-                        <xs:element name="sends-notifications" type="ewp:Empty" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    If this element is present, then the EWP Host states, that it has implemented
-                                    a Notification Sender for IIAs - it will *try* to deliver notifications to all
-                                    Interinstitutional Agreement CNR APIs implemented throughout the EWP Network
-                                    whenever related IIAs are changed.
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>

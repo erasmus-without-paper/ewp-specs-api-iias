@@ -71,8 +71,8 @@ Server implementers choose which security methods they support by declaring them
 in their Manifest API entry.
 
 
-Endpoints to be implemented
----------------------------
+Endpoints and functionality to be implemented
+---------------------------------------------
 
 Server implementers MUST:
 
@@ -83,6 +83,10 @@ Server implementers MUST:
 
 The details on each of these endpoints are described on separate pages of this
 API specification (use the links above).
+
+Implementers also MUST implement a Notification Sender for Interinstitutional Agreement objects.
+That means that an EWP host will *try* to deliver notifications to all Interinstitutional Agreement CNR APIs
+implemented throughout the EWP Network whenever related agreement objects are updated.
 
 
 Data model entities involved in the response
