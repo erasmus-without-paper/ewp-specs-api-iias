@@ -192,6 +192,8 @@
 
                                         If you are sending conditions-hash, be consistent in ordering cooperation conditions.
                                         The hash SHOULD NOT change if the cooperation conditions are not really changing.
+                                        An exception to this are the `sending-contact` and `receiving-contact` subelements
+                                        that are not taken into account when calculating hash.
                                     </xs:documentation>
                                 </xs:annotation>
                                 <xs:complexType>
@@ -231,7 +233,8 @@
                             <xs:element name="conditions-hash" type="ewp:Sha256Hex" minOccurs="0" maxOccurs="1">
                                 <xs:annotation>
                                     <xs:documentation>
-                                        The SHA-256 digest of the cooperation-conditions element. Before
+                                        The SHA-256 digest of the cooperation-conditions element but *excluding*
+                                        `sending-contact` and `receiving-contact` subelements. Before
                                         calculating the hash, the cooperation-conditions element should be normalized
                                         using Exclusive XML Canonicalization.
 
