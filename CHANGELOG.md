@@ -5,6 +5,32 @@ This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
 
+6.0.0
+-----
+
+* Limit sending-ounit-id and receiving-ounit-id to one element.
+* Update link to the PDF describing ISCED-F codes.
+* Fix #49 by adding note about the recommended format for ISCED code.
+* Exclude sending-contact and receiving-contact when calculating hash.
+* Fix descriptions of iia-id and iia-code fields.
+* Make sending CNRs mandatory.
+
+
+5.0.0
+-----
+
+* Add note about setting "blended" to false for "legacy" agreements.
+* Rename "total-months" and "total-days" fields.
+* Change name of "subject-area-name" element to "isced-clarification".
+* Add field for other information regarding the terms of the agreement.
+* Add optional subject area inside "recommended-language-skill".
+* Make "mobilities-per-year" element optional and remove note.
+* Add EQF level element also for student traineeship.
+* Make EQF level optional.
+* Make blended element required.
+* Remove referenced to multi-party agreements.
+
+
 4.0.0
 -----
 
