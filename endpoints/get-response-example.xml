@@ -75,7 +75,6 @@
                 </subject-area>
                 <total-months-per-year>5</total-months-per-year>
                 <blended>false</blended>
-                <!-- At least one eqf-level is required for "mobility for studies". -->
                 <eqf-level>7</eqf-level>
                 <eqf-level>8</eqf-level>
             </student-studies-mobility-spec>
