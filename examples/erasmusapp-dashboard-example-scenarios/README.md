@@ -6,10 +6,10 @@ They are part of the *EDSSI Project - Activity 2.4* and have been developed by t
 ## Scenarios
 4 scenarios are examined:
 * Scenarios 1-2: assume that the Sending HEI is being represented by `ErasmusAPP-Dashboard`, and
-* Scenarios 3-4: assume that the Sending HEI is being represented by `ErasmusAPP-Dashboard`.
+* Scenarios 3-4: assume that the Receiving HEI is being represented by `ErasmusAPP-Dashboard`.
 
 Briefly, these scenarios are:
 * Scenarios 1 and 3: Receiving accepts Nomination
 * Scenarios 2 and 4: Receiving rejects Nomination
 
-Along with the PDF file, the 4 example XML files are provided in the /src folder.
+Along with the PDF file, the 4 example XML files are provided in the /src/xml folder.
