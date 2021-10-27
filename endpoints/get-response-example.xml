@@ -160,7 +160,7 @@
                 <total-days-per-year>14</total-days-per-year>
             </staff-training-mobility-spec>
         </cooperation-conditions>
-        <conditions-hash>57ef636fcdcdfa54066ab13a21f630e41f1078ee8fa9877282a426afdcebd4c9</conditions-hash>
+        <conditions-hash>7c045bc4ca23b3b9953adb27374aa27dcd41cfdda74fff9d2240a813a80443ae</conditions-hash>
         <!-- For clarity, we do not paste a real PDF binary here. This should be a signed PDF. The hei can choose to generate -->
         <!-- and sign its own PDF or use (sign and serve here) a document served by the partner. -->
         <pdf>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmxt1dWM7wF18z9ZKd9IdolvVXPKYWsQo
