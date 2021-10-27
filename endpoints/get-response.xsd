@@ -238,6 +238,9 @@
                                         calculating the hash, the cooperation-conditions element should be normalized
                                         using Exclusive XML Canonicalization.
 
+                                        Please be aware that XML Canonicalization does not imply that spaces are removed:
+                                        https://www.w3.org/TR/xml-c14n2/#sec-Requirements-Robustness
+
                                         This element is not required. However, if it is not present, your partner
                                         will not be able to approve your version of the agreement using EWP IIAs Approval API.
                                         If you want to get approval of your agreements, then you should always send
