@@ -134,8 +134,9 @@
                                         <xs:element name="signing-contact" type="c:Contact" minOccurs="0" maxOccurs="1">
                                             <xs:annotation>
                                                 <xs:documentation>
-                                                    This describes that person who acts as the partner's institutional coordinator
-                                                    for this IIA (if known).
+                                                    This describes that person who is a partner's signer of this IIA (if known).
+                                                    Most often it is an institutional coordinator for this IIA,
+                                                    but it could also be, for example, the dean of the faculty.
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
