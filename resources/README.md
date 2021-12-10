@@ -1,3 +1,7 @@
+Current IIA template is specified [here][new-iia-template].
+
+IIA templates mentioned below are previous versions of the template.
+
 ### Additional resources
 
 This folder contains some additional documents related to IIAs API.
@@ -10,3 +14,5 @@ This folder contains some additional documents related to IIAs API.
   requirements for Inter-Institutional Agreements for years 2021-20[29].
 
 These templates should be the basis of our IIA model.
+
+[new-iia-template]: https://erasmus-plus.ec.europa.eu/resources-and-tools/inter-institutional-agreement
