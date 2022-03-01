@@ -541,8 +541,9 @@
                             <xs:documentation>
                                 A list of allowed study levels of the students being sent.
 
-                                (If a particular student's level is not listed here, then this student should
-                                not be able to apply for this mobility.)
+                                Note: If at least one EQF level is provided here and student's level
+                                is not one of these levels, then such student should not be able to apply
+                                for mobility specified by these cooperation conditions.
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>
