@@ -314,15 +314,15 @@
             <xs:element name="sending-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
-                        Optional ID of the sending organizational unit.
+                        Optional list of IDs of sending organizational units.
 
                         This data might be relevant for some partners, while other partners might
                         ignore it completely. If the server is aware that particular students should
                         come from a particular organizational unit, then it reports it here. Note, that
                         this MAY be the "root" unit (the one representing the entire HEI).
 
-                        This ID is defined by the HEI referred to in the `sending-hei-id` element.
-                        If the server is not aware of this ID, then it won't provide it. Clients
+                        These IDs are defined by the HEI referred to in the `sending-hei-id` element.
+                        If the server is not aware of these IDs, then it won't provide them. Clients
                         can retrieve further information on this unit via Organizational Units API, but
                         note, that it is not obvious *which* Organizational Units API the client should
                         use. See similar notes on `iia/partner-hei/hei-id` element. Discuss here:
@@ -359,15 +359,15 @@
             <xs:element name="receiving-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
-                        Optional ID of the receiving organizational unit.
+                        Optional list of receiving organizational units.
 
                         This data might be relevant for some partners, while other partners might
                         ignore it completely. If the server is aware that particular students should be
                         received by a particular organizational unit, then it reports it here. Note,
                         that this MAY be the "root" unit (the one representing the entire HEI).
 
-                        This ID is defined by the HEI referred to in the `receiving-hei-id` element.
-                        If the server is not aware of this ID, then it won't provide it. Clients
+                        These IDs are defined by the HEI referred to in the `receiving-hei-id` element.
+                        If the server is not aware of these IDs, then it won't provide them. Clients
                         can retrieve further information on this unit via Organizational Units API, but
                         note, that it is not obvious *which* Organizational Units API the client should
                         use. See similar notes on `iia/partner-hei/hei-id` element. Discuss here:
