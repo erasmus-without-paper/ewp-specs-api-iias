@@ -311,7 +311,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="sending-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="1">
+            <xs:element name="sending-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         Optional ID of the sending organizational unit.
@@ -356,7 +356,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="receiving-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="1">
+            <xs:element name="receiving-ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         Optional ID of the receiving organizational unit.
