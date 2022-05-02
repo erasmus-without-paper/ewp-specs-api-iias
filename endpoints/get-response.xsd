@@ -103,10 +103,11 @@
                                                     SHOULD NOT be displayed to the user (use `iia-code` for that).
 
                                                     Since IIA IDs are local (unique within a single HEI, but not within the world),
-                                                    each partner is allowed to have his own ID for the same IIA. If this server is
-                                                    aware of the IDs used by the other partners, then it MUST output it here
-                                                    (otherwise, a copy of the agreement in our system could be treated
-                                                    as a separate different agreement in partner's system).
+                                                    each partner is allowed to have his own ID for the same IIA.
+
+                                                    ID used by the partner MUST be provided as soon as it is mapped in the local system.
+                                                    Otherwise an agreement might be interpreted as not mapped, which may lead to duplicates.
+                                                    Also it is REQUIRED to provide partner agreement ID to be able to approve it.
 
                                                     Server implementers MUST use immutable surrogate keys for their work with EWP.
                                                     https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
