@@ -43,6 +43,24 @@ HEIs. The IIAs API is the final result.
    copy which is **currently in use** by the HEI which is serving the API.
 
 
+### Important rules
+
+
+* Electronic versions of IIAs should model their former paper equivalents in a straightforward manner.
+* Two HEIs sign one or several IIAs with one or several cooperation conditions.
+* Specifications support IIAs with many cooperation conditions and each node in the network should be able
+  to handle such IIAs to achieve this goal.
+* Both copies of the same IIA stored in both partners' systems must be presented to each other 
+  as exactly one IIA having the same number of corresponding cooperation conditions.
+* Partners should exchange identifiers of their copies of the IIA to match these copies respectively in their systems.
+* Regardless of whether a field is mandatory in the API, if it is present in the IIA of one HEI
+  it should also be present in the matched IIA of the partner HEI.
+* Providers are free to implement their local solutions to best support the needs of their customers
+  but under the condition that the general principle expressed in the points above is maintained.
+* It may happen that in time the signed IIA needs to be terminated, extended or modified for good reasons.
+  Future changes in specifications will support such needs.
+
+
 ### Fact sheet information
 
 If you compare our IIA XSDs to the [official IIA template](resources)
