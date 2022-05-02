@@ -409,6 +409,9 @@
                         Maximum number of people to be sent *for each* academic year. (The total number
                         of people being sent can be calculated by multiplying this number and the
                         length of the `receiving-academic-year-id` list.)
+
+                        This element is strongly RECOMMENDED and will be required in the next major release,
+                        as it is is mandatory in the final IIA template.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
