@@ -390,16 +390,19 @@
                 <xs:annotation>
                     <xs:documentation>
                         A list of academic years for which this mobility specification is required to
-                        be in effect. (Each mobility specification can be bound to a different set of
-                        academic years.) It MUST be a unique set of IDs (years are not allowed to be
-                        repeated).
+                        be in effect *during a given programme period* (each mobility specification
+                        can be bound to a different set of academic years).
+
+                        It MUST be a list of unique IDs in *chronological order*, where *gaps are not allowed*
+                        (in case of a gap separate agreements with consecutive academic years could be signed).
+                        For example: the list "2021/2022, 2022/2023, 2023/2024" is correct,
+                        but the lists "2021/2022, 2023/2024" and "2021/2022, 2023/2024, 2022/2023" are not allowed.
+                        The recipient SHOULD make sure that those conditions are met.
 
                         If one of the partner is from the southern hemisphere (so that he uses
                         academic years in a form of "2010/2010" instead of "2010/2011"), then IDs
                         provided here should refer to the scheme used by the receiving partner (not the
-                        sending one). At the beginning of the EWP project clients MAY expect all
-                        academic years to come in the northern hemisphere format, but this might change
-                        later on.
+                        sending one).
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
