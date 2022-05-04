@@ -48,7 +48,7 @@ HEIs. The IIAs API is the final result.
 
 * Electronic versions of IIAs should model their former paper equivalents in a straightforward manner.
 * Two HEIs sign one or several IIAs with one or several cooperation conditions.
-* Specifications support IIAs with many cooperation conditions and each node in the network should be able
+* Specifications support IIAs with many cooperation conditions and each node in the network must be able
   to handle such IIAs to achieve this goal.
 * Both copies of the same IIA stored in both partners' systems must be presented to each other 
   as exactly one IIA having the same number of corresponding cooperation conditions.
