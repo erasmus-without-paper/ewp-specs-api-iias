@@ -4,6 +4,26 @@ Release notes
 This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
+6.1.0
+-----
+
+* Fix description of sending-ounit-id and receiving-ounit-id.
+* Remove incorrect comment to the EQF level field in the example.
+* Add note about XML Canonicalization and spaces.
+* Changing the hash to correctly calculated in get response example.
+* Fix #69 by using a more generic description for signing-contact.
+* Add a link to the current IIA template.
+* Better indication of the template used to model IIA.
+* Fix #61 by rewording comment to EQL level.
+* Make mobilities per year element strongly recommended.
+* Require academic years to be ordered and without gaps (#70).
+* Emphasise that partner agreement ID should be provided ASAP.
+* Fix example scenario so that IIA approval is after ID mapping.
+* Add important rules of IIA exchange.
+* Change "should" to "must" for many CC support.
+* Change "should" to "highly recommend" for matching partner fields.
+
+
 6.0.1
 -----
 
