@@ -4,6 +4,11 @@ Release notes
 This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
+6.0.1
+-----
+
+* Fix namespace version number in manifest-entry.xsd.
+
 
 6.0.0
 -----
