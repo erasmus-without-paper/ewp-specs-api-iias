@@ -1,0 +1,19 @@
+<!-- TODO: Change these paths-->
+<iias-stats-response
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/tree/stable-v1"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias-approval/master/response.xsd
+    "
+>
+
+    <iia-fetchable>0</iia-fetchable>
+
+    <iia-locally-unapproved>0</iia-locally-unapproved>
+    <iia-partner-unapproved>0</iia-partner-unapproved>
+    <iia-approved>0</iia-approved>
+    <calculation-date>2022-07-10T09:00:00</calculation-date>
+
+</iias-stats-response>
