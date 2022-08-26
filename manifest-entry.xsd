@@ -87,7 +87,7 @@
                         <xs:element name="stats-url" type="ewp:HTTPS" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                                 <xs:documentation>
-                                    An URL at which the IIA `index` endpoint is being served.
+                                    An URL at which the IIA `stats` endpoint is being served.
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>

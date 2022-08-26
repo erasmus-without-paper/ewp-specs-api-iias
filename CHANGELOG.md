@@ -7,10 +7,7 @@ Agreements API* document, starting from its first beta draft version.
 6.2.0
 -----
 
-* Add IIAs statistics endpoint URL to manifest
-* Add IIAs statistics endpoint response schema
-* Add IIAs statistics endpoint response example
-* Add IIAs statistics endpoint README
+* Add IIAs statistics endpoint.
 
 
 6.1.0

@@ -8,7 +8,7 @@ IIA Stats endpoint
 Summary
 -------
 
-This endpoint allows the client to get the statistics describing IIAs from a specific HEI.
+This endpoint allows the client to get the statistics describing IIAs from a local HEI.
 
 Request method
 --------------
@@ -38,6 +38,5 @@ further information.
 [develhub]: http://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
-[echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [ewp-architecture]: https://github.com/erasmus-without-paper/ewp-specs-architecture
