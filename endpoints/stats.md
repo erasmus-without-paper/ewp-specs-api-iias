@@ -19,7 +19,7 @@ Request method
 Other requirements
 ------------------
 
-Refer to [this document][ewp-architecture] for more details about requirements for statistics endpoint (TODO: update link for specific section after merging)
+Refer to [this document][ewp-architecture] for more details about requirements for statistics endpoint.
 
 
 Error handling
@@ -39,4 +39,4 @@ further information.
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
-[ewp-architecture]: https://github.com/erasmus-without-paper/ewp-specs-architecture
+[ewp-architecture]: https://github.com/erasmus-without-paper/ewp-specs-architecture#ewp-statistics
