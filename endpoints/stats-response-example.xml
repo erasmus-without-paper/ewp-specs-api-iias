@@ -1,0 +1,15 @@
+<iias-stats-response
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v6/endpoints/stats-response.xsd
+    "
+>
+
+    <iia-fetchable>397</iia-fetchable>
+    <iia-local-unapproved-partner-approved>0</iia-local-unapproved-partner-approved>
+    <iia-local-approved-partner-unapproved>106</iia-local-approved-partner-unapproved>
+    <iia-both-approved>204</iia-both-approved>
+
+</iias-stats-response>

@@ -4,6 +4,12 @@ Release notes
 This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
+6.2.0
+-----
+
+* Add IIAs statistics endpoint.
+
+
 6.1.0
 -----
 
