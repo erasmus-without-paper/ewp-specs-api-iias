@@ -46,8 +46,8 @@
                     <xs:annotation>
                         <xs:documentation>
                             This represents a single IIA. Servers will produce one such element for
-                            each of the `iia_id` or `iia_code` values passed in the Institutions API
-                            call.
+                            each of the `iia_id` or `iia_code` values passed in the
+                            Interinstitutional Agreements API call.
                         </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
