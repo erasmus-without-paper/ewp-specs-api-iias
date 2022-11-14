@@ -81,6 +81,14 @@ we follow the following rules:
    is part of this API. The approval is done in the [IIAs Approval API][iias-approval-api]. 
 
 
+### Business requirements and processes
+
+
+[Business requirements and processes](resources/mandatory_business_requirements_IIA.pdf) 
+document clarifies the requirements for the technical solutions
+developed under EWP and in the local implementation that should adequately support
+the business processes related to the approval of IIAs at Higher Education Institutions.
+
 Security
 --------
 
