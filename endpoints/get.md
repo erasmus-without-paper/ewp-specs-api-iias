@@ -61,16 +61,6 @@ Server implementers provide their own chosen values of `<max-iia-ids>` and
 (or assume they're equal to `1`).
 
 
-### `send_pdf` (optional)
-
-Boolean, default false. Value `false` means, that the client is not interested
-in receiving PDF version of the agreement and the PDF SHOULD be skipped in the response.
-
-Note: the PDF version can be missing in the response even if value `true` is passed.
-Some servers MAY not support PDFs at all or the PDF version can be not ready yet.
-This parameter only helps to avoid unnecessary network traffic. 
-
-
 Permissions
 -----------
 

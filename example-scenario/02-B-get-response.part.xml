@@ -33,6 +33,6 @@
         <!-- B wants to have on the PDF his logo and some additional information, so he generates his own PDF. If both -->
         <!-- partners use the same PDF format, B could send here PDF fetched from A and signed by B (the same as in B's -->
         <!-- approval response). -->
-        <pdf>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAw...</pdf>
+        <pdf-file>2f521e8a-d9fd-4f49-9941-df9318bf190f</pdf-file>
     </iia>
 </iias-get-response>
