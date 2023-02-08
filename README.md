@@ -43,6 +43,24 @@ HEIs. The IIAs API is the final result.
    copy which is **currently in use** by the HEI which is serving the API.
 
 
+### Important rules
+
+
+* Electronic versions of IIAs should model their former paper equivalents in a straightforward manner.
+* Two HEIs sign one or several IIAs with one or several cooperation conditions.
+* Specifications support IIAs with many cooperation conditions and each node in the network must be able
+  to handle such IIAs to achieve this goal.
+* Both copies of the same IIA stored in both partners' systems must be presented to each other 
+  as exactly one IIA having the same number of corresponding cooperation conditions.
+* Partners should exchange identifiers of their copies of the IIA to match these copies respectively in their systems.
+* Regardless of whether a field is mandatory in the API, if it is present in the IIA of one HEI
+  it is highly recommended to have it in the matched IIA of the partner HEI.
+* Providers are free to implement their local solutions to best support the needs of their customers
+  but under the condition that the general principle expressed in the points above is maintained.
+* It may happen that in time the signed IIA needs to be terminated, extended or modified for good reasons.
+  Future changes in specifications will support such needs.
+
+
 ### Fact sheet information
 
 If you compare our IIA XSDs to the [official IIA template](resources)
@@ -63,6 +81,14 @@ we follow the following rules:
    is part of this API. The approval is done in the [IIAs Approval API][iias-approval-api]. 
 
 
+### Business requirements and processes
+
+
+[Business requirements and processes](resources/mandatory_business_requirements_IIA.pdf) 
+document clarifies the requirements for the technical solutions
+developed under EWP and in the local implementation that should adequately support
+the business processes related to the approval of IIAs at Higher Education Institutions.
+
 Security
 --------
 
@@ -78,6 +104,7 @@ Server implementers MUST:
 
  * Implement the [`get` endpoint](endpoints/get.md).
  * Implement the [`index` endpoint](endpoints/index.md).
+ * Implement the [`stats` endpoint](endpoints/stats.md)
  * Put the URLs of these endpoints in their [manifest file][discovery-api], as
    described in [manifest-entry.xsd](manifest-entry.xsd).
 

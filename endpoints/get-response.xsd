@@ -46,8 +46,8 @@
                     <xs:annotation>
                         <xs:documentation>
                             This represents a single IIA. Servers will produce one such element for
-                            each of the `iia_id` or `iia_code` values passed in the Institutions API
-                            call.
+                            each of the `iia_id` or `iia_code` values passed in the
+                            Interinstitutional Agreements API call.
                         </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -103,10 +103,11 @@
                                                     SHOULD NOT be displayed to the user (use `iia-code` for that).
 
                                                     Since IIA IDs are local (unique within a single HEI, but not within the world),
-                                                    each partner is allowed to have his own ID for the same IIA. If this server is
-                                                    aware of the IDs used by the other partners, then it MUST output it here
-                                                    (otherwise, a copy of the agreement in our system could be treated
-                                                    as a separate different agreement in partner's system).
+                                                    each partner is allowed to have his own ID for the same IIA.
+
+                                                    ID used by the partner MUST be provided as soon as it is mapped in the local system.
+                                                    Otherwise an agreement might be interpreted as not mapped, which may lead to duplicates.
+                                                    Also it is REQUIRED to provide partner agreement ID to be able to approve it.
 
                                                     Server implementers MUST use immutable surrogate keys for their work with EWP.
                                                     https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
@@ -390,16 +391,19 @@
                 <xs:annotation>
                     <xs:documentation>
                         A list of academic years for which this mobility specification is required to
-                        be in effect. (Each mobility specification can be bound to a different set of
-                        academic years.) It MUST be a unique set of IDs (years are not allowed to be
-                        repeated).
+                        be in effect *during a given programme period* (each mobility specification
+                        can be bound to a different set of academic years).
+
+                        It MUST be a list of unique IDs in *chronological order*, where *gaps are not allowed*
+                        (in case of a gap separate agreements with consecutive academic years could be signed).
+                        For example: the list "2021/2022, 2022/2023, 2023/2024" is correct,
+                        but the lists "2021/2022, 2023/2024" and "2021/2022, 2023/2024, 2022/2023" are not allowed.
+                        The recipient SHOULD make sure that those conditions are met.
 
                         If one of the partner is from the southern hemisphere (so that he uses
                         academic years in a form of "2010/2010" instead of "2010/2011"), then IDs
                         provided here should refer to the scheme used by the receiving partner (not the
-                        sending one). At the beginning of the EWP project clients MAY expect all
-                        academic years to come in the northern hemisphere format, but this might change
-                        later on.
+                        sending one).
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -409,6 +413,9 @@
                         Maximum number of people to be sent *for each* academic year. (The total number
                         of people being sent can be calculated by multiplying this number and the
                         length of the `receiving-academic-year-id` list.)
+
+                        This element is strongly RECOMMENDED and will be required in the next major release,
+                        as it is is mandatory in the final IIA template.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -541,8 +548,9 @@
                             <xs:documentation>
                                 A list of allowed study levels of the students being sent.
 
-                                (If a particular student's level is not listed here, then this student should
-                                not be able to apply for this mobility.)
+                                Note: If at least one EQF level is provided here and student's level
+                                is not one of these levels, then such student should not be able to apply
+                                for mobility specified by these cooperation conditions.
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>

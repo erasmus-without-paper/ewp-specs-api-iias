@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified"
+
+        targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd"
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd"
+>
+    <xs:annotation>
+        <xs:documentation>
+            This schema is a part of the Erasmus Without Paper project. Before you start
+            using it, make sure you have read the general rules described here:
+
+            http://developers.erasmuswithoutpaper.eu/
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="iias-stats-response">
+        <xs:annotation>
+            <xs:documentation>
+                This describes the format of the response returned by the `stats` endpoint of
+                EWP Interinstitutional Agreements API.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="iia-fetchable" type="xs:integer" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Number of IIAs created in the local system which can be fetched by the partner HEI.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="iia-local-unapproved-partner-approved" type="xs:integer" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Number of IIAs created in the local system which have been approved by the partner HEI,
+                            but the matching copies of the partner have not been approved by the local HEI.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="iia-local-approved-partner-unapproved" type="xs:integer" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Number of IIAs created in the local system which have not been approved by the partner HEI,
+                            but the matching copies of the partner have been approved by the local HEI.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="iia-both-approved" type="xs:integer" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Number of IIAs created in the local system which have been approved by the partner HEI
+                            and the matching copies of the partner have been approved by the local HEI.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
