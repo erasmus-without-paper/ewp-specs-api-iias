@@ -54,8 +54,8 @@ In other words, if we are called with the following parameters:
 hei_id=any&receiving_academic_year_id=2005/2006&receiving_academic_year_id=2006/2007
 ```
 
-Then, if an agreement `A` doesn't contain at least one of these academic years
-in the `<receiving-academic-year-id>` lists in any of its cooperation
+Then, if for agreement `A` none of these academic years are between
+the `<receiving-first-academic-year-id>` and `<receiving-last-academic-year-id>` in any of its cooperation
 conditions, then `A` SHOULD NOT be included in the response.
 
 

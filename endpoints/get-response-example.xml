@@ -54,13 +54,8 @@
                 <receiving-hei-id>hibo.no</receiving-hei-id>
                 <!-- Optional receiving-contact elements go here (if supported by the
                 server at this level). -->
-                <receiving-academic-year-id>2014/2015</receiving-academic-year-id>
-                <receiving-academic-year-id>2015/2016</receiving-academic-year-id>
-                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
-                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
-                <receiving-academic-year-id>2018/2019</receiving-academic-year-id>
-                <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
-                <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
+                <receiving-first-academic-year-id>2014/2015</receiving-first-academic-year-id>
+                <receiving-last-academic-year-id>2020/2021</receiving-last-academic-year-id>
                 <mobilities-per-year>2</mobilities-per-year>
                 <recommended-language-skill>
                     <language>en</language>
@@ -84,13 +79,8 @@
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
                 <sending-ounit-id>140</sending-ounit-id>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
-                <receiving-academic-year-id>2014/2015</receiving-academic-year-id>
-                <receiving-academic-year-id>2015/2016</receiving-academic-year-id>
-                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
-                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
-                <receiving-academic-year-id>2018/2019</receiving-academic-year-id>
-                <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
-                <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
+                <receiving-first-academic-year-id>2014/2015</receiving-first-academic-year-id>
+                <receiving-last-academic-year-id>2020/2021</receiving-last-academic-year-id>
                 <mobilities-per-year>10</mobilities-per-year>
                 <recommended-language-skill>
                     <language>no</language>
@@ -109,8 +99,8 @@
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
                 <sending-ounit-id>140</sending-ounit-id>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
-                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
-                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <receiving-first-academic-year-id>2016/2017</receiving-first-academic-year-id>
+                <receiving-last-academic-year-id>2017/2018</receiving-last-academic-year-id>
                 <mobilities-per-year>2</mobilities-per-year>
                 <recommended-language-skill>
                     <language>en</language>
@@ -129,8 +119,8 @@
                 <sending-hei-id>hibo.no</sending-hei-id>
                 <receiving-hei-id>uw.edu.pl</receiving-hei-id>
                 <receiving-ounit-id>140</receiving-ounit-id>
-                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
-                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <receiving-first-academic-year-id>2016/2017</receiving-first-academic-year-id>
+                <receiving-last-academic-year-id>2017/2018</receiving-last-academic-year-id>
                 <mobilities-per-year>2</mobilities-per-year>
                 <recommended-language-skill>
                     <language>en</language>
@@ -147,8 +137,8 @@
                 <sending-hei-id>hibo.no</sending-hei-id>
                 <receiving-hei-id>uw.edu.pl</receiving-hei-id>
                 <receiving-ounit-id>140</receiving-ounit-id>
-                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
-                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <receiving-first-academic-year-id>2016/2017</receiving-first-academic-year-id>
+                <receiving-last-academic-year-id>2017/2018</receiving-last-academic-year-id>
                 <mobilities-per-year>2</mobilities-per-year>
                 <recommended-language-skill>
                     <language>en</language>

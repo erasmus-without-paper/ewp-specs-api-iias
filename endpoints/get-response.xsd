@@ -383,18 +383,12 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="receiving-academic-year-id" type="trm:AcademicYearId" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="receiving-first-academic-year-id" type="trm:AcademicYearId" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                        A list of academic years for which this mobility specification is required to
+                        The first academic year for which this mobility specification is required to
                         be in effect *during a given programme period* (each mobility specification
                         can be bound to a different set of academic years).
-
-                        It MUST be a list of unique IDs in *chronological order*, where *gaps are not allowed*
-                        (in case of a gap separate agreements with consecutive academic years could be signed).
-                        For example: the list "2021/2022, 2022/2023, 2023/2024" is correct,
-                        but the lists "2021/2022, 2023/2024" and "2021/2022, 2023/2024, 2022/2023" are not allowed.
-                        The recipient SHOULD make sure that those conditions are met.
 
                         If one of the partner is from the southern hemisphere (so that he uses
                         academic years in a form of "2010/2010" instead of "2010/2011"), then IDs
@@ -403,12 +397,21 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            <xs:element name="receiving-last-academic-year-id" type="trm:AcademicYearId" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        The last academic year for which this mobility specification is required to be in effect.
+                        This academic year MUST NOT precede the `receiving-first-academic-year-id`.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="mobilities-per-year" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
-                        Maximum number of people to be sent *for each* academic year. (The total number
+                        Maximum number of people to be sent *for each* academic year. The total number
                         of people being sent can be calculated by multiplying this number and the
-                        length of the `receiving-academic-year-id` list.)
+                        number of the academic years this mobility specification is required to
+                        be in effect (see `receiving-first-academic-year-id` element documentation).
 
                         This element is strongly RECOMMENDED and will be required in the next major release,
                         as it is is mandatory in the final IIA template.
