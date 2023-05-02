@@ -412,9 +412,6 @@
                         of people being sent can be calculated by multiplying this number and the
                         number of the academic years this mobility specification is required to
                         be in effect (see `receiving-first-academic-year-id` element documentation).
-
-                        This element is strongly RECOMMENDED and will be required in the next major release,
-                        as it is is mandatory in the final IIA template.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
