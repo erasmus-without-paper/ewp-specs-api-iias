@@ -29,20 +29,6 @@ Parameters MUST be provided either in a query string (for GET requests), or in
 the `application/x-www-form-urlencoded` format (for POST requests).
 
 
-### `hei_id` (required)
-
-Identifier of the HEI which we want to fetch the list of IIAs from. This MUST
-be the HEI covered by the server. It MUST be required, even if the server
-covers only a single HEI.
-
-
-### `partner_hei_id` (optional)
-
-If given, then the server MUST limit the list of returned IIA IDs to only those
-in which `partner_hei_id` is one of the partners. This value of this parameter
-MUST NOT equal the value passed in `hei_id`.
-
-
 ### `receiving_academic_year_id` (optional, repeatable)
 
 If given, then the server SHOULD limit the list of returned IIA IDs to only
@@ -94,9 +80,6 @@ Handling of invalid parameters
 ------------------------------
 
  * General [error handling rules][error-handling] apply.
-
- * Invalid `hei_id` values (i.e. references to HEIs which are not covered by
-   this host) MUST result in a HTTP 400 error.
 
 
 Response
