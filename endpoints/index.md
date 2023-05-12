@@ -37,7 +37,7 @@ such, which are valid in at least one of the given academic years.
 In other words, if we are called with the following parameters:
 
 ```
-hei_id=any&receiving_academic_year_id=2005/2006&receiving_academic_year_id=2006/2007
+receiving_academic_year_id=2005/2006&receiving_academic_year_id=2006/2007
 ```
 
 Then, if for agreement `A` none of these academic years are between

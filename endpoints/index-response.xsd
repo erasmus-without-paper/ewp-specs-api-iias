@@ -36,8 +36,7 @@
                             identifiers can be used to access a single IIA via the `get` endpoint of
                             the IIAs API.
 
-                            "Local ID" means the IIA ID used by the HEI referred to in the `hei_id` request
-                            parameter.
+                            "Local ID" means the IIA ID used by the HEI covered by the host.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
