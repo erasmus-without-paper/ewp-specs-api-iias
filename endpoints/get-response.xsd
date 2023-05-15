@@ -230,6 +230,15 @@
                                             </xs:annotation>
                                         </xs:element>
                                     </xs:sequence>
+                                    <xs:attribute name="terminated-as-a-whole" type="xs:boolean" use="optional">
+                                        <xs:annotation>
+                                            <xs:documentation>
+                                                If given MUST be set to "true". Flags the agreement as terminated
+                                                and MUST be used only for mutually approved agreements that
+                                                the partners decide to terminate before any exchanges have taken place.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="conditions-hash" type="ewp:Sha256Hex" minOccurs="0" maxOccurs="1">
