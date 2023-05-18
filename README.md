@@ -57,7 +57,10 @@ HEIs. The IIAs API is the final result.
   it is highly recommended to have it in the matched IIA of the partner HEI.
 * Providers are free to implement their local solutions to best support the needs of their customers
   but under the condition that the general principle expressed in the points above is maintained.
-* It may happen that in time the signed IIA needs to be terminated, extended or modified for good reasons.
+* Termination of an IIA should be treated as an agreement modification if any exchanges already took place.
+  Otherwise, it should be treated as termination of the whole agreement which will be supported in the next version.
+* To modify an IIA which has been mutually approved, HEIs SHOULD take a snapshot of the last approved version
+  to be able to revert to it if they don't conclude a new approved version of the agreement.
 * An IIA that has not been mutually approved can be deleted by removing it from the EWP network.
   Such IIA MUST not be present in any of the IIA endpoints and an IIA CNR MUST be sent (see [CNR client part section][cnr-client-part]).
   An IIA can be removed from the EWP network only if it is permanently deleted.
