@@ -59,10 +59,10 @@ HEIs. The IIAs API is the final result.
   but under the condition that the general principle expressed in the points above is maintained.
 * It may happen that in time the signed IIA needs to be terminated, extended or modified for good reasons.
   Future changes in specifications will support such needs.
-* An IIA that has not been approved can be deleted by removing it from the EWP network.
+* An IIA that has not been mutually approved can be deleted by removing it from the EWP network.
   Such IIA MUST not be present in any of the IIA endpoints and an IIA CNR MUST be sent (see [CNR client part section][cnr-client-part]).
-  Although removing an IIA from the EWP network should only take place for IIAs that are being permanently deleted,
-  there is always a possibility for an IIA to reappear, i.e. in case of human error.
+  Removing an IIA from the EWP network should only take place for IIAs that are being permanently deleted.
+  Identifiers of the deleted objects SHOULD NOT be reused for new IIAs.
 
 
 ### Fact sheet information
