@@ -58,7 +58,6 @@ HEIs. The IIAs API is the final result.
 * Providers are free to implement their local solutions to best support the needs of their customers
   but under the condition that the general principle expressed in the points above is maintained.
 * It may happen that in time the signed IIA needs to be terminated, extended or modified for good reasons.
-  Future changes in specifications will support such needs.
 * An IIA that has not been mutually approved can be deleted by removing it from the EWP network.
   Such IIA MUST not be present in any of the IIA endpoints and an IIA CNR MUST be sent (see [CNR client part section][cnr-client-part]).
   Removing an IIA from the EWP network should only take place for IIAs that are being permanently deleted.
