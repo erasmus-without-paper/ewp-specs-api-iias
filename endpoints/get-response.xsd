@@ -537,7 +537,7 @@
                                 in a blended format, a combination of a short-term physical mobility with a virtual
                                 component.
 
-                                Note: This field should be set to 'false' for all agreements create before the
+                                Note: This field should be set to 'false' for all agreements created before the
                                 introduction of blended mobilities.
                             </xs:documentation>
                         </xs:annotation>
