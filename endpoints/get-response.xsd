@@ -479,7 +479,7 @@
 
     <xs:complexType name="SubjectArea">
         <xs:sequence>
-            <xs:element name="isced-f-code" type="xs:string" minOccurs="1" maxOccurs="1">
+            <xs:element name="isced-f-code" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
                         ISCED-F subject area code.
@@ -488,11 +488,16 @@
                         post-secondary and tertiary levels of education. Details:
                         http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf
 
-                        Note: We strongly recommend that the ISCED code should be four-digit,
-                        because this way it will be compliant with the requirements of Mobility Tool+ application,
+                        Note: ISCED code MUST be four-digit,
+                        to be compliant with the requirements of Mobility Tool+ application,
                         which only accepts four-digit codes for mobilities (see issue: #49).
                     </xs:documentation>
                 </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{4}"/>
+                    </xs:restriction>
+                </xs:simpleType>
             </xs:element>
             <xs:element name="isced-clarification" type="xs:string" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
