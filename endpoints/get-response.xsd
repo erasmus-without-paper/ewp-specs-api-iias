@@ -257,7 +257,7 @@
 
                                         The file MUST be accessible to the receiving HEI through the EWP File API.
 
-                                        For security reasons, you may consider checking the content type of the file
+                                        For security reasons, you MAY consider checking the content type of the file
                                         before displaying it in the browser.
                                     </xs:documentation>
                                 </xs:annotation>
