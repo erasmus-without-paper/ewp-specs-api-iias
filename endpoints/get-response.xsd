@@ -392,7 +392,7 @@
 
                         If one of the partner is from the southern hemisphere (so that he uses
                         academic years in a form of "2010/2010" instead of "2010/2011"), then IDs
-                        provided here should refer to the scheme used by the receiving partner (not the
+                        provided here SHOULD refer to the scheme used by the receiving partner (not the
                         sending one).
                     </xs:documentation>
                 </xs:annotation>
@@ -537,7 +537,7 @@
                                 in a blended format, a combination of a short-term physical mobility with a virtual
                                 component.
 
-                                Note: This field should be set to 'false' for all agreements created before the
+                                Note: This field SHOULD be set to 'false' for all agreements created before the
                                 introduction of blended mobilities.
                             </xs:documentation>
                         </xs:annotation>
@@ -548,7 +548,7 @@
                                 A list of allowed study levels of the students being sent.
 
                                 Note: If at least one EQF level is provided here and student's level
-                                is not one of these levels, then such student should not be able to apply
+                                is not one of these levels, then such student SHOULD NOT be able to apply
                                 for mobility specified by these cooperation conditions.
                             </xs:documentation>
                         </xs:annotation>
