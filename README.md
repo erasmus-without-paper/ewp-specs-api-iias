@@ -57,7 +57,7 @@ HEIs. The IIAs API is the final result.
   it is highly recommended to have it in the matched IIA of the partner HEI.
 * Providers are free to implement their local solutions to best support the needs of their customers
   but under the condition that the general principle expressed in the points above is maintained.
-* Termination of an IIA should be treated as an agreement modification if any exchanges already took place.
+* Termination of an IIA, which has been mutually approved, should be treated as an agreement modification if any exchanges already took place.
   Otherwise, it should be treated as termination of the whole agreement which will be supported in the next version.
 * To modify an IIA which has been mutually approved, HEIs SHOULD take a snapshot of the last approved version
   to be able to revert to it if they don't conclude a new approved version of the agreement.
