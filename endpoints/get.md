@@ -30,27 +30,12 @@ Parameters MUST be provided either in a query string (for GET requests), or in
 the `application/x-www-form-urlencoded` format (for POST requests).
 
 
-### `hei_id` (required)
-
-Identifier of the HEI to fetch the IIA from. (This HEI also needs to be one of
-the IIA's partners.)
-
-This parameter is required, because one EWP Host may cover multiple HEIs, and
-IIA IDs are *not* universally unique by themselves. Also note, that it is
-theoretically possible for one EWP Host (covering multiple HEIs) to serve two
-conflicting copies of a single IIA (as, per spec, each HEI can have a copy of
-its own).
-
-
 ### `iia_id` or `iia_code` (repeatable, required)
 
 A list of local IIA identifiers OR local IIA codes to be returned (no more than
 `<max-iia-ids>` or `<max-iia-codes>` items, respectively). The requester MUST
 provide either a list of `iia_id` values, or a list of `iia_code` values, **but
 not both**.
-
-HEI identified by the `hei_id` parameter MUST be one of the partners of all the
-referenced IIAs (otherwise, IIA won't be found).
 
 This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.
@@ -85,9 +70,6 @@ Handling of invalid parameters
 ------------------------------
 
  * General [error handling rules][error-handling] apply.
-
- * Invalid `hei_id` values (i.e. references to HEIs which are not covered by
-   this host) MUST result in a HTTP 400 error.
 
  * Invalid (or unknown) `iia_id` and `iia_code` values MUST be **ignored**.
    Servers MUST return a valid (HTTP 200) XML response in such cases, but the

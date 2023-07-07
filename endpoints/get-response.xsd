@@ -60,8 +60,8 @@
                                         This list includes the local HEI which MUST be the first element on this list.
                                         In other words:
 
-                                        * The value of `hei-id` of the first `partner` MUST match the value passed in
-                                          the `hei_id` request parameter,
+                                        * The value of `hei-id` of the first `partner` MUST match the HEI id covered
+                                          by the host,
 
                                         * Both `iia-id` and `iia-code` elements MUST be present in the first `partner`
                                           element (even though it's not required by the schema itself), and one of them
