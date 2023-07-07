@@ -54,7 +54,7 @@ HEIs. The IIAs API is the final result.
   as exactly one IIA having the same number of corresponding cooperation conditions.
 * Partners should exchange identifiers of their copies of the IIA to match these copies respectively in their systems.
 * Regardless of whether a field is mandatory in the API, if it is present in the IIA of one HEI
-  it is highly recommended to have it in the matched IIA of the partner HEI.
+  it is highly recommended having it in the matched IIA of the partner HEI.
 * Providers are free to implement their local solutions to best support the needs of their customers
   but under the condition that the general principle expressed in the points above is maintained.
 * It may happen that in time the signed IIA needs to be terminated, extended or modified for good reasons.
