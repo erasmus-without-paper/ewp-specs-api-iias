@@ -1,9 +1,9 @@
 <iias-stats-response
-        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd"
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/endpoints/stats-response.xsd"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v6/endpoints/stats-response.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/endpoints/stats-response.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v7/endpoints/stats-response.xsd
     "
 >
 

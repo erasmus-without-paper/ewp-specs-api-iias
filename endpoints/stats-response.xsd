@@ -4,8 +4,8 @@
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="qualified"
 
-        targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd"
-        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/stats-response.xsd"
+        targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/endpoints/stats-response.xsd"
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/endpoints/stats-response.xsd"
 >
     <xs:annotation>
         <xs:documentation>
