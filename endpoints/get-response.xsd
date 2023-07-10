@@ -414,7 +414,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="mobilities-per-year" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
+            <xs:element name="mobilities-per-year" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
                         Maximum number of people to be sent *for each* academic year. The total number
@@ -423,6 +423,13 @@
                         be in effect (see `receiving-first-academic-year-id` element documentation).
                     </xs:documentation>
                 </xs:annotation>
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:positiveInteger">
+                            <xs:attribute ref="not-yet-defined" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
             </xs:element>
             <xs:element name="recommended-language-skill" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
@@ -666,5 +673,15 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
+
+    <xs:attribute name="not-yet-defined" type="xs:boolean">
+        <xs:annotation>
+            <xs:documentation>
+                If given MUST be set to "true". Flags an element value as not yet defined
+                and MUST be used only for mutually approved agreements that
+                have been approved in the old IIA API version and have not been modified since.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
 
 </xs:schema>
