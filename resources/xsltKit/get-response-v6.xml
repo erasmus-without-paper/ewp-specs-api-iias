@@ -1,0 +1,78 @@
+<iias-get-response
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd"
+    xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v6/endpoints/get-response.xsd
+    "
+>
+    <iia>
+        <partner>
+            <hei-id>uw.edu.pl</hei-id>
+            <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
+            <iia-code>983/E+/III14&amp;15</iia-code>
+            <signing-contact>
+                <c:contact-name>Sylwia Nowak</c:contact-name>
+                <c:person-given-names>Sylwia</c:person-given-names>
+                <c:person-family-name>Nowak</c:person-family-name>
+                <c:email>email@example.com</c:email>
+            </signing-contact>
+            <c:contact>
+                <c:contact-name>Jadwiga Kowalska</c:contact-name>
+                <c:person-given-names>Jadwiga</c:person-given-names>
+                <c:person-family-name>Kowalska</c:person-family-name>
+                <c:email>email@example.com</c:email>
+            </c:contact>
+        </partner>
+        <partner>
+            <hei-id>hibo.no</hei-id>
+            <iia-id>1954991</iia-id>
+            <iia-code>2014/E+/PL/4104B</iia-code>
+            <signing-contact>
+                <c:contact-name>Monica Turner</c:contact-name>
+                <c:email>email@example.com</c:email>
+            </signing-contact>
+        </partner>
+        <in-effect>true</in-effect>
+        <cooperation-conditions>
+            <student-studies-mobility-spec>
+                <sending-hei-id>uw.edu.pl</sending-hei-id>
+                <sending-ounit-id>140</sending-ounit-id>
+                <receiving-hei-id>hibo.no</receiving-hei-id>
+                <receiving-academic-year-id>2014/2015</receiving-academic-year-id>
+                <receiving-academic-year-id>2015/2016</receiving-academic-year-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <receiving-academic-year-id>2018/2019</receiving-academic-year-id>
+                <receiving-academic-year-id>2019/2020</receiving-academic-year-id>
+                <receiving-academic-year-id>2020/2021</receiving-academic-year-id>
+                <subject-area>
+                    <isced-f-code>031</isced-f-code>
+                    <isced-clarification>Social and behavioural sciences</isced-clarification>
+                </subject-area>
+                <total-months-per-year>5</total-months-per-year>
+                <blended>false</blended>
+                <eqf-level>7</eqf-level>
+                <eqf-level>8</eqf-level>
+            </student-studies-mobility-spec>
+            <staff-teacher-mobility-spec>
+                <sending-hei-id>uw.edu.pl</sending-hei-id>
+                <sending-ounit-id>140</sending-ounit-id>
+                <receiving-hei-id>hibo.no</receiving-hei-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>en</language>
+                    <cefr-level>C1</cefr-level>
+                </recommended-language-skill>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
+                <total-days-per-year>8</total-days-per-year>
+            </staff-teacher-mobility-spec>
+        </cooperation-conditions>
+        <conditions-hash>f2b01c46c8b87b895597ecc40122ff377da8df16bebfa9c0c8020fb2207a50ba</conditions-hash>
+    </iia>
+</iias-get-response>

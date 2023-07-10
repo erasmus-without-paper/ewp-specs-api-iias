@@ -192,10 +192,8 @@
                                     <xs:documentation>
                                         List of all cooperation conditions defined in this agreement.
 
-                                        If you are sending conditions-hash, be consistent in ordering cooperation conditions.
-                                        The hash SHOULD NOT change if the cooperation conditions are not really changing.
-                                        An exception to this are the `sending-contact` and `receiving-contact` subelements
-                                        that are not taken into account when calculating hash.
+                                        You MUST be consistent in ordering cooperation conditions as it is used to
+                                        produce the `iia-hash` value.
                                     </xs:documentation>
                                 </xs:annotation>
                                 <xs:complexType>
@@ -241,21 +239,11 @@
                                     </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="conditions-hash" type="ewp:Sha256Hex" minOccurs="0" maxOccurs="1">
+                            <xs:element name="iia-hash" type="ewp:Sha256Hex" minOccurs="1" maxOccurs="1">
                                 <xs:annotation>
                                     <xs:documentation>
-                                        The SHA-256 digest of the cooperation-conditions element but *excluding*
-                                        `sending-contact` and `receiving-contact` subelements. Before
-                                        calculating the hash, the cooperation-conditions element MUST be normalized
-                                        using Exclusive XML Canonicalization.
-
-                                        Please be aware that XML Canonicalization does not imply that spaces are removed:
-                                        https://www.w3.org/TR/xml-c14n2/#sec-Requirements-Robustness
-
-                                        This element is not required. However, if it is not present, your partner
-                                        will not be able to approve your version of the agreement using EWP IIAs Approval API.
-                                        If you want to get approval of your agreements, then you should always send
-                                        the conditions hash.
+                                        The SHA-256 digest of the `text-to-hash` element content that is obtained
+                                        by using the appropriate XSLT transformation mentioned in the API specification.
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
