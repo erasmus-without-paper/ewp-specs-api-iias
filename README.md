@@ -96,6 +96,24 @@ document clarifies the requirements for the technical solutions
 developed under EWP and in the local implementation that should adequately support
 the business processes related to the approval of IIAs at Higher Education Institutions.
 
+
+### IIA hash calculation
+
+
+As of IIA version 7 each agreement contains an `iia-hash` element that replaces the `conditions-hash` element
+used in previous versions of this API.
+
+To calculate the new hash an IIA get response XML has to be transformed using the appropriate XSLT template provided:
+ * [XSLT template for IIA version 6](resources/xsltKit/transform_version_6.xsl),
+ * [XSLT template for IIA version 7](resources/xsltKit/transform_version_7.xsl).
+
+You can test these transformations using the provided [Java class](resources/xsltKit/XsltTest.java)
+
+You may need to find the right XSLT processor for these templates to work.
+For Java [Saxon-HE-9.5.1-8.jar](http://www.java2s.com/example/jar/s/download-saxonhe9518jar-file.html) processor works,
+the previous versions fail. For more details please go to [XSLT kit resources](resources/xsltKit).
+
+
 Security
 --------
 

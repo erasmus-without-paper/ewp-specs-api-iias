@@ -29,7 +29,7 @@
                 <eqf-level>8</eqf-level>
             </student-studies-mobility-spec>
         </cooperation-conditions>
-        <conditions-hash>cdcdf8bb7ce3f028a0cc6f7e848199a592a74b5014107ed4f4f6d4103421fa0a</conditions-hash>
+        <iia-hash>81aed817c4941cd4e8e424619de69578883b288ef4c00fd356133bc93d236780</iia-hash>
         <!-- B wants to have on the PDF his logo and some additional information, so he generates his own PDF. If both -->
         <!-- partners use the same PDF format, B could send here PDF fetched from A and signed by B (the same as in B's -->
         <!-- approval response). -->
