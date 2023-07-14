@@ -707,6 +707,8 @@
                 If given MUST be set to "true". Flags an element value as not yet defined
                 and MUST be used only for mutually approved agreements that
                 have been approved in the old IIA API version and have not been modified since.
+
+                If an IIA contains an element with this attribute set to "true" then such IIA MUST NOT be approved.
             </xs:documentation>
         </xs:annotation>
     </xs:attribute>
