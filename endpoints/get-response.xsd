@@ -505,7 +505,7 @@
                         http://uis.unesco.org/sites/default/files/documents/isced-fields-of-education-and-training-2013-en.pdf
 
                         Note: ISCED code MUST be four-digit,
-                        to be compliant with the requirements of Mobility Tool+ application,
+                        to be compliant with the requirements of the Beneficiary module,
                         which only accepts four-digit codes for mobilities (see issue: #49).
                     </xs:documentation>
                 </xs:annotation>
