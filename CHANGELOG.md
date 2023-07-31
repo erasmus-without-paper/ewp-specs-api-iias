@@ -4,6 +4,18 @@ Release notes
 This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
+6.3.0
+-----
+
+* Added rules about IIA termination and modification.
+* Added rules describing IIA deletion.
+* Improved ISCED clarification field description (#87).
+* Fixed wording in conditions-hash documentation.
+* IIAs Dashboard Exchange Scenarios (#93).
+* Added Mandatory Business requirements document.
+* Fixed wrong API name in documentation.
+
+
 6.2.0
 -----
 
