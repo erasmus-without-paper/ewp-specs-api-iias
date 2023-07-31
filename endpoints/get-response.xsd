@@ -547,6 +547,8 @@
 
                         It MUST be an empty string if a more precise description is not needed.
                         You MUST NOT put the official name of the ISCED in this field.
+                        Nevertheless if the agreement has been mutually approved in IIA version 6
+                        and has not been modified since, then this field MUST be unchanged.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
