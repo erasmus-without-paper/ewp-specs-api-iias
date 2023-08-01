@@ -4,6 +4,30 @@ Release notes
 This document describes all the changes made to the *Interinstitutional
 Agreements API* document, starting from its first beta draft version.
 
+
+7.0.0
+-----
+
+* Added XSLT transformations for iia-hash element.
+* Required recommended language skills for student studies and staff teaching.
+* Prohibited approving IIAs with not-yet-defined elements.
+* Added note to not change isced-clarification after version 6.
+* Added v6-value attribute to isced-f-code.
+* Replaced mention of MT+ with the Beneficiary module.
+* Added not-yet-defined attribute for mobilities-per-year element.
+* Added note that Factsheet and Institution APIs must be implemented.
+* Added attribute that flags IIAs terminated as a whole.
+* Removed hei_id and partner_hei_id parameters.
+* Made total months/days per year fields optional.
+* Required four-digit ISCED code as decided in #49.
+* Used MAY, SHOULD, SHOULD NOT, MUST and MUST NOT where possible.
+* Improved ISCED clarification field description.
+* Introduced first and last academic year id.
+* PDF will be shared via EWP File API.
+* Added IIAs Dashboard Exchange Scenarios.
+* Added Mandatory Business requirements document.
+
+
 6.2.0
 -----
 
