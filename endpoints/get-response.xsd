@@ -309,6 +309,14 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
+            <xs:group ref="MobilityMain"/>
+            <xs:element ref="recommended-language-skill" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:group ref="MobilityAdditional"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="MobilityMain">
+        <xs:sequence>
             <xs:element name="sending-hei-id" type="xs:string" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
@@ -431,46 +439,53 @@
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="recommended-language-skill" minOccurs="0" maxOccurs="unbounded">
-                <xs:annotation>
-                    <xs:documentation>
-                        A list of recommended language skills the student (or staff member) should
-                        have at the start of the mobility period.
+        </xs:sequence>
+    </xs:group>
 
-                        This element can currently be attached to all subclasses of
-                        MobilitySpecification. Since it has almost the same meaning regardless of where
-                        it is attached, we define it here (in the base class) for now. This MAY change
-                        in future versions though.
-                    </xs:documentation>
-                </xs:annotation>
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="language" type="xs:language" minOccurs="1" maxOccurs="1">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    The code of the language which the student (or staff member) is recommended to be
-                                    familiar with.
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:element>
-                        <xs:element name="cefr-level" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    Optional CEFR level code - the recommended minimum level of language skill the
-                                    student (or staff member) should have.
-                                    https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages
-                                </xs:documentation>
-                            </xs:annotation>
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:pattern value="[ABC][12]"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                        <xs:element name="subject-area" type="SubjectArea" minOccurs="0" maxOccurs="1"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
+    <xs:element name="recommended-language-skill">
+        <xs:annotation>
+            <xs:documentation>
+                A list of recommended language skills the student (or staff member) should
+                have at the start of the mobility period.
+
+                This element can currently be attached to all subclasses of
+                MobilitySpecification. Since it has almost the same meaning regardless of where
+                it is attached, we define it here (in the base class) for now. This MAY change
+                in future versions though.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="language" type="xs:language" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The code of the language which the student (or staff member) is recommended to be
+                            familiar with.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="cefr-level" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Optional CEFR level code - the recommended minimum level of language skill the
+                            student (or staff member) should have.
+                            https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[ABC][12]"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="subject-area" type="SubjectArea" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute ref="not-yet-defined" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:group name="MobilityAdditional">
+        <xs:sequence>
             <xs:element name="subject-area" type="SubjectArea" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
@@ -491,7 +506,7 @@
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
-    </xs:complexType>
+    </xs:group>
 
     <xs:complexType name="SubjectArea">
         <xs:sequence>
@@ -564,47 +579,53 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="total-months-per-year" minOccurs="0" maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation>
-                                Total number of mobility months per academic year.
-                            </xs:documentation>
-                        </xs:annotation>
-                        <xs:simpleType>
-                            <xs:restriction base="xs:decimal">
-                                <xs:minExclusive value="0"/>
-                                <xs:fractionDigits value="2"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element name="blended" type="xs:boolean" minOccurs="1" maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation>
-                                Blended mobility option for students. By sending 'true', the partners
-                                confirm that they are willing to exchange students who wish to carry out their mobility
-                                in a blended format, a combination of a short-term physical mobility with a virtual
-                                component.
-
-                                Note: This field SHOULD be set to 'false' for all agreements created before the
-                                introduction of blended mobilities.
-                            </xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                    <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="0" maxOccurs="unbounded">
-                        <xs:annotation>
-                            <xs:documentation>
-                                A list of allowed study levels of the students being sent.
-
-                                Note: If at least one EQF level is provided here and student's level
-                                is not one of these levels, then such student SHOULD NOT be able to apply
-                                for mobility specified by these cooperation conditions.
-                            </xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
+                    <xs:group ref="StudentMobilityExtension"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <xs:group name="StudentMobilityExtension">
+        <xs:sequence>
+            <xs:element name="total-months-per-year" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        Total number of mobility months per academic year.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minExclusive value="0"/>
+                        <xs:fractionDigits value="2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="blended" type="xs:boolean" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        Blended mobility option for students. By sending 'true', the partners
+                        confirm that they are willing to exchange students who wish to carry out their mobility
+                        in a blended format, a combination of a short-term physical mobility with a virtual
+                        component.
+
+                        Note: This field SHOULD be set to 'false' for all agreements created before the
+                        introduction of blended mobilities.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        A list of allowed study levels of the students being sent.
+
+                        Note: If at least one EQF level is provided here and student's level
+                        is not one of these levels, then such student SHOULD NOT be able to apply
+                        for mobility specified by these cooperation conditions.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
 
     <xs:complexType name="StaffMobilitySpecification" abstract="true">
         <xs:annotation>
@@ -615,23 +636,29 @@
         <xs:complexContent>
             <xs:extension base="MobilitySpecification">
                 <xs:sequence>
-                    <xs:element name="total-days-per-year" minOccurs="0" maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation>
-                                Total number of mobility days per academic year.
-                            </xs:documentation>
-                        </xs:annotation>
-                        <xs:simpleType>
-                            <xs:restriction base="xs:decimal">
-                                <xs:minExclusive value="0"/>
-                                <xs:fractionDigits value="2"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
+                    <xs:group ref="StaffMobilityExtension"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <xs:group name="StaffMobilityExtension">
+        <xs:sequence>
+            <xs:element name="total-days-per-year" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                        Total number of mobility days per academic year.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minExclusive value="0"/>
+                        <xs:fractionDigits value="2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
 
     <xs:element name="student-studies-mobility-spec">
         <xs:annotation>
@@ -641,11 +668,14 @@
         </xs:annotation>
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="StudentMobilitySpecification">
+                <xs:restriction base="StudentMobilitySpecification">
                     <xs:sequence>
-                        <!-- Currently, there are no extra fields for this subclass. -->
+                        <xs:group ref="MobilityMain"/>
+                        <xs:element ref="recommended-language-skill" minOccurs="1" maxOccurs="unbounded"/>
+                        <xs:group ref="MobilityAdditional"/>
+                        <xs:group ref="StudentMobilityExtension"/>
                     </xs:sequence>
-                </xs:extension>
+                </xs:restriction>
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
@@ -675,11 +705,14 @@
         </xs:annotation>
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="StaffMobilitySpecification">
+                <xs:restriction base="StaffMobilitySpecification">
                     <xs:sequence>
-                        <!-- Currently, there are no extra fields for this subclass. -->
+                        <xs:group ref="MobilityMain"/>
+                        <xs:element ref="recommended-language-skill" minOccurs="1" maxOccurs="unbounded"/>
+                        <xs:group ref="MobilityAdditional"/>
+                        <xs:group ref="StaffMobilityExtension"/>
                     </xs:sequence>
-                </xs:extension>
+                </xs:restriction>
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
