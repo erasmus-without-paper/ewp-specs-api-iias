@@ -12,7 +12,7 @@ is something similar to this:
 <?xml version="1.0" encoding="UTF-8"?>
 <iia>
    <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
-   <text-to-hash>_0f7a5682-faf7-49a7-9cc7-ec486c49a281__1954991__uw.edu.pl__140__hibo.no__031__Social and behavioural sciences__5__false__7__8__2014/2015__2020/2021__uw.edu.pl__140__hibo.no__2__en__C1__0314__8__2016/2017__2017/2018_</text-to-hash>
+   <text-to-hash>_iia-id_1=0f7a5682-faf7-49a7-9cc7-ec486c49a281__iia-id_2=1954991__cooperation-conditions.student-studies-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.student-studies-mobility-spec.sending-ounit-id=140__cooperation-conditions.student-studies-mobility-spec.receiving-hei-id=hibo.no__student-studies-mobility-spec.subject-area.isced-f-code=031__student-studies-mobility-spec.subject-area.isced-clarification=Social and behavioural sciences__cooperation-conditions.student-studies-mobility-spec.total-months-per-year=5__cooperation-conditions.student-studies-mobility-spec.blended=false__cooperation-conditions.student-studies-mobility-spec.eqf-level=7__cooperation-conditions.student-studies-mobility-spec.eqf-level=8__receiving-first-academic-year-id=2014/2015__receiving-last-academic-year-id=2020/2021__cooperation-conditions.staff-teacher-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.staff-teacher-mobility-spec.sending-ounit-id=140__cooperation-conditions.staff-teacher-mobility-spec.receiving-hei-id=hibo.no__cooperation-conditions.staff-teacher-mobility-spec.mobilities-per-year=2__staff-teacher-mobility-spec.recommended-language-skill.language=en__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.subject-area.isced-f-code=0314__cooperation-conditions.staff-teacher-mobility-spec.total-days-per-year=8__receiving-first-academic-year-id=2016/2017__receiving-last-academic-year-id=2017/2018_</text-to-hash>
 </iia>
 ```
 
@@ -68,9 +68,11 @@ The `<iia-id>` sub-element can be used to identify each IIA.
 Every `<iia>` element has two sub-elements and optionally a third one:
  - `<iia-id>` to indicate the associated IIA ID,
  - `<text-to-hash>` to expose the string built as a concatenation of all the leaf elements (elements without children)
-   separated by an underscore (e.g.: `_myValue_`). Before every element we have the values of its attributes (if they exist);
+   separated by an underscore (e.g.: `_parent.child=myValue_`).
+   Each element value is preceded with the element and ancestor names separated by a dot and a `=` sign.
+   Before every element we have the values of its attributes (if they exist);
    they are represented inside two markers` _@ `and `@_ `(e.g. `_@attributeValue@_`). There are some additional rules:
-   - the `<text-to-hash>` element contains both IIA IDs (sending and receiving); so it changes when IIA mapping changes,
+   - the `<text-to-hash>` element contains both IIA IDs (sending and receiving) and their position in the XML; so it changes when IIA mapping changes,
    - the `<text-to-hash>` element does not contain:
      - the sending/receiving contacts (for both of v6 and v7 XSLT)
      - the `receiving-academic-year-id` (only for v6 XSLT)

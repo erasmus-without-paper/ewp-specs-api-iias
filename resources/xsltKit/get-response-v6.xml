@@ -1,6 +1,7 @@
 <iias-get-response
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd"
     xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
+    xmlns:p="https://github.com/erasmus-without-paper/ewp-specs-types-phonenumber/tree/stable-v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd
@@ -39,6 +40,12 @@
             <student-studies-mobility-spec>
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
                 <sending-ounit-id>140</sending-ounit-id>
+                <sending-contact>
+                    <c:contact-name>XYZ</c:contact-name>
+                    <p:phone-number>
+                        <p:other-format>123456789</p:other-format>
+                    </p:phone-number>
+                </sending-contact>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
                 <receiving-academic-year-id>2014/2015</receiving-academic-year-id>
                 <receiving-academic-year-id>2015/2016</receiving-academic-year-id>
