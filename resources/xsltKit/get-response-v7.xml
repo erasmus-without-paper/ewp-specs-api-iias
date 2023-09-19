@@ -1,6 +1,7 @@
 <iias-get-response
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/endpoints/get-response.xsd"
     xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
+    xmlns:p="https://github.com/erasmus-without-paper/ewp-specs-types-phonenumber/tree/stable-v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/endpoints/get-response.xsd
@@ -39,6 +40,12 @@
             <student-studies-mobility-spec>
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
                 <sending-ounit-id>140</sending-ounit-id>
+                <sending-contact>
+                    <c:contact-name>XYZ</c:contact-name>
+                    <p:phone-number>
+                        <p:other-format>123456789</p:other-format>
+                    </p:phone-number>
+                </sending-contact>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
                 <receiving-first-academic-year-id>2014/2015</receiving-first-academic-year-id>
                 <receiving-last-academic-year-id>2020/2021</receiving-last-academic-year-id>
@@ -73,6 +80,6 @@
                 <total-days-per-year>8</total-days-per-year>
             </staff-teacher-mobility-spec>
         </cooperation-conditions>
-        <iia-hash>7bdd07b3a5088cb85da17326afa4d0514521b53ee6fc78cf7025a9ee6f5b11ab</iia-hash>
+        <iia-hash>87b33170d7a6c6d894215641f39e7b7de36501265479e5ab3922f32d5b225033</iia-hash>
     </iia>
 </iias-get-response>
