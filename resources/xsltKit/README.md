@@ -86,6 +86,7 @@ Every `<iia>` element has two sub-elements and optionally a third one:
  - `<valid-for-approval>` is present and set to false if the IIA v7 contains:
    - an element with the `not-yet-defined` attribute set to true,
    - an element with the `v6-value` attribute set to a non-empty value.
+The `<valid-for-approval>` element is only meant to be used for agreements that are new or modified in IIA v7.
 
 To test the XSLT against your IIA Get response XMLs you can use those online tools:
  - https://linangdata.com/xslt-tester/

@@ -527,9 +527,9 @@
                                         Value of this field as of IIA version 6.
 
                                         This attribute:
-                                         * MUST be set only for mutually approved agreements that
+                                         * MAY be set only for mutually approved agreements that
                                            have been approved in the IIA version 6 and have not been modified since,
-                                         * MUST be set only for agreements that had ISCED code with less than 4 digits,
+                                         * MUST be set for agreements that had ISCED code with less than 4 digits,
                                          * MUST NOT be set otherwise.
                                     </xs:documentation>
                                 </xs:annotation>
@@ -726,10 +726,9 @@
         <xs:annotation>
             <xs:documentation>
                 If given MUST be set to "true". Flags an element value as not yet defined
-                and MUST be used only for mutually approved agreements that
-                have been approved in the old IIA API version and have not been modified since.
-
-                If an IIA contains an element with this attribute set to "true" then such IIA MUST NOT be approved.
+                and MAY be set only for mutually approved agreements that
+                have been approved in the old IIA API version and have not been modified since,
+                and MUST NOT be set otherwise.
             </xs:documentation>
         </xs:annotation>
     </xs:attribute>
