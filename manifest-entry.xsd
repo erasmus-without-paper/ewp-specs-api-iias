@@ -69,14 +69,6 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="max-iia-codes" type="xs:positiveInteger" minOccurs="1" maxOccurs="1">
-                            <xs:annotation>
-                                <xs:documentation>
-                                    The maximum number of `iia_code` parameters the server is willing to accept
-                                    in one `get` request.
-                                </xs:documentation>
-                            </xs:annotation>
-                        </xs:element>
                         <xs:element name="index-url" type="ewp:HTTPS" minOccurs="1" maxOccurs="1">
                             <xs:annotation>
                                 <xs:documentation>
