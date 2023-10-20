@@ -63,6 +63,8 @@ HEIs. The IIAs API is the final result.
   to be able to revert to it if they don't conclude a new approved version of the agreement.
 * An IIA that has not been mutually approved can be deleted by removing it from the EWP network.
   Such IIA MUST not be present in any of the IIA endpoints and an IIA CNR MUST be sent (see [CNR client part section][cnr-client-part]).
+  The receiver MUST treat this CNR as a valid change notification and respond
+  with an HTTP 200 response (see [What constitutes a "bad CNR request"][cnr-bad-request]).
   An IIA can be removed from the EWP network only if it is permanently deleted.
   Identifiers of the deleted objects MUST NOT be reused for new IIAs.
 
@@ -160,3 +162,4 @@ Data model entities involved in the response
 [iias-approval-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval
 [ounits-api]: https://github.com/erasmus-without-paper/ewp-specs-api-ounits
 [cnr-client-part]: https://github.com/erasmus-without-paper/ewp-specs-architecture#client-part-sending-notifications
+[cnr-bad-request]: https://github.com/erasmus-without-paper/ewp-specs-architecture#what-constitutes-a-bad-cnr-request
