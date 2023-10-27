@@ -106,8 +106,9 @@
                                                     each partner is allowed to have his own ID for the same IIA.
 
                                                     ID used by the partner MUST be provided as soon as it is mapped in the local system.
-                                                    Otherwise an agreement might be interpreted as not mapped, which may lead to duplicates.
-                                                    Also it is REQUIRED to provide partner agreement ID to be able to approve it.
+                                                    Otherwise, an agreement might be interpreted as not mapped, which may lead to duplicates.
+                                                    Also, it is REQUIRED to provide partner agreement ID to be able to approve it.
+                                                    Yet, this ID MUST NOT be present if the partner has deleted the IIA.
 
                                                     Server implementers MUST use immutable surrogate keys for their work with EWP.
                                                     https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
