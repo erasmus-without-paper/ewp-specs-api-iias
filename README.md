@@ -62,7 +62,7 @@ HEIs. The IIAs API is the final result.
 * To modify an IIA which has been mutually approved, HEIs SHOULD take a snapshot of the last approved version
   to be able to revert to it if they don't conclude a new approved version of the agreement.
 * An IIA that has not been mutually approved can be deleted by removing it from the EWP network.
-  Such IIA MUST not be present in any of the IIA endpoints and an IIA CNR MUST be sent (see [CNR client part section][cnr-client-part]).
+  Such IIA MUST NOT be exposed by the server in any of the IIA endpoints and an IIA CNR MUST be sent (see [CNR client part section][cnr-client-part]).
   The receiver MUST treat this CNR as a valid change notification and respond
   with an HTTP 200 response (see [What constitutes a "bad CNR request"][cnr-bad-request]).
   An IIA can be removed from the EWP network only if it is permanently deleted.
