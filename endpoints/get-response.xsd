@@ -423,7 +423,7 @@
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:positiveInteger">
-                            <xs:attribute ref="not-yet-defined" use="optional"/>
+                            <xs:attributeGroup ref="not-yet-defined"/>
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
@@ -469,7 +469,7 @@
                 </xs:element>
                 <xs:element name="subject-area" type="SubjectArea" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
-            <xs:attribute ref="not-yet-defined" use="optional"/>
+            <xs:attributeGroup ref="not-yet-defined"/>
         </xs:complexType>
     </xs:element>
 
@@ -723,16 +723,18 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:attribute name="not-yet-defined" type="xs:boolean">
-        <xs:annotation>
-            <xs:documentation>
-                If given MUST be set to "true". Flags an element value as not yet defined
-                and MAY be set only for mutually approved agreements that
-                have been approved in the old IIA API version and have not been modified since,
-                and MUST NOT be set otherwise.
-            </xs:documentation>
-        </xs:annotation>
-    </xs:attribute>
+    <xs:attributeGroup name="not-yet-defined">
+        <xs:attribute name="not-yet-defined" type="xs:boolean" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    If given MUST be set to "true". Flags an element value as not yet defined
+                    and MAY be set only for mutually approved agreements that
+                    have been approved in the old IIA API version and have not been modified since,
+                    and MUST NOT be set otherwise.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup>
 
     <xs:simpleType name="isced">
         <xs:restriction base="xs:string">
