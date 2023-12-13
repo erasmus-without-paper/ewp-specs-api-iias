@@ -8,6 +8,17 @@ Agreements API* document, starting from its first beta draft version.
 7.0.0
 -----
 
+* Updated Saxon-HE library version recommendation.
+* Added attribute group for not-yet-defined attribute.
+* Added scenarios.
+* Set proper hash in IIA GET response example.
+* Updated hash in IIA v6 example.
+* Clarified that deleted IIA must not be exposed by the server.
+* Clarified how CNR works for IIA deletion.
+* Added requirement to unmap the IIA after partner deletes it.
+* Removed iia_code parameter.
+* Made approval v2 for old unmodified IIAs (v6) always valid.
+* Fixed XSLT templates.
 * Added XSLT transformations for iia-hash element.
 * Required recommended language skills for student studies and staff teaching.
 * Prohibited approving IIAs with not-yet-defined elements.
