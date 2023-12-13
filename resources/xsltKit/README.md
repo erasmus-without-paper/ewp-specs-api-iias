@@ -29,7 +29,7 @@ When an IIA has at least one element with the attribute `not-yet-defined`,
 the transformation adds a `<valid-for-approval>false</valid-for-approval>` sub-element as the last child of the `<iia>` element.
 
 To transform an XML you may need to find the right processor,
-e.g. for Java [Saxon-HE-9.5.1-8.jar](http://www.java2s.com/example/jar/s/download-saxonhe9518jar-file.html) works while the previous versions fail.
+e.g. for Java Saxon-HE version 12.4 has been tested.
 
 We provide an example in Java that transforms an IIA XML (as a byte array) via the XSLT (as a byte array too) and obtain the above-mentioned XML:
 
