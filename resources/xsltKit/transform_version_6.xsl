@@ -27,7 +27,7 @@
 
 
   <xsl:template match="/">
-
+    <iias>
     <xsl:for-each select="//*[local-name()='iia']">
       <iia>
         <iia-id>
@@ -62,5 +62,6 @@
         </text-to-hash>
       </iia>
     </xsl:for-each>
+    </iias>
   </xsl:template>
 </xsl:stylesheet>
