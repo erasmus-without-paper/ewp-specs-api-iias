@@ -47,7 +47,7 @@ func prepareConditions(xmlPartnerCopyConditions string) (string, error) {
 	coopConditionsXML := string(out)
 
 	// Add the xmlns to the cooperation-condition tag
-	coopConditionsXML = strings.ReplaceAll(coopConditionsXML, "<cooperation-conditions>", "<cooperation-conditions xmlns=\"https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd\"")
+	coopConditionsXML = strings.ReplaceAll(coopConditionsXML, "<cooperation-conditions>", "<cooperation-conditions xmlns=\"https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd\">")
 
 	// Remove sending and receiving contacts from all conditions
 	for {
