@@ -64,9 +64,9 @@
                                           by the host,
 
                                         * Both `iia-id` and `iia-code` elements MUST be present in the first `partner`
-                                          element (even though it's not required by the schema itself), and one of them
-                                          MUST match one of the values passed in the `iia_id` or `iia_code` request
-                                          parameter.
+                                          element (even though it's not required by the schema itself),
+
+                                        * `iia-id` MUST match the value passed in the `iia_id` request parameter,
 
                                         * The server will usually fill much more data for the first `partner`.
                                     </xs:documentation>
