@@ -73,7 +73,7 @@ Handling of invalid parameters
    Servers MUST return a valid (HTTP 200) XML response in such cases, but the
    response will simply not contain any information on these missing entities.
    If all values are unknown, servers MUST respond with an empty `<response>`
-   element. This requirement is true even when `<max-iia-ids>
+   element. This requirement is true even when `<max-iia-ids>`
    is set to `1`.
 
  * If the length of `iia_id` list is greater than `<max-iia-ids>`, then the
