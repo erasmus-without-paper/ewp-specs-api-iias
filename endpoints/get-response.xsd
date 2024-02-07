@@ -437,9 +437,9 @@
                 A list of recommended language skills the student (or staff member) should
                 have at the start of the mobility period.
 
-                This element can currently be attached to all subclasses of
+                This element is currently attached to all subclasses of
                 MobilitySpecification. Since it has almost the same meaning regardless of where
-                it is attached, we define it here (in the base class) for now. This MAY change
+                it is attached, we define it here for now. This MAY change
                 in future versions though.
             </xs:documentation>
         </xs:annotation>
