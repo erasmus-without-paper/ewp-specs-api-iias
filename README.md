@@ -28,8 +28,8 @@ HEIs. The IIAs API is the final result.
 ### Features
 
  * **It is distributed**. Agreements (IIAs) are stored and hosted **only** by
-   the institutions involved in these agreements. If the institutions use the IIA Manager
-   (part of the Dashboard), their agreements are stored in the Dashboard repository.
+   the institutions involved in these agreements
+   (or their providers representing them in the EWP Network).
 
  * **All partners are equal**. There is no "master" of the agreement. Since all
    partners of a single IIA are allowed to serve their copies of this IIA,
