@@ -40,7 +40,8 @@ HEIs. The IIAs API is the final result.
 
  * **No history of changes.** This API will serve only a single copy of the
    agreement (with no history of previous versions). This copy should be the
-   copy which is **currently in use** by the HEI which is serving the API.
+   copy which is **currently in use** by the HEI which is serving the API
+   or the one which is being proposed to the partner.
 
 
 ### Important rules
