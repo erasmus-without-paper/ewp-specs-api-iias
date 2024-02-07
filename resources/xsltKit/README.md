@@ -35,7 +35,7 @@ Also `v6-value` attribute of the `isced-f-code` element is used to acquire the o
 
 When an IIA contains an element with `not-yet-defined` or `v6-value` attribute,
 the transformation adds a `<valid-for-approval>false</valid-for-approval>` sub-element as the last child of the `<iia>` element.
-It informs that this IIA misses some values which are required in IIA v7 and should be accepted by a user.
+It informs that this IIA misses some values which are required in IIA v7, and it cannot be approved.
 
 To transform an XML you may need to find the right processor,
 e.g. for Java Saxon-HE version 12.4 has been tested.
