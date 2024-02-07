@@ -51,9 +51,9 @@ A datetime string in the [`xs:dateTime` format][xs-datetime], e.g.
 `2004-02-12T15:19:21+01:00`.
 
 If given, then the server SHOULD filter the returned IIA IDs to the ones
-which have been either created or modified after the given point in time.
+that have been either created or modified after the given point in time.
 
- * Servers MAY include IIAs which were *not* modified. For example, if the
+ * Servers MAY include IIAs, which were *not* modified. For example, if the
    server only *suspects* that the IIA has been modified, then it is okay to
    include such mobility's ID in the response.
 
@@ -71,7 +71,7 @@ which have been either created or modified after the given point in time.
 Permissions
 -----------
 
-You MUST return the set of all IDs which the requester has access to (via the
+You MUST return the set of all IDs that the requester has access to (via the
 `get` endpoint). See the `get` endpoint for details on which IIAs should be
 accessible by which requester.
 
