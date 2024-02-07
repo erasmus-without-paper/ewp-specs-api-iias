@@ -113,8 +113,8 @@ To calculate the new hash an IIA get response XML has to be transformed using th
 You can test these transformations using the provided [Java class](resources/xsltKit/XsltTest.java)
 
 You may need to find the right XSLT processor for these templates to work.
-For Java [Saxon-HE-9.5.1-8.jar](http://www.java2s.com/example/jar/s/download-saxonhe9518jar-file.html) processor works,
-the previous versions fail. For more details please go to [XSLT kit resources](resources/xsltKit).
+For Java Saxon-HE version 12.4 has been tested.
+For more details, please go to [XSLT kit resources](resources/xsltKit).
 
 
 Security
