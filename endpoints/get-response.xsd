@@ -529,8 +529,8 @@
 
                                         This attribute:
                                          * MAY be set only for mutually approved agreements that
-                                           have been approved in the IIA version 6 and have not been modified since,
-                                         * MUST be set for agreements that had ISCED code with less than 4 digits,
+                                           have been approved in IIA version 6 and have not been modified since,
+                                         * MUST be set for agreements that had ISCED code with less than four digits,
                                          * MUST NOT be set otherwise.
                                     </xs:documentation>
                                 </xs:annotation>
@@ -551,7 +551,7 @@
 
                         It MUST be an empty string if a more precise description is not needed.
                         You MUST NOT put the official name of the ISCED in this field.
-                        Nevertheless if the agreement has been mutually approved in IIA version 6
+                        Nevertheless, if the agreement has been mutually approved in IIA version 6
                         and has not been modified since, then this field MUST be unchanged.
                     </xs:documentation>
                 </xs:annotation>
