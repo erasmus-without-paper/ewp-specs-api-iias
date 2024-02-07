@@ -321,7 +321,7 @@
 
                         This data might be relevant for some partners, while other partners might
                         ignore it completely. If the server is aware that particular students should
-                        come from a particular organizational unit, then it reports it here. Note, that
+                        come from a particular organizational unit, then it reports it here. Note that
                         this MAY be the "root" unit (the one representing the entire HEI).
 
                         This ID is defined by the HEI referred to in the `sending-hei-id` element.
@@ -366,7 +366,7 @@
 
                         This data might be relevant for some partners, while other partners might
                         ignore it completely. If the server is aware that particular students should be
-                        received by a particular organizational unit, then it reports it here. Note,
+                        received by a particular organizational unit, then it reports it here. Note
                         that this MAY be the "root" unit (the one representing the entire HEI).
 
                         This ID is defined by the HEI referred to in the `receiving-hei-id` element.
