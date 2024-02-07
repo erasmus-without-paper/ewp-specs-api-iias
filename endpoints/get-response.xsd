@@ -284,7 +284,7 @@
                 https://github.com/erasmus-without-paper/ewp-wp3-data-model/issues/10
 
                 Each specification has a sending and receiving partner. Each specification
-                represents an agreement that, for each of the academic years listed within, the
+                represents an agreement that, for each of the academic years from start to end, the
                 sending partner will send a particular number of people to the receiving
                 partner, for a particular average duration each (e.g. for 8 weeks). This
                 describes an unidirectional flow - if people are sent in both directions, two
