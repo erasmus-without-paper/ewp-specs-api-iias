@@ -480,9 +480,9 @@
                     <xs:documentation>
                         Optional subject areas associated with this mobility.
 
-                        This element can currently be attached to all subclasses of
+                        This element is currently attached to all subclasses of
                         MobilitySpecification. Since it has almost the same meaning regardless of where
-                        it is attached, we define it here (in the base class) for now. This MAY change
+                        it is attached, we define it here for now. This MAY change
                         in future versions though.
                     </xs:documentation>
                 </xs:annotation>
