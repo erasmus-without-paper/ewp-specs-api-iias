@@ -1,4 +1,4 @@
-Current IIA template is specified [here][new-iia-template]. It is the basis of the IIA model used in this specification.
+The current IIA template is specified [here][new-iia-template]. It is the basis of the IIA model used in this specification.
 
 IIA templates mentioned below are previous versions of the template.
 
