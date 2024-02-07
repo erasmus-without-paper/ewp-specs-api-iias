@@ -512,8 +512,8 @@
                         to be compliant with the requirements of the Beneficiary module,
                         which only accepts four-digit codes for mobilities (see issue: #49).
 
-                        Agreements mutually approved before IIA version 7 that had ISCED code with less then four digits
-                        MUST have ISCED code replaced with a proper four digit ISCED code and
+                        Agreements mutually approved before IIA version 7 that had ISCED code with less than four digits
+                        MUST have ISCED code replaced with a proper four-digit ISCED code and
                         MUST have `v6-value` attribute set to the previous ISCED code approved in version 6.
                         After IIA version 7 is implemented and the agreement is modified the ISCED code
                         MUST be set by the end-user and the attribute MUST be removed.
