@@ -605,10 +605,10 @@
             <xs:element name="eqf-level" type="ewp:EqfLevel" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
-                        A list of allowed study levels of the students being sent.
+                        Allowed study levels of the students being sent.
 
                         Note: If at least one EQF level is provided here and student's level
-                        is not one of these levels, then such student SHOULD NOT be able to apply
+                        is not one of these levels, then such a student SHOULD NOT be able to apply
                         for mobility specified by these cooperation conditions.
                     </xs:documentation>
                 </xs:annotation>
