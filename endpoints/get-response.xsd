@@ -279,7 +279,7 @@
                 contexts.
 
                 Mobility specification may also be considered as a subclass of "cooperation
-                condition", but - since currently all nonabstract subclasses inherit from
+                condition", but - since currently all non-abstract subclasses inherit from
                 MobilitySpecification - no CooperationCondition class is introduced. See here:
                 https://github.com/erasmus-without-paper/ewp-wp3-data-model/issues/10
 
@@ -287,13 +287,13 @@
                 represents an agreement that, for each of the academic years from start to end, the
                 sending partner will send a particular number of people to the receiving
                 partner, for a particular average duration each (e.g. for 8 weeks). This
-                describes an unidirectional flow - if people are sent in both directions, two
+                describes a unidirectional flow - if people are sent in both directions, two
                 separate mobility specifications need to be defined (one for each direction).
 
                 More requirements (e.g. *who* is being sent to do *what*) are defined in
                 specific `*-mobility-spec` subclasses.
 
-                This type, nor any of its subclasses, SHOULD NOT be referenced outside of the
+                This type, nor any of its subclasses, SHOULD NOT be referenced outside the
                 EWP IIAs API. It is likely to be modified, or to be removed, in the future.
             </xs:documentation>
         </xs:annotation>
