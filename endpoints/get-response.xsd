@@ -327,7 +327,7 @@
                         This ID is defined by the HEI referred to in the `sending-hei-id` element.
                         If the server is not aware of this ID, then it won't provide it. Clients
                         can retrieve further information on this unit via Organizational Units API, but
-                        note, that it is not obvious *which* Organizational Units API the client should
+                        note that it is not obvious *which* Organizational Units API the client should
                         use. See similar notes on `iia/partner-hei/hei-id` element. Discuss here:
                         https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/6
                     </xs:documentation>
@@ -372,7 +372,7 @@
                         This ID is defined by the HEI referred to in the `receiving-hei-id` element.
                         If the server is not aware of this ID, then it won't provide it. Clients
                         can retrieve further information on this unit via Organizational Units API, but
-                        note, that it is not obvious *which* Organizational Units API the client should
+                        note that it is not obvious *which* Organizational Units API the client should
                         use. See similar notes on `iia/partner-hei/hei-id` element. Discuss here:
                         https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/6
                     </xs:documentation>
