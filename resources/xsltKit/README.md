@@ -37,8 +37,8 @@ When an IIA contains an element with `not-yet-defined` or `v6-value` attribute,
 the transformation adds a `<valid-for-approval>false</valid-for-approval>` sub-element as the last child of the `<iia>` element.
 It informs that this IIA misses some values which are required in IIA v7, and it cannot be approved.
 
-To transform an XML you may need to find the right processor,
-e.g. for Java Saxon-HE version 12.4 has been tested.
+To transform an XML, you may need to find the right processor,
+e.g., for Java Saxon-HE version 12.4 has been tested.
 
 We provide an example in Java that transforms an IIA XML (as a byte array) via the XSLT (as a byte array too) and obtain the above-mentioned XML:
 
