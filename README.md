@@ -110,7 +110,7 @@ To calculate the new hash an IIA get response XML has to be transformed using th
  * [XSLT template for IIA version 6](resources/xsltKit/transform_version_6.xsl),
  * [XSLT template for IIA version 7](resources/xsltKit/transform_version_7.xsl).
 
-You can test these transformations using the provided [Java class](resources/xsltKit/XsltTest.java)
+You can test these transformations using the provided [Java class](resources/xsltKit/XsltTest.java).
 
 You may need to find the right XSLT processor for these templates to work.
 For Java Saxon-HE version 12.4 has been tested.
@@ -132,7 +132,7 @@ Server implementers MUST:
 
  * Implement the [`get` endpoint](endpoints/get.md).
  * Implement the [`index` endpoint](endpoints/index.md).
- * Implement the [`stats` endpoint](endpoints/stats.md)
+ * Implement the [`stats` endpoint](endpoints/stats.md).
  * Put the URLs of these endpoints in their [manifest file][discovery-api], as
    described in [manifest-entry.xsd](manifest-entry.xsd).
 
