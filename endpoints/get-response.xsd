@@ -107,8 +107,8 @@
 
                                                     ID used by the partner MUST be provided as soon as it is mapped in the local system.
                                                     Otherwise, an agreement might be interpreted as not mapped, which may lead to duplicates.
-                                                    Also, it is REQUIRED to provide partner agreement ID to be able to approve it.
-                                                    Yet, this ID MUST NOT be present if the partner has deleted the IIA.
+                                                    Also, it is REQUIRED to provide a partner agreement ID so that the other partner can approve the agreement.
+                                                    Yet this ID MUST NOT be present if the partner has deleted the IIA.
 
                                                     Server implementers MUST use immutable surrogate keys for their work with EWP.
                                                     https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
@@ -118,12 +118,12 @@
                                         <xs:element name="iia-code" type="xs:string" minOccurs="0" maxOccurs="1">
                                             <xs:annotation>
                                                 <xs:documentation>
-                                                    The partner's "human readable" ID of this IIA (aka an agreement number). If
+                                                    The partner's "human-readable" ID of this IIA (aka an agreement number). If
                                                     this server is aware of the agreement numbers used by the other partners, then
                                                     it SHOULD output it here.
 
                                                     Since `iia-id` values should contain surrogate identifiers (and, as such,
-                                                    should not be displayed to the user), we require additional "human readable"
+                                                    should not be displayed to the user), we require additional "human-readable"
                                                     agreement codes/numbers to be provided here. These codes SHOULD be displayed to
                                                     the user, and they MAY be used for searching, but they are *not used* to
                                                     directly identify entities in EWP network.
