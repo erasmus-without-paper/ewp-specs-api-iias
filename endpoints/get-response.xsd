@@ -551,7 +551,7 @@
                     <xs:documentation>
                         This field contains additional details regarding `isced-f-code` field.
 
-                        It MUST be an empty string if a more precise description is not needed.
+                        It MUST NOT be present if a more precise description is not needed.
                         You MUST NOT put the official name of the ISCED in this field.
                         Nevertheless, if the agreement has been mutually approved in IIA version 6
                         and has not been modified since, then this field MUST be unchanged.
