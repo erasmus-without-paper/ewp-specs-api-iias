@@ -491,6 +491,8 @@
                 <xs:annotation>
                     <xs:documentation>
                         Optional field for any other information regarding the terms of the agreement.
+
+                        This element MUST NOT be empty if present.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
