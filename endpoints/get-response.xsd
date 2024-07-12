@@ -450,6 +450,10 @@
                         <xs:documentation>
                             The code of the language which the student (or staff member) is recommended to be
                             familiar with.
+
+                            Note: EWP is following BCP 47 (https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+                            for specifying languages but disallows the use of special codes mentioned in
+                            chapter 4.1. Choice of Language Tag, guideline 5 of this document.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
