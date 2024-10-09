@@ -117,7 +117,7 @@ The above XSLT does not guarantee that IIA hash calculated by both partners will
 reasons for IIAs to have different hashes. Cooperation conditions order, float formating, code casing are examples
 of IIA differences that influence the hash.
 
-@umesh-qs provided ([in this issue](https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/170#issuecomment-2222376593))
+[@umesh-qs](https://github.com/umesh-qs) provided ([in this issue](https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/170#issuecomment-2222376593))
 an updated XSLT that takes into account such differences - see [compare_version_7.xsl](compare_version_7.xsl).
 
 Please note that this XSLT doesn't take into account differences in text fields, so the users should still compare IIAs,
