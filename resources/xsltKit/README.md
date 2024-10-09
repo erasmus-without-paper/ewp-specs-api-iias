@@ -9,10 +9,12 @@ The result of the [XSLT transformation](transform_version_6.xsl) for
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<iia>
-    <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
-    <text-to-hash>_iia-id_1=0f7a5682-faf7-49a7-9cc7-ec486c49a281__iia-id_2=1954991__cooperation-conditions.student-studies-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.student-studies-mobility-spec.sending-ounit-id=140__cooperation-conditions.student-studies-mobility-spec.receiving-hei-id=hibo.no__student-studies-mobility-spec.subject-area.isced-f-code=031__student-studies-mobility-spec.subject-area.isced-clarification=Social and behavioural sciences__cooperation-conditions.student-studies-mobility-spec.total-months-per-year=5__cooperation-conditions.student-studies-mobility-spec.blended=false__cooperation-conditions.student-studies-mobility-spec.eqf-level=7__cooperation-conditions.student-studies-mobility-spec.eqf-level=8__receiving-first-academic-year-id=2014/2015__receiving-last-academic-year-id=2020/2021__cooperation-conditions.staff-teacher-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.staff-teacher-mobility-spec.sending-ounit-id=140__cooperation-conditions.staff-teacher-mobility-spec.receiving-hei-id=hibo.no__cooperation-conditions.staff-teacher-mobility-spec.mobilities-per-year=2__staff-teacher-mobility-spec.recommended-language-skill.language=en__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.subject-area.isced-f-code=0314__cooperation-conditions.staff-teacher-mobility-spec.total-days-per-year=8__receiving-first-academic-year-id=2016/2017__receiving-last-academic-year-id=2017/2018_</text-to-hash>
-</iia>
+<iias>
+    <iia>
+        <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
+        <text-to-hash>_iia-id_1=0f7a5682-faf7-49a7-9cc7-ec486c49a281__iia-id_2=1954991__cooperation-conditions.student-studies-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.student-studies-mobility-spec.sending-ounit-id=140__cooperation-conditions.student-studies-mobility-spec.receiving-hei-id=hibo.no__student-studies-mobility-spec.subject-area.isced-f-code=031__student-studies-mobility-spec.subject-area.isced-clarification=Social and behavioural sciences__cooperation-conditions.student-studies-mobility-spec.total-months-per-year=5__cooperation-conditions.student-studies-mobility-spec.blended=false__cooperation-conditions.student-studies-mobility-spec.eqf-level=7__cooperation-conditions.student-studies-mobility-spec.eqf-level=8__receiving-first-academic-year-id=2014/2015__receiving-last-academic-year-id=2020/2021__cooperation-conditions.staff-teacher-mobility-spec.sending-hei-id=hibo.no__cooperation-conditions.staff-teacher-mobility-spec.receiving-hei-id=uw.edu.pl__cooperation-conditions.staff-teacher-mobility-spec.receiving-ounit-id=140__cooperation-conditions.staff-teacher-mobility-spec.mobilities-per-year=2__staff-teacher-mobility-spec.recommended-language-skill.language=en__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.subject-area.isced-f-code=0514__staff-teacher-mobility-spec.subject-area.isced-f-code=0314__cooperation-conditions.staff-teacher-mobility-spec.total-days-per-year=14__receiving-first-academic-year-id=2016/2017__receiving-last-academic-year-id=2017/2018__cooperation-conditions.staff-teacher-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.staff-teacher-mobility-spec.sending-ounit-id=140__cooperation-conditions.staff-teacher-mobility-spec.receiving-hei-id=hibo.no__cooperation-conditions.staff-teacher-mobility-spec.mobilities-per-year=2__staff-teacher-mobility-spec.recommended-language-skill.language=en__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.recommended-language-skill.language=pl__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.subject-area.isced-f-code=0314__cooperation-conditions.staff-teacher-mobility-spec.total-days-per-year=8__receiving-first-academic-year-id=2016/2017__receiving-last-academic-year-id=2017/2018_</text-to-hash>
+    </iia>
+</iias>
 ```
 
 It has the same `text-to-hash` value as the result we obtain if we apply the [XSLT transformation](transform_version_7.xsl) for
@@ -20,11 +22,13 @@ It has the same `text-to-hash` value as the result we obtain if we apply the [XS
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<iia>
-    <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
-    <text-to-hash>_iia-id_1=0f7a5682-faf7-49a7-9cc7-ec486c49a281__iia-id_2=1954991__cooperation-conditions.student-studies-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.student-studies-mobility-spec.sending-ounit-id=140__cooperation-conditions.student-studies-mobility-spec.receiving-hei-id=hibo.no__student-studies-mobility-spec.subject-area.isced-f-code=031__student-studies-mobility-spec.subject-area.isced-clarification=Social and behavioural sciences__cooperation-conditions.student-studies-mobility-spec.total-months-per-year=5__cooperation-conditions.student-studies-mobility-spec.blended=false__cooperation-conditions.student-studies-mobility-spec.eqf-level=7__cooperation-conditions.student-studies-mobility-spec.eqf-level=8__receiving-first-academic-year-id=2014/2015__receiving-last-academic-year-id=2020/2021__cooperation-conditions.staff-teacher-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.staff-teacher-mobility-spec.sending-ounit-id=140__cooperation-conditions.staff-teacher-mobility-spec.receiving-hei-id=hibo.no__cooperation-conditions.staff-teacher-mobility-spec.mobilities-per-year=2__staff-teacher-mobility-spec.recommended-language-skill.language=en__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.subject-area.isced-f-code=0314__cooperation-conditions.staff-teacher-mobility-spec.total-days-per-year=8__receiving-first-academic-year-id=2016/2017__receiving-last-academic-year-id=2017/2018_</text-to-hash>
-    <valid-for-approval>false</valid-for-approval>
-</iia>
+<iias>
+   <iia>
+      <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
+      <text-to-hash>_iia-id_1=0f7a5682-faf7-49a7-9cc7-ec486c49a281__iia-id_2=1954991__cooperation-conditions.student-studies-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.student-studies-mobility-spec.sending-ounit-id=140__cooperation-conditions.student-studies-mobility-spec.receiving-hei-id=hibo.no__student-studies-mobility-spec.subject-area.isced-f-code=031__student-studies-mobility-spec.subject-area.isced-clarification=Social and behavioural sciences__cooperation-conditions.student-studies-mobility-spec.total-months-per-year=5__cooperation-conditions.student-studies-mobility-spec.blended=false__cooperation-conditions.student-studies-mobility-spec.eqf-level=7__cooperation-conditions.student-studies-mobility-spec.eqf-level=8__receiving-first-academic-year-id=2014/2015__receiving-last-academic-year-id=2020/2021__cooperation-conditions.staff-teacher-mobility-spec.sending-hei-id=hibo.no__cooperation-conditions.staff-teacher-mobility-spec.receiving-hei-id=uw.edu.pl__cooperation-conditions.staff-teacher-mobility-spec.receiving-ounit-id=140__cooperation-conditions.staff-teacher-mobility-spec.mobilities-per-year=2__staff-teacher-mobility-spec.recommended-language-skill.language=en__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.subject-area.isced-f-code=0514__staff-teacher-mobility-spec.subject-area.isced-f-code=0314__cooperation-conditions.staff-teacher-mobility-spec.total-days-per-year=14__receiving-first-academic-year-id=2016/2017__receiving-last-academic-year-id=2017/2018__cooperation-conditions.staff-teacher-mobility-spec.sending-hei-id=uw.edu.pl__cooperation-conditions.staff-teacher-mobility-spec.sending-ounit-id=140__cooperation-conditions.staff-teacher-mobility-spec.receiving-hei-id=hibo.no__cooperation-conditions.staff-teacher-mobility-spec.mobilities-per-year=2__staff-teacher-mobility-spec.recommended-language-skill.language=en__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.recommended-language-skill.language=pl__staff-teacher-mobility-spec.recommended-language-skill.cefr-level=C1__staff-teacher-mobility-spec.subject-area.isced-f-code=0314__cooperation-conditions.staff-teacher-mobility-spec.total-days-per-year=8__receiving-first-academic-year-id=2016/2017__receiving-last-academic-year-id=2017/2018_</text-to-hash>
+      <valid-for-approval>false</valid-for-approval>
+   </iia>
+</iias>
 ```
 
 We should next hash the value of the `text-to-hash` element with an SHA-256 algorithm to obtain the new `iia-hash` element value.
@@ -104,3 +108,19 @@ To test the XSLT against your IIA Get response XMLs you can use those online too
 
 To compute the hash code you can use:
  - https://www.fileformat.info/tool/hash.htm
+
+
+### IIA comparison
+
+
+The above XSLT does not guarantee that IIA hash calculated by both partners will be the same. There are number of
+reasons for IIAs to have different hashes. Cooperation conditions order, float formating, code casing are examples
+of IIA differences that influence the hash.
+
+@umesh-qs provided ([in this issue](https://github.com/erasmus-without-paper/ewp-specs-api-iias/issues/170#issuecomment-2222376593))
+an updated XSLT that takes into account such differences - see [compare_version_7.xsl](compare_version_7.xsl).
+
+Please note that this XSLT doesn't take into account differences in text fields, so the users should still compare IIAs,
+if `compare_version_7.xsl` produces different outputs.
+
+Please also note that `compare_version_7.xsl` MUST NOT be used to calculate the IIA hash.
