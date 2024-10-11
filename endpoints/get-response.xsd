@@ -463,6 +463,9 @@
                             Optional CEFR level code - the recommended minimum level of language skill the
                             student (or staff member) should have.
                             https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages
+
+                            It is strongly RECOMMENDED to provide this element, and it will be
+                            mandatory in the future version of the API.
                         </xs:documentation>
                     </xs:annotation>
                     <xs:simpleType>
