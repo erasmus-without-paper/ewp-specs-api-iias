@@ -64,6 +64,25 @@
                 <eqf-level>8</eqf-level>
             </student-studies-mobility-spec>
             <staff-teacher-mobility-spec>
+                <sending-hei-id>hibo.no</sending-hei-id>
+                <receiving-hei-id>uw.edu.pl</receiving-hei-id>
+                <receiving-ounit-id>140</receiving-ounit-id>
+                <receiving-academic-year-id>2016/2017</receiving-academic-year-id>
+                <receiving-academic-year-id>2017/2018</receiving-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>en</language>
+                    <cefr-level>C1</cefr-level>
+                </recommended-language-skill>
+                <subject-area>
+                    <isced-f-code>0514</isced-f-code>
+                </subject-area>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
+                <total-days-per-year>14</total-days-per-year>
+            </staff-teacher-mobility-spec>
+            <staff-teacher-mobility-spec>
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
                 <sending-ounit-id>140</sending-ounit-id>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
@@ -74,12 +93,16 @@
                     <language>en</language>
                     <cefr-level>C1</cefr-level>
                 </recommended-language-skill>
+                <recommended-language-skill>
+                    <language>pl</language>
+                    <cefr-level>C1</cefr-level>
+                </recommended-language-skill>
                 <subject-area>
                     <isced-f-code>0314</isced-f-code>
                 </subject-area>
                 <total-days-per-year>8</total-days-per-year>
             </staff-teacher-mobility-spec>
         </cooperation-conditions>
-        <conditions-hash>3ecc69b81e73bf215b5b2c8da0f2b1a77dac97105171669c16c0e88a4e6be84c</conditions-hash>
+        <conditions-hash>d17e9a84bcc7f898ec107bfad21d4fe2456c1a23e44fa84f54efc70dbad4ef98</conditions-hash>
     </iia>
 </iias-get-response>

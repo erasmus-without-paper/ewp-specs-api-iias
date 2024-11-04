@@ -10,6 +10,15 @@
 >
     <iia>
         <partner>
+            <hei-id>hibo.no</hei-id>
+            <iia-id>1954991</iia-id>
+            <iia-code>2014/E+/PL/4104B</iia-code>
+            <signing-contact>
+                <c:contact-name>Monica Turner</c:contact-name>
+                <c:email>email@example.com</c:email>
+            </signing-contact>
+        </partner>
+        <partner>
             <hei-id>uw.edu.pl</hei-id>
             <iia-id>0f7a5682-faf7-49a7-9cc7-ec486c49a281</iia-id>
             <iia-code>983/E+/III14&amp;15</iia-code>
@@ -26,24 +35,15 @@
                 <c:email>email@example.com</c:email>
             </c:contact>
         </partner>
-        <partner>
-            <hei-id>hibo.no</hei-id>
-            <iia-id>1954991</iia-id>
-            <iia-code>2014/E+/PL/4104B</iia-code>
-            <signing-contact>
-                <c:contact-name>Monica Turner</c:contact-name>
-                <c:email>email@example.com</c:email>
-            </signing-contact>
-        </partner>
         <in-effect>true</in-effect>
         <cooperation-conditions>
             <student-studies-mobility-spec>
                 <sending-hei-id>uw.edu.pl</sending-hei-id>
                 <sending-ounit-id>140</sending-ounit-id>
                 <sending-contact>
-                    <c:contact-name>XYZ</c:contact-name>
+                    <c:contact-name>ZYX</c:contact-name>
                     <p:phone-number>
-                        <p:other-format>123456789</p:other-format>
+                        <p:other-format>987654321</p:other-format>
                     </p:phone-number>
                 </sending-contact>
                 <receiving-hei-id>hibo.no</receiving-hei-id>
@@ -51,18 +51,38 @@
                 <receiving-last-academic-year-id>2020/2021</receiving-last-academic-year-id>
                 <mobilities-per-year not-yet-defined="true">2</mobilities-per-year>
                 <recommended-language-skill not-yet-defined="true">
-                    <language>en</language>
+                    <language>EN</language>
                     <cefr-level>B1</cefr-level>
                 </recommended-language-skill>
                 <subject-area>
                     <isced-f-code v6-value="031">0314</isced-f-code>
                     <isced-clarification>Social and behavioural sciences</isced-clarification>
                 </subject-area>
-                <total-months-per-year>5</total-months-per-year>
-                <blended>false</blended>
-                <eqf-level>7</eqf-level>
+                <total-months-per-year>05.00</total-months-per-year>
+                <blended>0</blended>
                 <eqf-level>8</eqf-level>
+                <eqf-level>7</eqf-level>
             </student-studies-mobility-spec>
+            <staff-teacher-mobility-spec>
+                <sending-hei-id>uw.edu.pl</sending-hei-id>
+                <sending-ounit-id>140</sending-ounit-id>
+                <receiving-hei-id>hibo.no</receiving-hei-id>
+                <receiving-first-academic-year-id>2016/2017</receiving-first-academic-year-id>
+                <receiving-last-academic-year-id>2017/2018</receiving-last-academic-year-id>
+                <mobilities-per-year>2</mobilities-per-year>
+                <recommended-language-skill>
+                    <language>pl</language>
+                    <cefr-level>C1</cefr-level>
+                </recommended-language-skill>
+                <recommended-language-skill>
+                    <language>en-US</language>
+                    <cefr-level>C1</cefr-level>
+                </recommended-language-skill>
+                <subject-area>
+                    <isced-f-code>0314</isced-f-code>
+                </subject-area>
+                <total-days-per-year>08.00</total-days-per-year>
+            </staff-teacher-mobility-spec>
             <staff-teacher-mobility-spec>
                 <sending-hei-id>hibo.no</sending-hei-id>
                 <receiving-hei-id>uw.edu.pl</receiving-hei-id>
@@ -82,27 +102,7 @@
                 </subject-area>
                 <total-days-per-year>14</total-days-per-year>
             </staff-teacher-mobility-spec>
-            <staff-teacher-mobility-spec>
-                <sending-hei-id>uw.edu.pl</sending-hei-id>
-                <sending-ounit-id>140</sending-ounit-id>
-                <receiving-hei-id>hibo.no</receiving-hei-id>
-                <receiving-first-academic-year-id>2016/2017</receiving-first-academic-year-id>
-                <receiving-last-academic-year-id>2017/2018</receiving-last-academic-year-id>
-                <mobilities-per-year>2</mobilities-per-year>
-                <recommended-language-skill>
-                    <language>en</language>
-                    <cefr-level>C1</cefr-level>
-                </recommended-language-skill>
-                <recommended-language-skill>
-                    <language>pl</language>
-                    <cefr-level>C1</cefr-level>
-                </recommended-language-skill>
-                <subject-area>
-                    <isced-f-code>0314</isced-f-code>
-                </subject-area>
-                <total-days-per-year>8</total-days-per-year>
-            </staff-teacher-mobility-spec>
         </cooperation-conditions>
-        <iia-hash>bde93fa24f085f8131d4e07b43850a744e6e6419aa8a5b093196d3928c8000b5</iia-hash>
+        <iia-hash>6cd3afda0d59ddba34f7eff70bb7415156fc15bb719cfd1687f0fc7bffc215be</iia-hash>
     </iia>
 </iias-get-response>
